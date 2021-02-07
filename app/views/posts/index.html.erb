@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Post一覧ページ</h1>
+
+<%= link_to 'New Post', new_post_path %>
+<hr>
+
+
+
+    <% @posts.each do |post| %>
+        <%= post.title %>
+        <%= post.caption %>
+        <%= post.tag %>
+        <%= link_to 'Show', post %>
+    <% end %>
