@@ -1,0 +1,57 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.container{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.post_container{
+    background: silver;
+}
+
+.main_img_area{
+    background: pink;
+    width: 100%;
+    text-align: center;
+}
+
+.main_img_area img{
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+}
+
+
+
+div#modal_body {
+  position:fixed;/* 階層を上にする */
+  max-width:90%;/* モーダルの幅 */
+  max-height:80%;/* モーダルの高さ */
+  top:50%;/* bodyの上から50%分ずらす */
+  left:50%;/* bodyの左から50%分ずらす */
+  transform:translate(-50%,-50%);/* 指定した位置から真ん中にずらす */
+  background:#fff;/* モーダルの色 */
+  overflow-y:scroll;/* 高さを指定しているので中身が超えた分はスクロールできるように */
+  border: 10px solid silver;
+    z-index: 99;
+}
+
+
+
+
+@media screen and (max-width:639px) {
+
+    .container{
+        width: 100%;
+    }
+    
+}

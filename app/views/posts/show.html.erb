@@ -1,16 +1,22 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Caption:</strong>
-  <%= @post.caption %>
-</p>
+<%= stylesheet_link_tag 'show_post' %>
 
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-<%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <div class="post_container">
+        
+     <div class="main_img_area">
+      <%= image_tag @post.image %>
+        </div>
+        
+        <div class="post_data">
+            <h1><%= @post.title %></h1>
+            <p><%= @post.caption %></p>
+            <hr>
+            <p id="notice"><%= notice %></p>
+            <hr>
+            <%= link_to 'Edit', edit_post_path(@post) %> <br>
+           <%= link_to 'Back', posts_path %><br>
+           <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+        
+    </div>
