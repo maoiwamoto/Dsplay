@@ -1,8 +1,3 @@
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-}
 
 img{
     vertical-align: middle;
@@ -14,11 +9,10 @@ img{
 }
 
 .post_container{
-    background: silver;
+    background: #ccc;
 }
 
 .main_img_area{
-    background: pink;
     width: 100%;
     text-align: center;
 }
@@ -31,17 +25,24 @@ img{
 }
 
 
+#img_modal_bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
 
-div#modal_body {
+#img_modal_body {
   position:fixed;/* 階層を上にする */
   max-width:90%;/* モーダルの幅 */
-  max-height:80%;/* モーダルの高さ */
+  max-height:85%;/* モーダルの高さ */
   top:50%;/* bodyの上から50%分ずらす */
   left:50%;/* bodyの左から50%分ずらす */
   transform:translate(-50%,-50%);/* 指定した位置から真ん中にずらす */
-  background:#fff;/* モーダルの色 */
-  overflow-y:scroll;/* 高さを指定しているので中身が超えた分はスクロールできるように */
-  border: 10px solid silver;
+  overflow:scroll;/* 高さを指定しているので中身が超えた分はスクロールできるように */
+  border: 10px solid #ccc;
     z-index: 99;
 }
 

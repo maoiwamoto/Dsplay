@@ -9,10 +9,4 @@
 <hr>
 
 
-
-    <% @posts.each do |post| %>
-        <%= post.title %>
-        <%= post.caption %>
-        <%= post.tag %>
-        <%= link_to 'Show', post %>
-    <% end %>
+<%= render partial: 'post', collection: @posts, as: "post" %>

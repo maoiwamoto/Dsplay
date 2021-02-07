@@ -6,8 +6,4 @@
 <hr>
 
 
-    <% @tags.each do |tag| %>
-      <%= tag.name %>
-    　<%= link_to 'Show', tag %>
-    <% end %>
-
+ <%= render partial: 'tag', collection: @tags, as: "tag" %>

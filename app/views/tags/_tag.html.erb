@@ -1,0 +1,9 @@
+
+<div style="background: #ccc;">
+  <h2>タグ名：<%= tag.name %></h2>
+  <%= link_to "Show", tag_path(tag) %>
+  <hr>
+  <h3>このタグがつけられた画像投稿</h3>
+  <%= render partial: 'posts/post', collection: tag.posts, as: "post" %>
+  </div>
+  <br>
