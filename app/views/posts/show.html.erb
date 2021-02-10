@@ -11,6 +11,9 @@
             <h1><%= @post.title %></h1>
             <p><%= @post.caption %></p>
             <hr>
+            <p>一覧のサムネイルに使う画像サイズ確認</p>
+            <%=  image_tag @post.image.grid_index_thumb.url %>
+            <hr>
             <p id="notice"><%= notice %></p>
             <hr>
             <%= link_to 'Edit', edit_post_path(@post) %> <br>
