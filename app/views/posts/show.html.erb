@@ -13,6 +13,8 @@
             <hr>
             <p>一覧のサムネイルに使う画像サイズ確認</p>
             <%=  image_tag @post.image.grid_index_thumb.url %>
+            <p>トリミング後</p>
+            <%=  image_tag @post.image.tiny.url %>
             <hr>
             <p id="notice"><%= notice %></p>
             <hr>

@@ -63,3 +63,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # jquery
 gem "jquery-rails"
+# cropping
+gem 'rails-assets-jcrop', source: 'https://rails-assets.org'

@@ -24,7 +24,11 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
       if @post.save
+        if params[:post][:image].present?
+          render :crop
+        else
          redirect_to @post, notice: "Post was successfully created."
+        end
       else
         render :new, status: :unprocessable_entity
       end
@@ -32,8 +36,12 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
-      if @post.update(post_params)
+      if @post.update_attributes(post_params)
+      if params[:post][:image].present?
+        render :crop
+      else
         redirect_to @post, notice: "Post was successfully updated."
+      end
       else
         render :edit, status: :unprocessable_entity
       end
@@ -53,7 +61,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :caption, :tag_id, :image)
+      params.require(:post).permit(:title, :caption, :tag_id, :image, :crop_x, :crop_y, :crop_w, :crop_h)
     end
     
 end

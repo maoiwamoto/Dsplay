@@ -29,17 +29,29 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
-  # Process files as they are uploaded:
-  # process scale: [200, 300]
-  #
-  # def scale(width, height)
-  #   # do something
-  # end
-
   # Create different versions of your uploaded files:
  version :grid_index_thumb do
-  process resize_to_limit: [300, 2000]
-end
+  process resize_to_limit: [450, 2000]
+ end
+ 
+  version :tiny do
+    process :crop
+    process resize_to_fill: [100, 100]
+  end
+  
+  def crop
+    if model.crop_x.present?
+      resize_to_limit(450, 2000)
+      manipulate! do |img|
+        x = model.crop_x.to_i
+        y = model.crop_y.to_i
+        w = model.crop_w.to_i
+        h = model.crop_h.to_i
+        # [[w, h].join('x'),[x, y].join('+')].join('+') => "wxh+x+y"
+        img.crop([[w, h].join('x'),[x, y].join('+')].join('+'))
+      end
+    end
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
