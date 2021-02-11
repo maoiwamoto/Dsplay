@@ -3,15 +3,11 @@
 <%= stylesheet_link_tag 'crop_style' %>
 
 <div class="crop_html_container">
-
-<div class='row'>
-  <div class='col-xs-8'>
-
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">Crop Avatar</h3>
-      </div>
-      <div class="panel-body">
+  
+     
+        <h3>Crop Avatar</h3>
+  
+  
         <div class="croparea_box">
         <%= image_tag @post.image_url(:grid_index_thumb), id: "cropbox" %>
         </div>
@@ -19,30 +15,16 @@
        <%= form_for(@post) do |f| %>
           <% %w[x y w h].each do |attribute| %>
             <%= f.text_field "crop_#{attribute}" %>
-          <% end %>
-
-          <div class="form-actions">
-            <%= f.submit %>
-          </div>
+              <% end %>
+          <div class="form-actions"><%= f.submit %></div>
         <% end %>
-
-      </div>
-    </div>
-  </div>
-
-  <div class='col-xs-4'>
-
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">Preview</h3>
-      </div>
-      <div class="panel-body">
+ 
+        <h3>Preview</h3>
+   
         <div style="width:100px; height:100px; overflow:hidden">
           <%= image_tag @post.image.url(:grid_index_thumb), id: "preview" %>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+        
+        <%= link_to 'トリミングをスキップする', posts_path %>
 
 </div>
