@@ -17,6 +17,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @post.image.cache! unless @post.image.blank?
   end
 
   # POST /posts or /posts.json

@@ -17,8 +17,8 @@
   </div>
   
   <div class="field">
-    <p>メイン画像</p>
-    <%= form.file_field :image %>
+    <p>添付画像の選択</p>
+     <%= form.file_field :image %>
   </div>
 
   <div class="field">
@@ -28,7 +28,6 @@
 
   <div class="field">
     <%= form.label :tag_id %>
-    
     <%= form.collection_select(:tag_id, Tag.all, :id, :name, include_blank: true) %>
   </div>
 

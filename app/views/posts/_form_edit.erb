@@ -1,0 +1,44 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  
+  <div class="field">
+    <div class="attached_img_area">
+    <%=  image_tag @post.image.grid_index_thumb.url %>
+    </div>
+    <%= form.hidden_field :image_cache %>
+
+    <p>添付画像の変更</p>
+     <%= form.file_field :image %>
+  </div>
+  
+  <hr>
+
+  <div class="field">
+    <%= form.label :caption %>
+    <%= form.text_area :caption %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag_id %>
+    <%= form.collection_select(:tag_id, Tag.all, :id, :name, include_blank: true) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
