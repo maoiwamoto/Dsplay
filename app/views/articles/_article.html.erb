@@ -1,0 +1,9 @@
+<div class="card article">
+    <% if article.photo.present? %>
+    <%=  image_tag article.photo.resize1.url %>
+    <% end %>
+        <div class="body_bg"><p><%= article.body %></p></div>
+        <%= link_to article_path(article) do %>
+    <span class="data"><%= article.title %></span>
+    <% end %>
+    </div>

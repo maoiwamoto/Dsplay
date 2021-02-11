@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'basic_grid_partial' %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Articles</h1>
@@ -5,11 +7,6 @@
 <%= link_to 'New Article', new_article_path %>
 <hr>
 
-    <% @articles.each do |article| %>
-        <%= article.title %>
-        <%= article.body %>
-        <%= article.tag %>
-      <%= link_to 'Show', article %></td>
-    <% end %>
-
-
+<div class="item_index_container">
+<%= render partial: 'article', collection: @articles, as: "article" %>
+</div>
