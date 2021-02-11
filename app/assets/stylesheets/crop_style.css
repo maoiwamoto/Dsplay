@@ -1,0 +1,34 @@
+.crop_html_container{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.croparea_box{
+  max-width: 100%;/* モーダルの幅 */
+  width: 500px;
+  height: 500px;
+  background: pink;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  overflow-scrolling: touch; 
+-webkit-overflow-scrolling: touch;
+
+position: relative;
+}
+
+.croparea_box img{
+    position: absolute;
+    display: block;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width:639px) {
+
+    .crop_html_container{
+        width: 100%;
+    }
+    
+}

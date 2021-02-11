@@ -1,5 +1,8 @@
 <%= javascript_include_tag 'post_crop' %>
-    <%= javascript_include_tag 'post_crop_js' %>
+<%= javascript_include_tag 'post_crop_js' %>
+<%= stylesheet_link_tag 'crop_style' %>
+
+<div class="crop_html_container">
 
 <div class='row'>
   <div class='col-xs-8'>
@@ -9,7 +12,9 @@
         <h3 class="panel-title">Crop Avatar</h3>
       </div>
       <div class="panel-body">
+        <div class="croparea_box">
         <%= image_tag @post.image_url(:grid_index_thumb), id: "cropbox" %>
+        </div>
         <br>
        <%= form_for(@post) do |f| %>
           <% %w[x y w h].each do |attribute| %>
@@ -38,4 +43,6 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>

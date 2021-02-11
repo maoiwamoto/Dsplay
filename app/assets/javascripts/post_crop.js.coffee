@@ -8,7 +8,7 @@ class ImageCrop
     height = parseInt($('#cropbox').height())
     $('#cropbox').Jcrop
       aspectRatio: 1
-      setSelect: [0, 0, width, height]
+      setSelect: [0, 0, 100, 100]
       onSelect: @update
       onChange: @update
 
