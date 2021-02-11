@@ -11,9 +11,7 @@
             <h1><%= @post.title %></h1>
             <p><%= @post.caption %></p>
             <hr>
-            <p>post一覧のサムネに使う画像サイズ確認</p>
-            <%=  image_tag @post.image.grid_index_thumb.url %>
-            <p>トリミング後</p>
+            <p>トリミング後（tags/index）</p>
             <%=  image_tag @post.image.tiny.url %>
             <hr>
             <p id="notice"><%= notice %></p>

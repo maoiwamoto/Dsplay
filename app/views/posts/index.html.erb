@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'basic_grid_partial' %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Post一覧ページ</h1>
@@ -8,5 +10,6 @@
 <%= link_to 'article一覧へ', articles_path %>
 <hr>
 
-
+<div class="item_index_container">
 <%= render partial: 'post', collection: @posts, as: "post" %>
+</div>

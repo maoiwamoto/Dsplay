@@ -3,13 +3,10 @@ img{
     vertical-align: middle;
 }
 
-.container{
+.post_container{
     width: 500px;
     max-width: 100%;
     margin: 0 auto;
-}
-
-.post_container{
     background: #ccc;
 }
 
@@ -63,13 +60,4 @@ img{
     top: 0;
     left: 0;
 
-}
-
-
-
-@media screen and (max-width:639px) {
-
-    .container{
-    }
-    
 }

@@ -1,8 +1,7 @@
-<div style="background: pink;">
-        タイトル：<%= post.title %><br>
-        キャプション：<%= post.caption %><br>
-        タグID：<%= post.tag_id %><br>
-  <%= link_to "Show", post_path(post) %>
-  </div>
-  <br>
-  
+ <div class="card post">
+    <div class="top"><%=  image_tag post.image.grid_index_thumb.url %></div>
+    <div class="bottom">
+            <%= link_to post_path(post) do %>
+            <span><%= post.title %></span>
+            <% end %></div>
+    </div>

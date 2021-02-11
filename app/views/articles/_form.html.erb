@@ -20,6 +20,11 @@
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
+  
+    <div class="field">
+    <p>イメージ画像の選択（任意）</p>
+     <%= form.file_field :photo %>
+    </div>
 
   <div class="field">
     <%= form.label :tag_id %>
