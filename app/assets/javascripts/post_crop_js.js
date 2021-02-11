@@ -21,10 +21,10 @@ ImageCrop = (function() {
   }
 
   ImageCrop.prototype.update = function(coords) {
-    $('#crop_x').val(coords.x);
-    $('#crop_y').val(coords.y);
-    $('#crop_w').val(coords.w);
-    $('#crop_h').val(coords.h);
+    $('#post_crop_x').val(coords.x);
+    $('#post_crop_y').val(coords.y);
+    $('#post_crop_w').val(coords.w);
+    $('#post_crop_h').val(coords.h);
     return this.updatePreview(coords);
   };
 

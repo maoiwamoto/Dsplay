@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'carrierwave'
 gem 'mini_magick', '~> 4.8'
+# cropping
+gem 'rails-assets-jcrop', source: 'https://rails-assets.org'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -63,5 +65,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # jquery
 gem "jquery-rails"
-# cropping
-gem 'rails-assets-jcrop', source: 'https://rails-assets.org'

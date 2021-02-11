@@ -11,13 +11,13 @@
       <div class="panel-body">
         <%= image_tag @post.image_url(:grid_index_thumb), id: "cropbox" %>
         <br>
-        <%= form_with model: @post do |f| %>
+       <%= form_for(@post) do |f| %>
           <% %w[x y w h].each do |attribute| %>
-            <%= f.hidden_field "crop_#{attribute}" %>
+            <%= f.text_field "crop_#{attribute}" %>
           <% end %>
 
           <div class="form-actions">
-            <%= f.button :submit %>
+            <%= f.submit %>
           </div>
         <% end %>
 
