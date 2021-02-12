@@ -25,3 +25,9 @@ position: relative;
     top: 0;
     left: 0;
 }
+
+.preview_box{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}

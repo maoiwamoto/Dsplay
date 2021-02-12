@@ -9,21 +9,21 @@
   
   
         <div class="croparea_box">
-        <%= image_tag @post.image_url(:grid_index_thumb), id: "cropbox" %>
+        <%= image_tag @post.image_url(:thumb), id: "cropbox" %>
         </div>
-        <br>
+        
+        <h3>Preview</h3>
+        <div class="preview_box">
+          <%= image_tag @post.image.url(:thumb), id: "preview" %>
+        </div>
+        
+        <hr>
        <%= form_for(@post) do |f| %>
           <% %w[x y w h].each do |attribute| %>
             <%= f.text_field "crop_#{attribute}" %>
               <% end %>
           <div class="form-actions"><%= f.submit %></div>
         <% end %>
- 
-        <h3>Preview</h3>
-   
-        <div style="width:100px; height:100px; overflow:hidden">
-          <%= image_tag @post.image.url(:grid_index_thumb), id: "preview" %>
-        </div>
         
         <%= link_to 'トリミングをスキップする', posts_path %>
 

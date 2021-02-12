@@ -15,6 +15,7 @@
 .item_index_container .card{
     position: relative;
     overflow: hidden;
+    background: rgba(0,0,0,0.5);
 }
 
 /*articleの指定*/
@@ -86,12 +87,3 @@
     opacity: 1;
 }
 
-
-
-@media screen and (max-width: 639px) {
-
-:root{
-    --grid-card-width: 210px;
-}
-
-}

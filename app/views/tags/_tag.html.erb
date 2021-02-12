@@ -1,15 +1,19 @@
-
 <div style="background: #ccc;">
   <h2>タグ名：<%= tag.name %></h2>
   <%= link_to "Show", tag_path(tag) %>
   <hr>
-  <h3>このタグがつけられた画像投稿</h3>
   
   <% if tag.posts.present? %>
-  <%= render partial: 'posts/post', collection: tag.posts, as: "post" %>
-  <% else %>
-    <span>このタグの関連投稿はありません</span>
+  <ul class="list_item_container">
+  <%= render partial: 'posts/post_small', collection: tag.posts, as: "post" %>
+  </ul>
   <% end %>
+  <% if tag.articles.present? %>
+  <ul class="list_item_container">
+  <%= render partial: 'articles/article_small', collection: tag.articles, as: "article" %>
+  </ul>
+  <% end %>
+
   
   </div>
   <br>

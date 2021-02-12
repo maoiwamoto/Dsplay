@@ -1,0 +1,110 @@
+:root{
+    --grid-li-width: 120px;
+}
+
+ul.list_item_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,var(--grid-li-width));
+    grid-auto-rows: var(--grid-li-width);
+    grid-gap: 4px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.list_item_container .card{
+    background: #424242;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/*articleの指定*/
+
+.list_item_container .article .txt_area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,transparent,rgba(255,255,255,0.6));
+    text-align: center;
+}
+
+.list_item_container .article .txt_area::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border: 1px solid #fafafa;
+    top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%); /* Safari用 */
+  transform: translate(-50%, -50%);
+}
+
+.list_item_container .article .txt_area span{
+ display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%); /* Safari用 */
+  transform: translateY(-50%);
+    
+ font-weight: bold;
+ color: #fafafa;
+    font-family: "yu gothic";
+    font-size: 16px;
+    
+    text-shadow: 0 1px 8px #000;
+}
+
+
+/*---------------------------------------*/
+
+/*postの指定*/
+
+.list_item_container .post img{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+/*---------------------------------------*/
+
+/*a部分の指定（共通）*/
+
+.list_item_container .card a{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    text-decoration: none;
+}
+
+.list_item_container .card a .show{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.list_item_container .card a:hover{
+    opacity: 0.5;
+}
+
+/*---------------------------------------*/
+
+@media screen and (max-width: 415px) {
+
+    ul.list_item_container{
+      width: 95vw;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: calc(95vw / 3);
+    }
+
+}

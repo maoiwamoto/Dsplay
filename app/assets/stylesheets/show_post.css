@@ -36,7 +36,7 @@ img{
   position:fixed;/* 階層を上にする */
   max-width:90vw;/* モーダルの幅 */
   max-height:90vh;/* モーダルの高さ */
-  width: 600px;
+  width: 800px;
   height: 85vh;
   top:50%;
   left:50%;

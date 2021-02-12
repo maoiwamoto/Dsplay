@@ -8,7 +8,7 @@ class ImageCrop
     height = parseInt($('#cropbox').height())
     $('#cropbox').Jcrop
       aspectRatio: 1
-      setSelect: [0, 0, 100, 100]
+      setSelect: [0, 0, 150, 150]
       onSelect: @update
       onChange: @update
 
@@ -20,8 +20,8 @@ class ImageCrop
     @updatePreview(coords)
 
   updatePreview: (coords) =>
-    rx = 100 / coords.w
-    ry = 100 / coords.h
+    rx = 150 / coords.w
+    ry = 150 / coords.h
 
     $('#preview').css
         width: Math.round(rx * $('#cropbox').width()) + 'px'

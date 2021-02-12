@@ -30,18 +30,18 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
- version :grid_index_thumb do
-  process resize_to_limit: [450, 1100]
+ version :thumb do
+  process resize_to_limit: [450, 900]
  end
  
   version :tiny do
     process :crop
-    process resize_to_fill: [100, 100]
+    process resize_to_fill: [150, 150]
   end
   
   def crop
     if model.crop_x.present?
-      resize_to_limit(450, 1100)
+      resize_to_limit(450, 900)
       manipulate! do |img|
         x = model.crop_x.to_i
         y = model.crop_y.to_i
