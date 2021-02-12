@@ -14,8 +14,6 @@
             <p>トリミング後（tags/index）</p>
             <%=  image_tag @post.image.tiny.url %>
             <hr>
-            <p id="notice"><%= notice %></p>
-            <hr>
             <%= link_to 'Edit', edit_post_path(@post) %> <br>
            <%= link_to 'Back', posts_path %><br>
            <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>

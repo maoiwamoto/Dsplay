@@ -1,28 +1,28 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_post, only: %i[ show edit update destroy ]
 
-  # GET /posts or /posts.json
+ 
   def index
-    @posts = Post.all
+    @posts = current_user.posts
   end
 
-  # GET /posts/1 or /posts/1.json
+
   def show
   end
 
-  # GET /posts/new
+
   def new
-    @post = Post.new
+    @post = current_user.posts.new
   end
 
-  # GET /posts/1/edit
+
   def edit
     @post.image.cache! unless @post.image.blank?
   end
 
-  # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
 
       if @post.save
         if params[:post][:image].present?
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
       end
   end
 
-  # PATCH/PUT /posts/1 or /posts/1.json
+
   def update
       if @post.update_attributes(post_params)
       if params[:post][:image].present?
@@ -48,19 +48,19 @@ class PostsController < ApplicationController
       end
   end
 
-  # DELETE /posts/1 or /posts/1.json
+
   def destroy
     @post.destroy
       redirect_to posts_url, notice: "Post was successfully destroyed."
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_post
-      @post = Post.find(params[:id])
+      @post = current_user.posts.find_by(id: params[:id])
+      redirect_to(posts_url, alert: "ERROR!!") if @post.blank?
     end
 
-    # Only allow a list of trusted parameters through.
     def post_params
       params.require(:post).permit(:title, :caption, :tag_id, :image, :crop_x, :crop_y, :crop_w, :crop_h)
     end

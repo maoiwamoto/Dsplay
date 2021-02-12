@@ -1,22 +1,23 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_article, only: %i[ show edit update destroy ]
 
   def index
-    @articles = Article.all
+    @articles = current_user.articles
   end
 
   def show
   end
 
   def new
-    @article = Article.new
+    @article = current_user.articles.new
   end
 
   def edit
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.new(article_params)
 
       if @article.save
         redirect_to @article, notice: "Article was successfully created."
@@ -40,7 +41,8 @@ class ArticlesController < ApplicationController
 
   private
     def set_article
-      @article = Article.find(params[:id])
+      @article = current_user.articles.find_by(id: params[:id])
+      redirect_to(articles_url, alert: "ERROR!!") if @article.blank?
     end
 
     def article_params
