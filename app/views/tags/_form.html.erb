@@ -12,8 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <p>タグ名</p>
     <%= form.text_field :name %>
+  </div>
+  
+    <div class="field">
+    <p>タグの説明文</p>
+    <%= form.text_area :caption %>
   </div>
 
   <div class="actions">

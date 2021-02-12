@@ -1,12 +1,13 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>タグ個別ページ</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @tag.name %>
-</p>
 
+  <h2><%= @tag.name %></h2>
+  <% if @tag.caption.present? %>
+  <p><%= @tag.caption %></p>
+  <% end %>
+  
 <%= link_to 'Edit', edit_tag_path(@tag) %> |
 <%= link_to 'Back', tags_path %>
 <%= link_to 'Destroy', @tag, method: :delete, data: { confirm: 'Are you sure?' } %>
