@@ -24,7 +24,7 @@
     <div class="field">
     <% if article.photo.present? %>
     <div class="attached_img_area">
-    <%=  image_tag article.photo.resize1.url %>
+    <%=  image_tag article.photo.thumb.url %>
     </div>
     <%= form.hidden_field :image_cache %>
     <% end %>

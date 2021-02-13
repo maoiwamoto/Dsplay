@@ -9,7 +9,7 @@
         </div>
         
         <div class="body_area">
-          <p><%= @article.body %></p>
+          <p><%= safe_join(@article.body.split("\n"),tag(:br)) %></p>
         </div>
         
         <div class="article_data">
@@ -40,7 +40,7 @@
         <%= link_to article_path(@article.next) do %>
         <span>
          <% if @article.next.photo.present? %>
-         <%= image_tag @article.next.photo.resize1.url %>
+         <%= image_tag @article.next.photo.tiny.url %>
          <% end %>
         </span>
         <%= @article.next.title %>
@@ -66,7 +66,7 @@
         <%= link_to article_path(@article.prev_tag) do %>
         <span>
          <% if @article.prev_tag.photo.present? %>
-         <%= image_tag @article.prev_tag.photo.resize1.url %>
+         <%= image_tag @article.prev_tag.photo.tiny.url %>
          <% end %>
          </span>
         <%= @article.prev_tag.title %>
@@ -78,7 +78,7 @@
         <%= link_to article_path(@article.next_tag) do %>
         <span>
          <% if @article.next_tag.photo.present? %>
-         <%= image_tag @article.next_tag.photo.resize1.url %>
+         <%= image_tag @article.next_tag.photo.tiny.url %>
          <% end %>
         </span>
         <%= @article.next_tag.title %>
