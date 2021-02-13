@@ -31,6 +31,8 @@ gem 'carrierwave'
 gem 'mini_magick', '~> 4.8'
 # cropping
 gem 'rails-assets-jcrop', source: 'https://rails-assets.org'
+# ページネーション
+gem 'kaminari'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -67,5 +69,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "jquery-rails"
 # devise
 gem 'devise', '~> 4.2'
-# material_icon
-gem 'material_icons'
+

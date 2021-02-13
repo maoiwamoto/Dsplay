@@ -97,8 +97,9 @@ ul.list_item_container{
     position: absolute;
     bottom: 0;
     right: 0;
-    font-size: 30px;
+    font-size: 20px;
     color: #fff;
+    padding: 5px;
 }
 
 .list_item_container .card a:hover{

@@ -14,7 +14,7 @@ ImageCrop = (function() {
     height = parseInt($('#cropbox').height());
     $('#cropbox').Jcrop({
       aspectRatio: 1,
-      setSelect: [0, 0, 150, 150],
+      setSelect: [0, 0, 120, 120],
       onSelect: this.update,
       onChange: this.update
     });
@@ -30,8 +30,8 @@ ImageCrop = (function() {
 
   ImageCrop.prototype.updatePreview = function(coords) {
     var rx, ry;
-    rx = 150 / coords.w;
-    ry = 150 / coords.h;
+    rx = 120 / coords.w;
+    ry = 120 / coords.h;
     return $('#preview').css({
       width: Math.round(rx * $('#cropbox').width()) + 'px',
       height: Math.round(ry * $('#cropbox').height()) + 'px',

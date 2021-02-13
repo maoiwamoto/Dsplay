@@ -1,5 +1,4 @@
 
-
 <h1>タグ個別ページ</h1>
 
 
@@ -7,6 +6,19 @@
   <% if @tag.caption.present? %>
   <p><%= @tag.caption %></p>
   <% end %>
+  
+   <% if @tag.posts.present? %>
+  <ul class="item_index_container">
+  <%= render partial: 'posts/post', collection: @tag.posts, as: "post" %>
+  </ul>
+  <% end %>
+  <% if @tag.articles.present? %>
+  <ul class="item_index_container">
+  <%= render partial: 'articles/article', collection: @tag.articles, as: "article" %>
+  </ul>
+  <% end %>
+  
+  <hr>
   
 <%= link_to 'Edit', edit_tag_path(@tag) %> |
 <%= link_to 'Back', tags_path %>
