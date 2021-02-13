@@ -13,7 +13,9 @@
         </div>
         
         <div class="article_data">
-            <h1><%= @article.title %></h1>
+            <h2><%= @article.title %></h2>
+            <time><%= @article.created_at.strftime("%Y-%m-%d") %></time>
+            <hr>
             
             <%= link_to 'Edit', edit_article_path(@article) %> 
             <%= link_to 'Back', articles_path %>
@@ -46,6 +48,44 @@
         <% end %>
                 
         </div><%# show_nav %>
+        
+        <hr>
+        
+        <% if @article.tag_id.present? %>
+        
+        <h3 class="h3_show_tag">
+        <%= link_to tag_path(@article.tag) do %>
+        <%= @article.tag.name %>
+        <% end %>
+        </h3>
+        
+        <div class="show_nav"><%# 同じタグに属する前後のレコードに移動するナビゲーション %>
+                
+        <% if @article.prev_tag.present? %>
+        <div class="show_nav_item">
+        <%= link_to article_path(@article.prev_tag) do %>
+        <span>
+         <% if @article.prev_tag.photo.present? %>
+         <%= image_tag @article.prev_tag.photo.resize1.url %>
+         <% end %>
+         </span>
+        <%= @article.prev_tag.title %>
+        <% end %></div>
+        <% end %>
+        
+        <% if @article.next_tag.present? %>
+        <div class="show_nav_item">
+        <%= link_to article_path(@article.next_tag) do %>
+        <span>
+         <% if @article.next_tag.photo.present? %>
+         <%= image_tag @article.next_tag.photo.resize1.url %>
+         <% end %>
+        </span>
+        <%= @article.next_tag.title %>
+        <% end %></div>
+        <% end %>
+        </div>
+        <% end %><%# タグ投稿ナビゲーション終了 %>
             
         </div><%# article_data %>
         

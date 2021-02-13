@@ -16,11 +16,11 @@ class Article < ApplicationRecord
   # 同じタグに属するレコードの前後を取得
   
   def prev_tag
-    tag.articles.order('id desc').where('id < ?', id).first
+    tag.articles.order('created_at desc, id desc').where('created_at <= ? and id < ?', created_at, id).first
   end
 
   def next_tag
-    tag.articles.order('id desc').where('id > ?', id).reverse.first
+    tag.articles.order('created_at desc, id desc').where('created_at >= ? and id > ?', created_at, id).reverse.first
   end
   
 end

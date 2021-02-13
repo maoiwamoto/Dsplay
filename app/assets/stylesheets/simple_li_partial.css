@@ -16,6 +16,7 @@ ul.list_item_container{
     background: #424242;
     overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
 
 
@@ -82,7 +83,6 @@ ul.list_item_container{
     height: 100%;
     background: rgba(0,0,0,0.4);
     opacity: 0;
-    text-decoration: none;
     color: #fff;
 }
 
