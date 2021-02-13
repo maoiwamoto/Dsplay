@@ -35,3 +35,37 @@
     background: #fff;
     padding: 20px;
 }
+
+.show_nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.show_nav .show_nav_item{
+    text-align: center;
+    width: 50%;
+}
+
+.show_nav_item span{
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border: 2px solid;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.show_nav_item span img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.show_nav_item a{
+    text-decoration: none;
+    color: #000;
+}
