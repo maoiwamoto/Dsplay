@@ -9,7 +9,7 @@
         
         <div class="post_data">
             <h1><%= @post.title %></h1>
-            <p><%= @post.caption %></p>
+            <p><%= safe_join(@post.caption.split("\n"),tag(:br)) %></p>
             <time><%= @post.created_at.strftime("%Y-%m-%d") %></time>
             <hr>
             <p>トリミング後（tags/index）</p>

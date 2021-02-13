@@ -21,16 +21,14 @@
             <%= link_to 'Back', articles_path %>
             <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
             
+            
+            
         <div class="show_nav"><%# 前後のレコードに移動するナビゲーション %>
                 
         <% if @article.previous.present? %>
         <div class="show_nav_item">
         <%= link_to article_path(@article.previous) do %>
-        <span>
-         <% if @article.previous.photo.present? %>
-         <%= image_tag @article.previous.photo.resize1.url %>
-         <% end %>
-         </span>
+        <span><%= image_tag @article.previous.photo.tiny.url if @article.previous.photo.present? %></span>
         <%= @article.previous.title %>
         <% end %></div>
         <% end %>
@@ -38,11 +36,7 @@
         <% if @article.next.present? %>
         <div class="show_nav_item">
         <%= link_to article_path(@article.next) do %>
-        <span>
-         <% if @article.next.photo.present? %>
-         <%= image_tag @article.next.photo.tiny.url %>
-         <% end %>
-        </span>
+        <span><%= image_tag @article.next.photo.tiny.url if @article.next.photo.present? %></span>
         <%= @article.next.title %>
         <% end %></div>
         <% end %>
@@ -64,11 +58,7 @@
         <% if @article.prev_tag.present? %>
         <div class="show_nav_item">
         <%= link_to article_path(@article.prev_tag) do %>
-        <span>
-         <% if @article.prev_tag.photo.present? %>
-         <%= image_tag @article.prev_tag.photo.tiny.url %>
-         <% end %>
-         </span>
+        <span><%= image_tag @article.prev_tag.photo.tiny.url if @article.prev_tag.photo.present? %></span>
         <%= @article.prev_tag.title %>
         <% end %></div>
         <% end %>
@@ -76,11 +66,7 @@
         <% if @article.next_tag.present? %>
         <div class="show_nav_item">
         <%= link_to article_path(@article.next_tag) do %>
-        <span>
-         <% if @article.next_tag.photo.present? %>
-         <%= image_tag @article.next_tag.photo.tiny.url %>
-         <% end %>
-        </span>
+        <span><%= image_tag @article.next_tag.photo.tiny.url if @article.next_tag.photo.present? %></span>
         <%= @article.next_tag.title %>
         <% end %></div>
         <% end %>

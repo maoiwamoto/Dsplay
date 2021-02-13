@@ -22,7 +22,13 @@
   </div>
   
     <div class="field">
-    <p>イメージ画像の選択（任意）</p>
+    <% if article.photo.present? %>
+    <div class="attached_img_area">
+    <%=  image_tag article.photo.thumb.url %>
+    </div>
+    <%= form.hidden_field :photo_cache %>
+    <% end %>
+     <%= form.label :photo %>
      <%= form.file_field :photo %>
     </div>
 

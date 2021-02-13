@@ -17,16 +17,16 @@
   </div>
   
   <div class="field">
+    <% if @post.image.present? %>
     <div class="attached_img_area">
     <%=  image_tag @post.image.thumb.url %>
     </div>
     <%= form.hidden_field :image_cache %>
+    <% end %>
 
-    <p>添付画像の変更</p>
+     <%= form.label :image %>
      <%= form.file_field :image %>
   </div>
-  
-  <hr>
 
   <div class="field">
     <%= form.label :caption %>

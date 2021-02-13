@@ -18,7 +18,6 @@ class PostsController < ApplicationController
 
 
   def edit
-    @post.image.cache! unless @post.image.blank?
   end
 
   def create
@@ -62,7 +61,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :caption, :tag_id, :image, :crop_x, :crop_y, :crop_w, :crop_h)
+      params.require(:post).permit(:title, :caption, :tag_id, :image, :image_cache, :crop_x, :crop_y, :crop_w, :crop_h)
     end
     
 end
