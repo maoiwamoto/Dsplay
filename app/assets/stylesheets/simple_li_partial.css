@@ -83,24 +83,29 @@ ul.list_item_container{
     background: rgba(0,0,0,0.4);
     opacity: 0;
     text-decoration: none;
+    color: #fff;
 }
 
 .list_item_container .card a .show{
   position: absolute;
-  display: block;
+  display: inline-block;
   width: 100%;
   bottom: 0;
-  opacity: 1;
+  display: none;
 }
 
-.list_item_container .card a .show i{
+.list_item_container .card a::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00e";
+    display: inline-block;
     position: absolute;
     bottom: 0;
     right: 0;
-    font-size: 20px;
-    color: #fff;
+    font-size: 25px;
     padding: 5px;
 }
+
 
 .list_item_container .card a:hover{
     opacity: 1;

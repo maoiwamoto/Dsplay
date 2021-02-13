@@ -19,7 +19,7 @@
             <%= link_to 'Back', articles_path %>
             <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
             
-        <div class="show_nav">
+        <div class="show_nav"><%# 前後のレコードに移動するナビゲーション %>
                 
         <% if @article.previous.present? %>
         <div class="show_nav_item">

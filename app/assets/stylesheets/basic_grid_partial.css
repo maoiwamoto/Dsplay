@@ -76,11 +76,14 @@
  opacity: 0.5;
 }
 
-.item_index_container .card span.data{
+.item_index_container .card .data{
     color: #fff;
+    display: inline-block;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    padding: 5px;
+    text-indent: 0.5em;
 }
 
 .item_index_container .card a:hover{

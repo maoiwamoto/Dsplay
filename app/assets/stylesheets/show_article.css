@@ -36,6 +36,8 @@
     padding: 20px;
 }
 
+/*投稿詳細画面の前後のレコード取得用のnav（postとarticle兼用）---------*/
+
 .show_nav{
     display: flex;
     justify-content: center;
