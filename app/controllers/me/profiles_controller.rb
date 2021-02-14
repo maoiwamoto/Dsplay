@@ -17,7 +17,7 @@ end
 def create
     @profile = current_user.build_user_profile(user_profile_params)
     if @profile.save
-        redirect_to me_profile_path
+        redirect_to me_profile_path, notice: "Profile was successfully created."
     else
         render :new
     end
@@ -30,7 +30,7 @@ end
 def update
     @profile = current_user.user_profile
     if @profile.update(user_profile_params)
-        redirect_to me_profile_path
+        redirect_to me_profile_path, notice: "Profile was successfully updated."
     else
         render :edit
     end
