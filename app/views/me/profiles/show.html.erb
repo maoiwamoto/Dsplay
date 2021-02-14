@@ -1,6 +1,30 @@
-<%= @profile.name %>
-<%= @profile.profile %>
-<%= image_tag @profile.avator.url %>
-<%= image_tag @profile.headerimage.url %>
+<%= stylesheet_link_tag 'me' %>
 
-<%= link_to "edit" ,edit_me_profile_path %>
+<div class="me_container">
+        
+<div class="side">
+        
+    <div class="header_area"><%= image_tag @profile.headerimage.url if @profile.headerimage.present? %></div>
+    
+    <div class="prof_z">
+      <div class="prof_box">
+         <div class="main_avator"><%= image_tag @profile.avator.url if @profile.avator.present? %></div>
+           <div class="user_info">
+             <p class="user_title"><%= @profile.name %></p>
+             <p class="prof_text"><%= safe_join(@profile.profile.split("\n"),tag(:br)) %></p>
+          </div>
+       </div>
+   </div>
+    
+    <ul class="side_menu">
+    <li>画像投稿一覧</li>
+    <li>文章投稿一覧</li>
+    <li>タグ一覧</li>
+    <li><%= link_to "プロフィール編集", edit_me_profile_path %></li>
+    <li>メニュー</li>
+    </ul>
+        
+</div>
+        
+        <div class="main"><p>ここに投稿一覧を新着順で表示</p><br><br><br><br><br></div>
+</div>

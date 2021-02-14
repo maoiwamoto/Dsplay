@@ -11,10 +11,23 @@
   </head>
 
   <body>
+      
+      <header>
+        <div class="left"><h1><a href="#">site name</a></h1></div>
+        <div class="right">
+            <span>ログインユーザー名</span>
+            <div class="nav_avator">
+            </div>
+        </div>
+      <div class="flash">
+    　<p class="notice"><%= notice %></p>
+   　　<p class="alert"><%= alert %></p>
+      </div>
+      </header>
     
-      <p class="notice"><%= notice %></p>
-   　<p class="alert"><%= alert %></p>
-    
+    <main>
     <%= yield %>
+    </main>
+    
   </body>
 </html>
