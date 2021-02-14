@@ -1,0 +1,31 @@
+<%= form_with model: @profile, url: me_profile_path, local: true do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :profile %>
+<%= f.text_area :profile %>
+
+  <div class="field">
+    <% if @profile.avator.present? %>
+    <div class="attached_img_area">
+    <%=  image_tag @profile.avator.url %>
+    </div>
+    <%= f.hidden_field :avator_cache %>
+    <% end %>
+<%= f.label :avator %>
+<%= f.file_field :avator %>
+
+  <div class="field">
+    <% if @profile.headerimage.present? %>
+    <div class="attached_img_area">
+    <%= image_tag @profile.headerimage.url %>
+    </div>
+    <%= f.hidden_field :headerimage_cache %>
+    <% end %>
+
+<%= f.label :headerimage %>
+<%= f.file_field :headerimage %>
+
+
+<%= f.submit %>
+<% end %>

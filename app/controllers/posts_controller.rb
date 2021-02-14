@@ -21,8 +21,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(post_params)
-
+    
+      @post = current_user.posts.new(post_params)
       if @post.save
         if params[:post][:image].present?
           render :crop
