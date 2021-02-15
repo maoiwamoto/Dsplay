@@ -1,11 +1,32 @@
-<%= form_with model: @profile, url: me_profile_path, method: :put, local: true do |f| %>
+<%= javascript_include_tag "count_form" %>
 
-<%= f.label :name %>
+<%= form_with model: @profile, url: me_profile_path, local: true do |f| %>
+
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+<%= f.label :ユーザー名 %>
 <%= f.text_field :name %>
-<%= f.label :pagetitle %>
+</div>
+<div class="field">
+<%= f.label :ユーザーページタイトル %>
 <%= f.text_field :pagetitle %>
-<%= f.label :profile %>
-<%= f.text_area :profile %>
+</div>
+<div class="field">
+<%= f.label :プロフィール文 %>
+<%= f.text_area :profile, id: "input-text" %>
+<div class="count_limit"><span id="counter">0文字</span> / @@@文字</div>
+</div>
 
   <div class="field">
     <% if @profile.avator.present? %>
@@ -14,7 +35,7 @@
     </div>
     <%= f.hidden_field :avator_cache %>
     <% end %>
-<%= f.label :avator %>
+<%= f.label :ユーザーアイコン画像 %>
 <%= f.file_field :avator %>
 
   <div class="field">
@@ -25,7 +46,7 @@
     <%= f.hidden_field :headerimage_cache %>
     <% end %>
 
-<%= f.label :headerimage %>
+<%= f.label :ヘッダー画像 %>
 <%= f.file_field :headerimage %>
 
 
