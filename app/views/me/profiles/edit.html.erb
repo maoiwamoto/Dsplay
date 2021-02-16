@@ -21,7 +21,7 @@
 </div>
 <div class="field" id="countable">
 <%= f.label :ユーザーページタイトル %>
-<%= f.text_field :pagetitle, id: "input_text" %>
+<%= f.text_field :pagetitle, id: "input_text", placeholder: "MyPage" %>
 <p><span id="counter">0文字</span> / <span id="limit" data-count="30">最大文字数</span></p>
 </div>
 <div class="field" id="countable">
@@ -41,6 +41,7 @@
     
 <%= f.label :ユーザーアイコン画像 %>
 <%= f.file_field :avator %>
+   </div>
 
   <div class="field">
     <% if @profile.headerimage.present? %>
@@ -53,7 +54,8 @@
 
 <%= f.label :ヘッダー画像 %>
 <%= f.file_field :headerimage %>
+   </div>
 
 
-<%= f.submit %>
+<%= f.submit :変更を保存する %>
 <% end %>

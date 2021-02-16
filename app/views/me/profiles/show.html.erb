@@ -10,13 +10,7 @@
       <div class="prof_box">
          <div class="main_avator"><%= image_tag @profile.avator.url if @profile.avator.present? %></div>
            <div class="user_info">
-             <h2>
-                 <% if @profile.pagetitle.present? %>
-                 <%= @profile.pagetitle %>
-                 <% else %>
-                 <%= @pagetitle %>
-                 <% end %>
-                 </h2>
+             <h2><%= @profile.pagetitle %></h2>
              <p class="user_title"><%= @profile.name %></p>
              <p class="prof_text"><%= safe_join(@profile.profile.split("\n"),tag(:br)) %></p>
           </div>

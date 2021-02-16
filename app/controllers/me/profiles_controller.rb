@@ -1,11 +1,10 @@
 class Me::ProfilesController < ApplicationController
+    before_action :set_profile, only: %i[ show edit update]
 
 def index
 end
 
 def show
-    @pagetitle = "MyRoom"
-    @profile = current_user.user_profile
     if @profile.nil?
         redirect_to new_me_profile_path
     end
@@ -25,11 +24,9 @@ def create
 end
 
 def edit
-    @profile = current_user.user_profile
 end
 
 def update
-    @profile = current_user.user_profile
     if @profile.update(user_profile_params)
         redirect_to me_profile_path, notice: "Profile was successfully updated."
     else
@@ -42,6 +39,10 @@ private
 
 def user_profile_params
     params.require(:user_profile).permit(:name, :profile, :avator, :headerimage, :pagetitle, :avator_cache, :headerimage_cache, :remove_avator, :remove_headerimage)
+end
+
+def set_profile
+    @profile = current_user.user_profile
 end
     
 end
