@@ -41,7 +41,7 @@ end
 private
 
 def user_profile_params
-    params.require(:user_profile).permit(:name, :profile, :avator, :headerimage, :avator_cache, :headerimage_cache, :pagetitle)
+    params.require(:user_profile).permit(:name, :profile, :avator, :headerimage, :pagetitle, :avator_cache, :headerimage_cache, :remove_avator, :remove_headerimage)
 end
     
 end

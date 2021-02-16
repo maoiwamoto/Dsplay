@@ -69,5 +69,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "jquery-rails"
 # devise
 gem 'devise', '~> 4.2'
-# アップロードfileのバリデーション
-gem 'file_validators'

@@ -1,6 +1,14 @@
 class AvatorUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   process resize_to_fill: [100, 100]
+  
+  def size_range
+  0..2.megabytes
+  end
+  
+   def extension_whitelist
+   %w(jpg jpeg png)
+   end
 
   # Choose what kind of storage to use for this uploader:
   storage :file

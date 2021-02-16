@@ -35,8 +35,10 @@
     <div class="attached_img_area">
     <%=  image_tag @profile.avator.url %>
     </div>
-    <%= f.hidden_field :avator_cache %>
+    <label><%= f.check_box :remove_avator %>アイコン画像を削除する</label>
     <% end %>
+    <%= f.hidden_field :avator_cache %>
+    
 <%= f.label :ユーザーアイコン画像 %>
 <%= f.file_field :avator %>
 
@@ -45,8 +47,9 @@
     <div class="attached_img_area">
     <%= image_tag @profile.headerimage.url %>
     </div>
-    <%= f.hidden_field :headerimage_cache %>
+    <label><%= f.check_box :remove_headerimage %>ヘッダー画像を削除する</label>
     <% end %>
+    <%= f.hidden_field :headerimage_cache %>
 
 <%= f.label :ヘッダー画像 %>
 <%= f.file_field :headerimage %>
