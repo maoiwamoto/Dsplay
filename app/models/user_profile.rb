@@ -4,5 +4,5 @@ class UserProfile < ApplicationRecord
     mount_uploader :headerimage, HeaderimageUploader
     validates :name, presence: true
     validates :pagetitle, presence: true
-    validates :profile, presence: true, length: {maximum: 300}
+    validates :profile, presence: true, length: {maximum: 15}
 end
