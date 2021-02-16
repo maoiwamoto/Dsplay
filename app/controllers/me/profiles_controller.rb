@@ -4,6 +4,7 @@ def index
 end
 
 def show
+    @pagetitle = "MyRoom"
     @profile = current_user.user_profile
     if @profile.nil?
         redirect_to new_me_profile_path

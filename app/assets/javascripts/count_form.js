@@ -1,8 +1,8 @@
 $(function(){
     
     function countInputText(input) {
-        const piyo = $(input).next('p').find('#counter');
-        const mofu = $(input).next('p').find('#limit');
+        const piyo = $(input).parents('#countable').find('#counter');
+        const mofu = piyo.next('span#limit');
         const maxLength = mofu.data("count");
         let countNum = String($(input).val().length);
         piyo.text(countNum + "文字");
@@ -17,7 +17,7 @@ $(function(){
     // フォーム入力時に文字数をカウントして表示
   $("input#input_text,textarea#input_text").on('keyup',function(){
        let countNum = String($(this).val().length);
-       const thisCounter = $(this).next('p').find('#counter');
+       const thisCounter = $(this).parents('#countable').find('#counter');
        const thisLimit = thisCounter.next('span#limit').data('count');
      // 現在の文字数と最大文字数を比較して、
    // 現在の文字数が多ければ赤く表示する

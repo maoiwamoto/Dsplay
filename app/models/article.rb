@@ -2,6 +2,8 @@ class Article < ApplicationRecord
   belongs_to :tag, optional: true
   belongs_to :user
   mount_uploader :photo, PhotoUploader
+  validates :title, length: {maximum: 50}
+  validates :body, presence:true, length: {maximum: 3000}
 
 # show画面で前後の投稿を取得
 
