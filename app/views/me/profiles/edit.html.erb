@@ -16,11 +16,13 @@
 
 <div class="field">
 <%= f.label :ユーザー名 %>
-<%= f.text_field :name %>
+<%= f.text_field :name, id: "input_text" %>
+<p><span id="counter">0文字</span> / <span id="limit" data-count="5">最大文字数</span></p>
 </div>
 <div class="field">
 <%= f.label :ユーザーページタイトル %>
-<%= f.text_field :pagetitle %>
+<%= f.text_field :pagetitle, id: "input_text" %>
+<p><span id="counter">0文字</span> / <span id="limit" data-count="10">最大文字数</span></p>
 </div>
 <div class="field">
 <%= f.label :プロフィール文 %>
