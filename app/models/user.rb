@@ -7,4 +7,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+         
+def tags
+return Tag.where(user_id: self.id)
+end
+         
 end

@@ -6,6 +6,9 @@
   <% if @tag.caption.present? %>
   <p><%= @tag.caption %></p>
   <% end %>
+  <hr>
+  このタグの作成者：<%= @tag.user.prof.name %>
+  <hr>
   
    <% if @tag.posts.present? %>
   <ul class="item_index_container">

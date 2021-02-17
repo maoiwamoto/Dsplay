@@ -20,7 +20,7 @@
     <ul class="side_menu">
     <li>画像投稿一覧</li>
     <li>文章投稿一覧</li>
-    <li>タグ一覧</li>
+    <li><%= link_to "タグ一覧", controller: "tags", action: "index", id: @user.id %></li>
     <li>メニュー</li>
     </ul>
         

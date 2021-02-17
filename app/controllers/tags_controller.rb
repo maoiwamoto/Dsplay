@@ -1,12 +1,14 @@
 class TagsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
-  before_action :set_tag, only: %i[ show edit update destroy ]
+  before_action :set_tag, only: %i[ edit update destroy ]
 
   def index
-    @tags = current_user.tags
+    @user = User.find_by(id: params[:id])
+    @tags = @user.tags
   end
 
   def show
+    @tag = Tag.find_by(id: params[:id])
   end
 
   def new
