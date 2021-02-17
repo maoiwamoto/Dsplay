@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_14_122402) do
+ActiveRecord::Schema.define(version: 2021_02_17_064611) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(version: 2021_02_14_122402) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "profs", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "pagetitle", null: false
+    t.text "profile", null: false
+    t.string "avator"
+    t.string "headerimage"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profs_on_user_id"
+  end
+
   create_table "tags", force: :cascade do |t|
     t.string "name", null: false
     t.text "caption"
@@ -43,18 +55,6 @@ ActiveRecord::Schema.define(version: 2021_02_14_122402) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.index ["user_id"], name: "index_tags_on_user_id"
-  end
-
-  create_table "user_profiles", force: :cascade do |t|
-    t.string "name"
-    t.text "profile"
-    t.string "avator"
-    t.string "headerimage"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "pagetitle", default: "myroom", null: false
-    t.index ["user_id"], name: "index_user_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

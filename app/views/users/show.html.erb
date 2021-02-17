@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag 'me' %>
+
+<div class="me_container">
+        
+<div class="side">
+        
+    <div class="header_area"><%= image_tag @user.prof.headerimage.url if @user.prof.headerimage.present? %></div>
+    
+    <div class="prof_z">
+      <div class="prof_box">
+         <div class="main_avator"><%= image_tag @user.prof.avator.url if @user.prof.avator.present? %></div>
+           <div class="user_info">
+             <h2><%= @user.prof.pagetitle %></h2>
+             <p class="user_title"><%= @user.prof.name %></p>
+             <p class="prof_text"><%= safe_join(@user.prof.profile.split("\n"),tag(:br)) %></p>
+          </div>
+       </div>
+   </div>
+    
+    <ul class="side_menu">
+    <li>画像投稿一覧</li>
+    <li>文章投稿一覧</li>
+    <li>タグ一覧</li>
+    <li>メニュー</li>
+    </ul>
+        
+</div>
+        
+        <div class="main"><p>投稿を表示</p><br><br><br><br><br></div>
+</div>

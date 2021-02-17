@@ -1,13 +1,13 @@
 <%= javascript_include_tag "count_form" %>
 
-<%= form_with model: @profile, url: me_profile_path, local: true do |f| %>
+<%= form_with model: prof ,local: true do |f| %>
 
-  <% if @profile.errors.any? %>
+  <% if prof.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+      <h2><%= pluralize(prof.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
       <ul>
-      <% @profile.errors.full_messages.each do |message| %>
+      <% prof.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -31,9 +31,9 @@
 </div>
 
   <div class="field">
-    <% if @profile.avator.present? %>
+    <% if prof.avator.present? %>
     <div class="attached_img_area">
-    <%=  image_tag @profile.avator.url %>
+    <%=  image_tag prof.avator.url %>
     </div>
     <label><%= f.check_box :remove_avator %>アイコン画像を削除する</label>
     <% end %>
@@ -44,9 +44,9 @@
    </div>
 
   <div class="field">
-    <% if @profile.headerimage.present? %>
+    <% if prof.headerimage.present? %>
     <div class="attached_img_area">
-    <%= image_tag @profile.headerimage.url %>
+    <%= image_tag prof.headerimage.url %>
     </div>
     <label><%= f.check_box :remove_headerimage %>ヘッダー画像を削除する</label>
     <% end %>

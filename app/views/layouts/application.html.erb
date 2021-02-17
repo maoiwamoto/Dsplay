@@ -15,10 +15,16 @@
       <header>
         <div class="left"><h1><a href="#">site name</a></h1></div>
         <div class="right">
-            <span>ログインユーザー名</span>
+          <% if user_signed_in? %>
+          <%= link_to user_path(current_user.id) do %>
+            <span><%= current_user.prof.name %></span>
+            <% end %>
             <div class="nav_avator">
+              <%= image_tag current_user.prof.avator.url if current_user.prof.avator.present? %>
             </div>
+             <% end %>
         </div>
+       
       </header>
     
     <main>

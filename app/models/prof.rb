@@ -1,4 +1,4 @@
-class UserProfile < ApplicationRecord
+class Prof < ApplicationRecord
     belongs_to :user
     mount_uploader :avator, AvatorUploader
     mount_uploader :headerimage, HeaderimageUploader
