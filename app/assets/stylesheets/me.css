@@ -2,19 +2,17 @@
 .me_container{ 
  min-height: 100vh;
  max-width: 100%;
- width: 950px;
- margin: 0 auto;
+ width: 100vw;
  display: flex;
- background: ;
 }
 
 .me_container .side{
-    width: 40%;
-    border: 1px solid;
+    width: 25vw;
+    outline: 1px solid;
 }
 
 .me_container .main{
-    width: 60%;
+    width: 75vw;
 }
 
 
@@ -103,10 +101,15 @@
     
     .me_container .main{
         width: 100%;
+        padding: 0;
     }
     
     .me_container .main_avator{
         margin: 0 auto;
     }
+    
+    .me_container .user_info{
+        text-align: center;
+}
     
 }

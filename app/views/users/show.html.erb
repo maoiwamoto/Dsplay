@@ -26,5 +26,11 @@
         
 </div>
         
-        <div class="main"><p>投稿を表示</p><br><br><br><br><br></div>
+        <div class="main">
+            <p>投稿を表示</p>
+        <div class="item_index_container">
+         <%= render partial: 'posts/post', collection: @user.posts, as: "post" %>
+        </div>
+        
+        </div>
 </div>
