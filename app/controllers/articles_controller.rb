@@ -1,13 +1,15 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
-  before_action :set_article, only: %i[ show edit update destroy ]
+  before_action :set_article, only: %i[ edit update destroy ]
   PER = 2
 
   def index
-    @articles = current_user.articles.page(params[:page]).per(PER)
+    @user = User.find_by(id: params[:id])
+    @articles = @user.articles.page(params[:page]).per(PER)
   end
 
   def show
+    @article = Article.find_by(id: params[:id])
   end
 
   def new

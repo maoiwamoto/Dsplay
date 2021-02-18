@@ -4,6 +4,10 @@ class Article < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   validates :title, length: {maximum: 50}
   validates :body, presence:true, length: {maximum: 3000}
+  
+  def user
+    return User.find_by(id: self.user_id)
+  end
 
 # show画面で前後の投稿を取得
 

@@ -11,5 +11,13 @@ class User < ApplicationRecord
 def tags
 return Tag.where(user_id: self.id)
 end
+
+def posts
+return Post.where(user_id: self.id)
+end
+
+def articles
+return Article.where(user_id: self.id)
+end
          
 end

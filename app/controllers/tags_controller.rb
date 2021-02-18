@@ -45,7 +45,7 @@ class TagsController < ApplicationController
 
     def set_tag
       @tag = current_user.tags.find_by(id: params[:id])
-      redirect_to(tags_url, alert: "ERROR!!") if @tag.blank?
+      redirect_to(tags_url, alert: "ERROR!!　指定したIDのタグは存在しません") if @tag.blank?
     end
 
     def tag_params

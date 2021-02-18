@@ -10,6 +10,7 @@
         <div class="post_data">
             <h1><%= @post.title %></h1>
             <p><%= safe_join(@post.caption.split("\n"),tag(:br)) %></p>
+            <p>ユーザー名：<%= @post.user.prof.name %></p>
             <time><%= @post.created_at.strftime("%Y-%m-%d") %></time>
             <hr>
             <p>トリミング後（tags/index）</p>

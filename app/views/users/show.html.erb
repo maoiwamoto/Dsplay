@@ -18,8 +18,8 @@
    </div>
     
     <ul class="side_menu">
-    <li>画像投稿一覧</li>
-    <li>文章投稿一覧</li>
+    <li><%= link_to "画像投稿一覧", controller: "posts", action: "index", id: @user.id %></li>
+    <li><%= link_to "文章投稿一覧", controller: "articles", action: "index", id: @user.id %></li>
     <li><%= link_to "タグ一覧", controller: "tags", action: "index", id: @user.id %></li>
     <li>メニュー</li>
     </ul>

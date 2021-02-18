@@ -12,4 +12,9 @@ class Post < ApplicationRecord
   def crop_image
     image.recreate_versions! if crop_x.present?
   end
+  
+  def user
+    return User.find_by(id: self.user_id)
+  end
+  
 end

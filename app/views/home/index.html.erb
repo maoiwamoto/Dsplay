@@ -7,7 +7,11 @@
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
   
   <hr>
+<% if current_user.prof.nil? %>
+<%= link_to "プロフィール作成", new_prof_path %>
+<% else %>
 <%= link_to "プロフィール編集", edit_prof_path %>
+<% end %>
   
 <% else %>
   <!-- ユーザーがログインしていなかった時の処理 -->

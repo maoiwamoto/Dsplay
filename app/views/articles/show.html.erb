@@ -14,6 +14,7 @@
         
         <div class="article_data">
             <h2><%= @article.title %></h2>
+            <p>ユーザー名：<%= @article.user.prof.name %></p>
             <time><%= @article.created_at.strftime("%Y-%m-%d") %></time>
             <hr>
             

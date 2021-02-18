@@ -1,22 +1,23 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: %i[ edit update destroy ]
 
  
   def index
-    @posts = current_user.posts
+      @user = User.find_by(id: params[:id])
+      @posts = @user.posts
   end
 
 
   def show
+     @post = Post.find_by(id: params[:id])
   end
 
 
   def new
     @post = current_user.posts.new
   end
-
-
+  
   def edit
   end
 
@@ -33,7 +34,6 @@ class PostsController < ApplicationController
         render :new, status: :unprocessable_entity
       end
   end
-
 
   def update
       if @post.update_attributes(post_params)

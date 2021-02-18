@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_064611) do
+ActiveRecord::Schema.define(version: 2021_02_17_110339) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(version: 2021_02_17_064611) do
   end
 
   create_table "profs", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "pagetitle", null: false
-    t.text "profile", null: false
+    t.string "name", default: "name", null: false
+    t.string "pagetitle", default: "MyPage", null: false
+    t.text "profile", default: "Hello World!", null: false
     t.string "avator"
     t.string "headerimage"
     t.integer "user_id"
