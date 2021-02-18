@@ -16,7 +16,7 @@
  *= require simple_li_partial
  */
  
- :root{
+:root{
  --ac-color: #f48fb1;
 }
 
@@ -93,6 +93,7 @@ main{
 
 
 /*postとarticleのedit画面で既存の添付画像がはみ出ないように設定------------------------------------*/
+
 .attached_img_area img{
     max-width: 100%;
 }

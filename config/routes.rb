@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'home#index'
   
+  get 'users/mypage' => 'users#mypage'
   get 'users/:id' => 'users#show'
-  get 'user/:id' => 'users#show'
   get 'users/:id/tags' => 'tags#index'
   get 'users/:id/posts' => 'posts#index'
   get 'users/:id/articles' => 'articles#index'

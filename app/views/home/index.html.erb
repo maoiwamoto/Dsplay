@@ -6,16 +6,10 @@
   <h4> メールアドレス： <%= current_user.email %> </h4>
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
   
-  <hr>
-<% if current_user.prof.nil? %>
-<%= link_to "プロフィール作成", new_prof_path %>
-<% else %>
-<%= link_to "プロフィール編集", edit_prof_path %>
-<% end %>
   
 <% else %>
   <!-- ユーザーがログインしていなかった時の処理 -->
   <h2> 現在ログインしていません </h2>
-  <%= link_to "ログイン", new_user_session_path, class: 'post' %> <!-- ログイン画面に移行する -->
-  <%= link_to "新規登録", new_user_registration_path, class: 'post' %> <!-- 新規登録画面に移行する -->
+  <%= link_to "ログイン", new_user_session_path %> <!-- ログイン画面に移行する -->
+  <%= link_to "新規登録", new_user_registration_path %> <!-- 新規登録画面に移行する -->
 <% end %>

@@ -1,0 +1,8 @@
+<h2>マイページ</h2>
+
+ 
+<% if current_user.prof.nil? %>
+<%= link_to "プロフィール作成", new_prof_path %>
+<% else %>
+<%= link_to "プロフィール編集", edit_prof_path %>
+<% end %>
