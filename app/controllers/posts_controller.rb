@@ -28,7 +28,7 @@ class PostsController < ApplicationController
         if params[:post][:image].present?
           render :crop
         else
-         redirect_to @post, notice: "Post was successfully created."
+         redirect_to action: :index, id: current_user.id, notice: "Post was successfully created."
         end
       else
         render :new, status: :unprocessable_entity
@@ -50,7 +50,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-      redirect_to posts_url, notice: "Post was successfully destroyed."
+      redirect_to action: :index, id: current_user.id, notice: "Post was successfully destroyed."
   end
 
   private

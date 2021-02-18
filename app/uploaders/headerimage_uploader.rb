@@ -1,6 +1,10 @@
 class HeaderimageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
-  process resize_to_limit: [800, 500]
+  process resize_to_limit: [700, 500]
+  
+  def size_range
+  0..2.megabytes
+  end
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -25,6 +29,10 @@ class HeaderimageUploader < CarrierWave::Uploader::Base
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+  
+  def extension_whitelist
+  %w(jpg jpeg png)
   end
 
 end

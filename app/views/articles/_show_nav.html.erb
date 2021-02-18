@@ -1,0 +1,50 @@
+ <div class="show_nav"><%# 前後のレコードに移動するナビゲーション %>
+                
+        <% if article.previous.present? %>
+        <div class="show_nav_item">
+        <%= link_to article_path(article.previous) do %>
+        <span><%= image_tag article.previous.photo.tiny.url if article.previous.photo.present? %></span>
+        <%= article.previous.title %>
+        <% end %></div>
+        <% end %>
+        
+        <% if article.next.present? %>
+        <div class="show_nav_item">
+        <%= link_to article_path(article.next) do %>
+        <span><%= image_tag article.next.photo.tiny.url if article.next.photo.present? %></span>
+        <%= article.next.title %>
+        <% end %></div>
+        <% end %>
+                
+        </div><%# show_nav %>
+        
+        <hr>
+        
+        <% if article.tag_id.present? %>
+        
+        <h3 class="h3_show_tag">
+        <%= link_to tag_path(article.tag) do %>
+        <%= article.tag.name %>
+        <% end %>
+        </h3>
+        
+        <div class="show_nav"><%# 同じタグに属する前後のレコードに移動するナビゲーション %>
+                
+        <% if article.prev_tag.present? %>
+        <div class="show_nav_item">
+        <%= link_to article_path(article.prev_tag) do %>
+        <span><%= image_tag article.prev_tag.photo.tiny.url if article.prev_tag.photo.present? %></span>
+        <%= article.prev_tag.title %>
+        <% end %></div>
+        <% end %>
+        
+        <% if article.next_tag.present? %>
+        <div class="show_nav_item">
+        <%= link_to article_path(article.next_tag) do %>
+        <span><%= image_tag article.next_tag.photo.tiny.url if article.next_tag.photo.present? %></span>
+        <%= article.next_tag.title %>
+        <% end %></div>
+        <% end %>
+        </div>
+        <% end %><%# タグ投稿ナビゲーション終了 %>
+            

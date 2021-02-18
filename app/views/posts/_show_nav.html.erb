@@ -1,0 +1,50 @@
+<div class="show_nav"><%# 前後のレコードに移動するナビゲーション %>
+                
+        <% if post.previous.present? %>
+        <div class="show_nav_item">
+        <%= link_to post_path(post.previous) do %>
+        <span><%= image_tag post.previous.image.tiny.url %></span>
+        <%= post.previous.title %>
+        <% end %></div>
+        <% end %>
+        
+        <% if post.next.present? %>
+        <div class="show_nav_item">
+        <%= link_to post_path(post.next) do %>
+        <span><%= image_tag post.next.image.tiny.url %></span>
+        <%= post.next.title %>
+        <% end %></div>
+        <% end %>
+                
+        </div><%# show_nav %>
+        
+        <hr>
+        
+        <% if post.tag_id.present? %>
+        
+        <h3 class="h3_show_tag">
+        <%= link_to tag_path(post.tag) do %>
+        <%= post.tag.name %>
+        <% end %>
+        </h3>
+        
+        <div class="show_nav"><%# 同じタグに属する前後のレコードに移動するナビゲーション %>
+                
+        <% if post.prev_tag.present? %>
+        <div class="show_nav_item">
+        <%= link_to post_path(post.prev_tag) do %>
+        <span><%= image_tag post.prev_tag.image.tiny.url %></span>
+        <%= post.prev_tag.title %>
+        <% end %></div>
+        <% end %>
+        
+        <% if post.next_tag.present? %>
+        <div class="show_nav_item">
+        <%= link_to post_path(post.next_tag) do %>
+        <span><%= image_tag post.next_tag.image.tiny.url %></span>
+        <%= post.next_tag.title %>
+        <% end %></div>
+        <% end %>
+        </div><%# show_nav %>
+        <% end %>
+           

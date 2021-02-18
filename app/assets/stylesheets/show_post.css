@@ -30,14 +30,16 @@ img{
     top: 0;
     left: 0;
     background: rgba(0,0,0,0.5);
+    z-index: 999;
 }
 
 #img_modal_body {
   position:fixed;/* 階層を上にする */
   max-width:90vw;/* モーダルの幅 */
   max-height:90vh;/* モーダルの高さ */
-  width: 800px;
-  height: 85vh;
+  width: 750px;
+  height: 95vh;
+  z-index: 9999;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);/* 指定した位置から真ん中にずらす */
@@ -45,7 +47,6 @@ img{
   overflow-x: scroll;
   overflow-y: scroll;
   border: 5px solid #ccc;
-  z-index: 99;
   overflow-scrolling: touch; 
 -webkit-overflow-scrolling: touch;
 }
@@ -59,5 +60,10 @@ img{
     height: auto;
     top: 0;
     left: 0;
+}
+
+/*---------------------------------------*/
+
+@media screen and (max-width: 639px) {
 
 }

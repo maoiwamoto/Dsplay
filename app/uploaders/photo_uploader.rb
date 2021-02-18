@@ -1,6 +1,10 @@
 class PhotoUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   process resize_to_limit: [700, 600]
+  
+  def size_range
+  0..2.megabytes
+  end
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -28,6 +32,10 @@ class PhotoUploader < CarrierWave::Uploader::Base
  
    version :tiny do
     process resize_to_fill: [120, 120]
+  end
+  
+  def extension_whitelist
+  %w(jpg jpeg png)
   end
  
 end
