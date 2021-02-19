@@ -1,13 +1,27 @@
 Rails.application.routes.draw do
   
-  devise_for :users
-  resources :articles
-  resources :posts
-  resources :tags
+  
+    devise_for :users, :controllers => {
+    :registrations => 'users/registrations',
+    :sessions => 'users/sessions',
+    :passwords => 'users/passwords',
+    :confirmations => 'users/confirmations',
+    :unlocks => 'users/unlocks',
+  }
+  
+    devise_scope :user do
+    root :to => "users/sessions#new"
+    get "signup", :to => "users/registrations#new"
+    get "verify", :to => "users/registrations#verify"
+    get "login", :to => "users/sessions#new"
+    get "logout", :to => "users/sessions#destroy"
+  end
+  
+  resources :articles, :posts, :tags
   resource :prof,only:[:new,:create,:edit,:update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'home#index'
   
+  get 'home/' => 'home#index'
   get 'users/mypage' => 'users#mypage'
   get 'users/:id' => 'users#show'
   get 'users/:id/tags' => 'tags#index'

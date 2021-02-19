@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   
   def show
       @user = User.find_by(id: params[:id])
-      redirect_to(root_path, alert: "ERROR!!　指定したIDのユーザーは存在しません") if @user.nil?
+      redirect_to(home_path, alert: "ERROR!!　指定したIDのユーザーは存在しません") if @user.nil?
   end
 
  private

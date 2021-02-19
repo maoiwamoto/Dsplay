@@ -34,6 +34,11 @@ gem 'rails-assets-jcrop', source: 'https://rails-assets.org'
 # ページネーション
 gem 'kaminari'
 
+# 環境変数を使用できる
+gem 'dotenv-rails'
+# 日本語化
+gem 'rails-i18n', '~> 5.1' 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

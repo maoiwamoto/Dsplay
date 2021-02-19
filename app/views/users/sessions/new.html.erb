@@ -1,0 +1,42 @@
+<h2>ログイン</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", required: "required" %>
+          <% if alert %>
+          <span>
+            <strong>メールアドレスが正しくない可能性があります。</strong>
+          </span>
+          <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password, autofocus: "true", autocomplete: "current-password", placeholder: "パスワード" %>
+          <% if alert %>
+          <span>
+            <strong>パスワードが正しくない可能性があります。</strong>
+          </span>
+          <% end %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me, "次回から自動的にログインする" %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ログイン" %>
+  </div>
+  <%= link_to "パスワードをお忘れの場合", new_user_password_path %>
+<% end %>
+
+<hr>
+<%= link_to "新規登録", new_user_registration_path %>
+
+
+
