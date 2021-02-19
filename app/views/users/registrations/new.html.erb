@@ -20,6 +20,17 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
+  
+   <%= f.fields_for :prof do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.label :pagetitle %>
+      <%= f.text_field :pagetitle %>
+      <%= f.label :profile %>
+      <%= f.text_area :profile %>
+    </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit "Sign up" %>

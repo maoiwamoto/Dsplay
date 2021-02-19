@@ -17,10 +17,10 @@
         <div class="right">
           <% if user_signed_in? %>
           <%= link_to controller: "users", action: "show", id: current_user.id do %>
-            <span><%= current_user.prof.name if current_user.prof.present? %></span>
+            <span><%= current_user.prof.name %></span>
             <% end %>
             <div class="nav_avator">
-              <%= image_tag current_user.prof.avator.url if current_user.prof.present? %>
+              <%= image_tag current_user.prof.avator.url if current_user.prof.avator.present? %>
             </div>
              <% end %>
         </div>
