@@ -27,10 +27,13 @@
 </div>
         
         <div class="main">
-            <p>投稿を表示</p>
+
+        <% if @user.posts.present? %>
+        <h3>posts</h3>
         <div class="item_index_container">
          <%= render partial: 'posts/post', collection: @user.posts, as: "post" %>
         </div>
+        <% end %>
         
         </div>
 </div>
