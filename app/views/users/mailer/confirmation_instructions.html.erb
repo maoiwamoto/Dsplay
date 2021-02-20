@@ -3,7 +3,7 @@
 <% if @resource.unconfirmed_email %>
 下記のリンクをクリックするとメールアドレスが変更されます。
 <% else %>
-下記のリンクをクリックしてユーザ登録を完了してください。
+下記のリンクをクリックしてユーザー登録を完了してください。
 <% end %>
 
 <p><%= link_to 'メールアドレス確認', controller: 'users/confirmations', action: 'create', confirmation_token: @token %></p>
