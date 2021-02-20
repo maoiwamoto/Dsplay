@@ -1,5 +1,5 @@
 <li class="card post">
-    <%= image_tag post.image.tiny.url %>
+    <%= image_tag post.image.tiny.url, alt: "サムネイル" %>
     <%= link_to post_path(post) do %>
     <span class="show">詳細を見る</span>
     <% end %>

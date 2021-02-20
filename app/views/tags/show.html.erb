@@ -1,10 +1,8 @@
 
-<h1>タグ個別ページ</h1>
-
 
   <h2><%= @tag.name %></h2>
   <% if @tag.caption.present? %>
-  <p><%= @tag.caption %></p>
+  <p><%= safe_join(@tag.caption.split("\n"),tag(:br)) %></p>
   <% end %>
   <hr>
   このタグの作成者：<%= @tag.user.prof.name %>

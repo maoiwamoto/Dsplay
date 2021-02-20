@@ -1,16 +1,17 @@
 <h2>パスワードの再設定</h2>
 
       <p>
-        ご登録時のメールアドレスを入力してください。<br>
-        パスワード再発行用のメールをお送りします。
+        パスワードをお忘れの場合、下記のフォームにご登録時のメールアドレスを入力してください。<br>
+        パスワード再発行用のメールをお送りします。<br>
+        お送りしたメール内に記載のリンクから、再設定を完了してください。
       </p>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %>
+    <%= f.label :email, "ご登録時のメールアドレス" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力" %>
   </div>
 
   <div class="actions">

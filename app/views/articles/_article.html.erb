@@ -1,6 +1,6 @@
 <div class="card article">
     <% if article.photo.present? %>
-    <%=  image_tag article.photo.thumb.url %>
+    <%=  image_tag article.photo.thumb.url, alt: "サムネイル" %>
     <% end %>
         <div class="body_bg"><p><%= safe_join(article.body.split("\n"),tag(:br)) %></p></div>
         <%= link_to article_path(article) do %>

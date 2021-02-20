@@ -4,11 +4,11 @@
     <div class="post_container">
         
      <div class="main_img_area">
-      <%= image_tag @post.image.url %>
+      <%= image_tag @post.image.url, alt: "添付画像" %>
         </div>
         
         <div class="post_data">
-            <h1><%= @post.title %></h1>
+            <h2><%= @post.title %></h2>
             <p><%= safe_join(@post.caption.split("\n"),tag(:br)) %></p>
             <p>ユーザー名：<%= @post.user.prof.name %></p>
             <time><%= @post.created_at.strftime("%Y-%m-%d") %></time>

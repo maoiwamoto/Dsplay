@@ -5,16 +5,28 @@
 <div class="crop_html_container">
   
      
-        <h3>Crop Avatar</h3>
+        <h2>画像のトリミング</h2>
+        
+        <p>アイコン用画像を好きな位置でトリミングできます。<br>
+        作成したアイコンはタグ一覧ページなどのサムネイルとして使用します。</p>
+        
+        <p>※PC版向けの機能のため、スマートフォンからの操作だと正常に動作しない場合があります。<br> 
+        その場合、「トリミングをスキップする」を押すと自動的にリサイズしたアイコンを生成して保存します。
+        </p>
+
+        
+        <%= link_to 'トリミングをスキップする', posts_path %>
+        
+        <hr>
   
   
         <div class="croparea_box">
-        <%= image_tag @post.image_url(:thumb), id: "cropbox" %>
+        <%= image_tag @post.image_url(:thumb), alt: "サムネイル", id: "cropbox" %>
         </div>
         
         <h3>Preview</h3>
         <div class="preview_box">
-          <%= image_tag @post.image.url(:thumb), id: "preview" %>
+          <%= image_tag @post.image.url(:thumb), alt: "プレビュー画像", id: "preview" %>
         </div>
         
         <hr>
@@ -22,9 +34,9 @@
           <% %w[x y w h].each do |attribute| %>
             <%= f.text_field "crop_#{attribute}" %>
               <% end %>
-          <div class="form-actions"><%= f.submit %></div>
+          <div class="form-actions"><%= f.submit "アイコンを作成する" %></div>
         <% end %>
         
-        <%= link_to 'トリミングをスキップする', posts_path %>
+        
 
 </div>

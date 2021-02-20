@@ -4,7 +4,7 @@
         
      <div class="photo_area">
        <% if @article.photo.present? %>
-         <%= image_tag @article.photo.url %>
+         <%= image_tag @article.photo.url, alt: "イメージ画像" %>
          <% end %>
         </div>
         

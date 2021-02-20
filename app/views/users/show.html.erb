@@ -4,11 +4,11 @@
         
 <div class="side">
         
-    <div class="header_area"><%= image_tag @user.prof.headerimage.url if @user.prof.headerimage.present? %></div>
+    <div class="header_area"><%= image_tag @user.prof.headerimage.url, alt: "ヘッダー画像" if @user.prof.headerimage.present? %></div>
     
     <div class="prof_z">
       <div class="prof_box">
-         <div class="main_avator"><%= image_tag @user.prof.avator.url if @user.prof.avator.present? %></div>
+         <div class="main_avator"><%= image_tag @user.prof.avator.url, alt: "ユーザーアイコン" if @user.prof.avator.present? %></div>
            <div class="user_info">
              <h2><%= @user.prof.pagetitle %></h2>
              <p class="user_title"><%= @user.prof.name %></p>

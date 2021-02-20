@@ -1,8 +1,10 @@
+
+<h2>投稿の新規作成・編集</h2>
+
 <%= form_with(model: article, local: true) do |form| %>
   <% if article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
       <ul>
       <% article.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,32 +14,37 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title, "タイトル" %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :body %>
+    <%= form.label :body, "本文" %>
     <%= form.text_area :body %>
   </div>
   
     <div class="field">
     <% if article.photo.present? %>
     <div class="attached_img_area">
-    <%=  image_tag article.photo.thumb.url %>
+    <%=  image_tag article.photo.thumb.url, alt: "サムネイル" %>
     </div>
-    <%= form.hidden_field :photo_cache %>
+    <label><%= form.check_box :remove_photo %>添付画像を削除する</label>
     <% end %>
-     <%= form.label :photo %>
+    <%= form.hidden_field :photo_cache %>
+     <%= form.label :photo, "イメージ画像" %>
      <%= form.file_field :photo %>
     </div>
 
   <div class="field">
-    <%= form.label :tag_id %>
+    <%= form.label :tag_id, "タグの設定・変更" %>
+    <p>この投稿と関連づける作成済みのタグを選んでください。<br>
+    デフォルトでは未選択となっています。<br>
+    すでにタグ付けがされている場合、先頭の空白行を選択することでタグの解除ができます。
+    </p>
     <%= form.collection_select(:tag_id, current_user.tags, :id, :name, include_blank: true) %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "投稿する" %>
   </div>
 <% end %>

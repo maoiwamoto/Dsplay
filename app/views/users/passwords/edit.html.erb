@@ -1,24 +1,25 @@
 <h2>パスワードの再設定</h2>
+<p>以下のフォームから新しいパスワードを設定してください。</p>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
   <%= f.hidden_field :reset_password_token %>
 
   <div class="field">
-    <%= f.label :password, "New password" %><br />
+    <%= f.label :password, "新しいパスワード" %><br />
     <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+      <em>(<%= @minimum_password_length %>文字以上)</em>
     <% end %>
     <%= f.password_field :password, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :password_confirmation, "新しいパスワードの確認" %><br />
+    <%= f.password_field :password_confirmation, placeholder: "新しいパスワードを再入力" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Change my password" %>
+    <%= f.submit "パスワードを設定する" %>
   </div>
 <% end %>
 

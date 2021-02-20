@@ -1,8 +1,10 @@
+
+<h2>タグの作成・編集</h2>
+
 <%= form_with(model: tag, local: true) do |form| %>
   <% if tag.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
-
       <ul>
       <% tag.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,16 +14,16 @@
   <% end %>
 
   <div class="field">
-    <p>タグ名</p>
+    <%= form.label :name, "タグ名" %>
     <%= form.text_field :name %>
   </div>
   
     <div class="field">
-    <p>タグの説明文</p>
+    <%= form.label :caption, "タグの説明文" %>
     <%= form.text_area :caption %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "送信" %>
   </div>
 <% end %>
