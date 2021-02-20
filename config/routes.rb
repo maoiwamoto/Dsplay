@@ -23,9 +23,9 @@ Rails.application.routes.draw do
   
   get 'home/' => 'home#index'
   get 'users/mypage' => 'users#mypage'
-  get 'users/:id' => 'users#show'
-  get 'users/:id/tags' => 'tags#index'
-  get 'users/:id/posts' => 'posts#index'
-  get 'users/:id/articles' => 'articles#index'
+  get 'users/:id' => 'users#show', as: 'me'
+  get 'users/:id/tags' => 'tags#index', as: 'her_tags'
+  get 'users/:id/posts' => 'posts#index', as: 'her_posts'
+  get 'users/:id/articles' => 'articles#index', as: 'her_articles'
   
 end

@@ -1,6 +1,6 @@
 class HeaderimageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
-  process resize_to_limit: [800, 500]
+  process resize_to_limit: [700, 400]
   
   def size_range
   0..2.megabytes

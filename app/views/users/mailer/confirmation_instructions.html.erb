@@ -1,9 +1,13 @@
 <p>こんにちは !</p>
 
-<p>ユーザー登録を完了してください。</p>
+<% if @resource.unconfirmed_email %>
+下記のリンクをクリックするとメールアドレスが変更されます。
+<% else %>
+下記のリンクをクリックしてユーザ登録を完了してください。
+<% end %>
 
 <p><%= link_to 'メールアドレス確認', controller: 'users/confirmations', action: 'create', confirmation_token: @token %></p>
 
 <p>心当たりがない場合は、本メッセージは破棄してください。</p>
 
-<p>Ruby on Rails</p>
+<p>Dsplay</p>

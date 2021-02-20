@@ -13,15 +13,11 @@
   <body>
       
       <header>
-        <div class="left"><h1><%= link_to "site name", home_path %></h1></div>
+        <div class="left"><h1><%= link_to "Dsplay", home_path %></h1></div>
         <div class="right">
           <% if user_signed_in? %>
-          <%= link_to controller: "users", action: "show", id: current_user.id do %>
-            <span><%= current_user.prof.name %></span>
-            <% end %>
-            <div class="nav_avator">
-              <%= image_tag current_user.prof.avator.url if current_user.prof.avator.present? %>
-            </div>
+          <div><%= link_to me_path(current_user) do %><%= current_user.prof.name %><span class="nav_avator"><%= image_tag current_user.prof.avator.url if current_user.prof.avator.present? %></span><% end %></div>
+          <div><%= link_to users_mypage_path do %><i class="fas fa-home"></i><% end %></div>
              <% end %>
         </div>
        

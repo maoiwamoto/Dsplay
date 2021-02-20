@@ -54,20 +54,35 @@ header{
 
 header .left{
     width: auto;
+    height: 100%;
 }
 
 header .right{
-    display: flex;
-    align-items: center;
     margin-right: 0;
     margin-left: auto;
-    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: var(--ac-color);
+}
+
+header .right div{
+    border-left: 1px dashed;
+    padding: 0 10px;
+    height: 100%;
+}
+
+header .right a{
+    display: flex;
+    align-items: center;
+    color: #fff;
     font-size: 10px;
 }
 
 header .nav_avator{
     height: 50px;
     width: 50px;
+    display: block;
     margin-left: 10px;
     border-radius: 50%;
     background: #ccc;
@@ -81,14 +96,15 @@ header .nav_avator img{
     object-fit: cover;
 }
 
-header .right span{
-    font-weight: bold;
+.right i{
+    font-size: 40px;
+    line-height: 50px;
 }
 
 /*<main>---------*/
 
 main{
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 
