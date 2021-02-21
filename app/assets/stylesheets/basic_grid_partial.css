@@ -3,10 +3,9 @@
     --item-c: 3;
 }
 
-/*--item-box-wはme.cssのmainの横幅と同じに設定*/
 
 .item_index_container{
-    width: var(--item-box-w);/*me.cssのmainの幅と同じに設定*/
+    width: var(--item-box-w);
     display: grid;
     grid-template-columns: repeat(var(--item-c),1fr);
     grid-auto-rows: calc(var(--item-box-w) / var(--item-c));

@@ -1,8 +1,12 @@
 
+:root{
+    --item-box-w: 60vw;
+    --item-c: 3;
+}
+
 .me_container{ 
- min-height: 100vh;
- max-width: 100%;
- width: 100vw;
+ width: 90vw;
+ margin: 0 auto;
  display: flex;
 }
 
@@ -12,7 +16,8 @@
 }
 
 .me_container .main{
-    width: 75vw;
+    width: 65vw;
+    background: silver;
 }
 
 
@@ -86,9 +91,16 @@
 }
 
 @media screen and (max-width: 769px) {
+    
+    :root{
+    --item-box-w: 95vw;
+    --item-c: 2;
+}
+    
 
     .me_container{
         display: inherit;
+        width: 100%;/*vwじゃなくてパーセント指定*/
     }
     
     .me_container .side{
