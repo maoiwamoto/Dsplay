@@ -49,6 +49,8 @@ img{
   border: 5px solid #ccc;
   overflow-scrolling: touch; 
 -webkit-overflow-scrolling: touch;
+
+background-image: url('zoombg.png');
 }
 
 

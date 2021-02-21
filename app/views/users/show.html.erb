@@ -31,7 +31,14 @@
         <% if @user.posts.present? %>
         <h3>posts</h3>
         <div class="item_index_container">
-         <%= render partial: 'posts/post', collection: @user.posts, as: "post" %>
+         <%= render partial: 'posts/post', collection: @user.posts.limit(6).order('id DESC'), as: "post" %>
+        </div>
+        <% end %>
+        
+        <% if @user.articles.present? %>
+        <h3>articles</h3>
+        <div class="item_index_container">
+         <%= render partial: 'articles/article', collection: @user.articles.limit(6).order('id DESC'), as: "article" %>
         </div>
         <% end %>
         
