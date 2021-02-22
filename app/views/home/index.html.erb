@@ -1,2 +1,23 @@
-<h1>home/index.html</h1>
+<%= stylesheet_link_tag 'home' %>
 
+<div class="home_main_img_area"><%= image_tag 'main.jpg', alt: "ヘッダー画像" %></div>
+
+<div class="home_container">
+
+    <h2>このサイトについて</h2>
+    
+<div class="home_flex_box">
+    <div class="intro"><%= image_tag 'post.png', alt: "アイコン" %><h3>画像投稿</h3><p>投稿機能の説明。</p></div>
+    <div class="intro"><%= image_tag 'article.png', alt: "アイコン" %><h3>文章投稿</h3><p>投稿機能の説明。</p></div>
+    <div class="intro"><%= image_tag 'tag.png', alt: "アイコン" %><h3>タグ作成</h3><p>タグ機能の説明。</p></div>
+</div>
+
+    <h2>ユーザーの新着投稿</h2>
+    <p>ユーザーの投稿</p>
+    <div class="item_index-container"></div>
+    
+    <h2>使用例の紹介</h2>
+    <p>サンプルアカウントの紹介</p>
+    <div class="item_index-container"></div>
+
+</div>

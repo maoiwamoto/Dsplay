@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   }
   
     devise_scope :user do
-    root :to => "users/sessions#new"
     get "signup", :to => "users/registrations#new"
     get "verify", :to => "users/registrations#verify"
     get "login", :to => "users/sessions#new"
@@ -21,6 +20,7 @@ Rails.application.routes.draw do
   resource :prof,only:[:edit,:update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
+  root to: "home#index"
   get 'home/' => 'home#index'
   get 'users/mypage' => 'users#mypage'
   get 'users/:id' => 'users#show', as: 'me'
