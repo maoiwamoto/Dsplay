@@ -1,3 +1,4 @@
+<%= javascript_include_tag "count_form" %>
 
 <h2>投稿の新規作成・編集</h2>
 
@@ -13,14 +14,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" id="countable">
     <%= form.label :title, "タイトル" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, id: "input_text" %>
+    <p><span id="counter">0文字</span> / <span id="limit" data-count="20">最大文字数</span></p>
   </div>
 
-  <div class="field">
+  <div class="field" id="countable">
     <%= form.label :body, "本文" %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, id: "input_text" %>
+    <p><span id="counter">0文字</span> / <span id="limit" data-count="3000">最大文字数</span></p>
   </div>
   
     <div class="field">

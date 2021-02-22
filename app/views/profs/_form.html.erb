@@ -1,5 +1,7 @@
 <%= javascript_include_tag "count_form" %>
 
+<h2>プロフィール編集</h2>
+
 <%= form_with model: prof, local: true do |f| %>
 
   <% if prof.errors.any? %>
@@ -17,7 +19,7 @@
 <div class="field" id="countable">
 <%= f.label :name,"ユーザー名" %>
 <%= f.text_field :name, id: "input_text" %>
-<p><span id="counter">0文字</span> / <span id="limit" data-count="15">最大文字数</span></p>
+<p><span id="counter">0文字</span> / <span id="limit" data-count="10">最大文字数</span></p>
 </div>
 <div class="field" id="countable">
 <%= f.label :pagetitle ,"ユーザーページタイトル" %>
