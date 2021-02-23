@@ -38,14 +38,14 @@ class TagsController < ApplicationController
 
   def destroy
     @tag.destroy
-      redirect_to tags_url, notice: "Tag was successfully destroyed."
+      redirect_to her_tags_path(current_user.id), notice: "Tag was successfully destroyed."
   end
 
   private
 
     def set_tag
       @tag = current_user.tags.find_by(id: params[:id])
-      redirect_to(tags_url, alert: "ERROR!!　指定したIDのタグは存在しません") if @tag.blank?
+      redirect_to(root_path, alert: "error") if @tag.blank?
     end
 
     def tag_params

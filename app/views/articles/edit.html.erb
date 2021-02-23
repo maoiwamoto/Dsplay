@@ -1,4 +1,7 @@
+<h2>投稿の編集</h2>
 
 <%= render 'form', article: @article %>
 
 <%= link_to '作品ページにもどる', @article %> 
+
+<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>

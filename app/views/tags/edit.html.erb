@@ -1,5 +1,7 @@
-
+<h2>タグの編集</h2>
 
 <%= render 'form', tag: @tag %>
 
 <%= link_to 'タグの詳細ページにもどる', @tag %>
+
+<%= link_to 'Destroy', @tag, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -1,7 +1,5 @@
 <%= javascript_include_tag "count_form" %>
 
-<h2>タグの作成・編集</h2>
-
 <%= form_with(model: tag, local: true) do |form| %>
   <% if tag.errors.any? %>
     <div id="error_explanation">

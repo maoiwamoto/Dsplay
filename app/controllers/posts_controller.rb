@@ -50,14 +50,14 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-      redirect_to action: :index, id: current_user.id, notice: "Post was successfully destroyed."
+      redirect_to her_posts_path(current_user.id), notice: "Post was successfully destroyed."
   end
 
   private
 
     def set_post
       @post = current_user.posts.find_by(id: params[:id])
-      redirect_to(posts_url, alert: "ERROR!!") if @post.blank?
+      redirect_to(root_path, alert: "ERROR!!") if @post.blank?
     end
 
     def post_params

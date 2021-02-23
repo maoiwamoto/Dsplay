@@ -39,13 +39,13 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-      redirect_to articles_url, notice: "Article was successfully destroyed."
+      redirect_to her_articles_path(current_user.id), notice: "Article was successfully destroyed."
   end
 
   private
     def set_article
       @article = current_user.articles.find_by(id: params[:id])
-      redirect_to(articles_url, alert: "ERROR!!") if @article.blank?
+      redirect_to(root_path, alert: "ERROR!!") if @article.blank?
     end
 
     def article_params

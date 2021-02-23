@@ -1,7 +1,5 @@
 <%= javascript_include_tag "count_form" %>
 
-<h2>投稿の新規作成・編集</h2>
-
 <%= form_with(model: article, local: true) do |form| %>
   <% if article.errors.any? %>
     <div id="error_explanation">

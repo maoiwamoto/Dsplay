@@ -16,8 +16,7 @@
             <p>トリミング後（tags/index）</p>
             <%=  image_tag @post.image.tiny.url %>
             <hr>
-            <%= link_to 'Edit', edit_post_path(@post) %> <br>
-           <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Edit', edit_post_path(@post) %> 
            
         <%= render partial: 'show_nav', locals: { post: @post } %>
            

@@ -75,10 +75,8 @@ header{
     border-bottom: 1px solid;
     height: 50px;
     background: rgba(255,255,255,0.9);
-    
     display: flex;
     flex-wrap: no-wrap;
-    align-items: center;
 }
 
 header h1 img{
@@ -107,14 +105,16 @@ header .first a{
 
 header .first .name{
     font-size: 12px;
-    padding-right: 10px;
+    padding-right: 8px;
 }
 
 header .nav_avator{
-    height: 50px;
-    width: 50px;
+    height: 49px;
+    width: 49px;
     border-radius: 50%;
-    background: #ccc;
+    background-color: #fff;
+    background-image: url("icon.jpg");
+    background-size: contain;
     overflow: hidden;
 }
 
@@ -228,7 +228,7 @@ nav.pagination span i:hover{
 }
 
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 415px) {
 
 header .first .name{
     display: none;

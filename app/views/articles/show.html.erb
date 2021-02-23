@@ -19,7 +19,6 @@
             <hr>
             
             <%= link_to 'Edit', edit_article_path(@article) %> 
-            <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
             
             <%= render partial: 'show_nav', locals: { article: @article } %>
             
