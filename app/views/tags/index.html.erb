@@ -1,7 +1,9 @@
+<%= stylesheet_link_tag 'tags_index' %>
 
-<h1><%= @user.prof.name %>のタグ一覧ページ</h1>
+<%= link_to 'タグの新規作成', new_tag_path %>
 
-<%= link_to 'New Tag', new_tag_path %>
-<hr>
+<div class="tag_cards_container">
 
  <%= render partial: 'tag', collection: @tags, as: "tag" %>
+ 
+ </div>

@@ -1,7 +1,5 @@
-<div style="background: #ccc;">
-  <h2>タグ名：<%= tag.name %></h2>
-  <%= link_to "Show", tag_path(tag) %>
-  <hr>
+<div class="tag_card">
+  <span class="tagname"><%= tag.name %></span>
   
   <% if tag.posts.present? %>
   <ul class="list_item_container">
@@ -13,7 +11,7 @@
   <%= render partial: 'articles/article_small', collection: tag.articles, as: "article" %>
   </ul>
   <% end %>
-
   
+  <%= link_to "Show", tag_path(tag) %>
+
   </div>
-  <br>
