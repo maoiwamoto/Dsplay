@@ -13,7 +13,7 @@ ul.list_item_container{
 }
 
 .list_item_container .card{
-    background: #424242;
+    background: rgba(0,0,0,0.8);
     overflow: hidden;
     position: relative;
     overflow: hidden;

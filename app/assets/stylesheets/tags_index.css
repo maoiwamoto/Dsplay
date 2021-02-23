@@ -5,11 +5,23 @@
 }
 
 .tag_card{
-    background: pink;
-    margin: 25px 0;
+    margin: 35px 0;
     padding-left: 20px;
     padding-bottom: 20px;
-    border-left: 3px solid;
+    position: relative;
+}
+
+.tag_card::before{
+    content: "";
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom,#000,transparent);
+    background-size: auto 150%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
 }
 
 .tag_card .tagname{
@@ -24,4 +36,17 @@
     font-weight: 900;
     content: "\f292";
     padding-right: 10px;
+}
+
+@media screen and (max-width: 639px) {
+
+.tag_card{
+    padding-left: 0;
+    position: static;
+}
+
+.tag_card::before{
+    display: none;
+}
+
 }
