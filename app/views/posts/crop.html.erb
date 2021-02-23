@@ -1,5 +1,4 @@
-<%= javascript_include_tag 'post_crop' %>
-<%= javascript_include_tag 'post_crop_js' %>
+
 <%= stylesheet_link_tag 'crop_style' %>
 
 <div class="crop_html_container">
@@ -15,7 +14,7 @@
         </p>
 
         
-        <%= link_to 'トリミングをスキップする', posts_path %>
+        <%= link_to 'トリミングをスキップする', post_path(@post) %>
         
         <hr>
   
@@ -40,3 +39,6 @@
         
 
 </div>
+
+<%= javascript_include_tag 'post_crop' %>
+<%= javascript_include_tag 'post_crop_js' %>
