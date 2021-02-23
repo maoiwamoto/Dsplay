@@ -22,11 +22,9 @@
         
         <% if article.tag_id.present? %>
         
-        <h3 class="h3_show_tag">
-        <%= link_to tag_path(article.tag) do %>
+        <%= link_to tag_path(article.tag), class: "ttr_tag" do %>
         <%= article.tag.name %>
         <% end %>
-        </h3>
         
         <div class="show_nav"><%# 同じタグに属する前後のレコードに移動するナビゲーション %>
                 

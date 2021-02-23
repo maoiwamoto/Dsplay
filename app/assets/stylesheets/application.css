@@ -191,16 +191,17 @@ nav.pagination span i:hover{
 
 /*投稿詳細画面の前後のレコード取得用のnav（postとarticle兼用）---------*/
 
-.h3_show_tag{
+.ttr_tag{
+    display: block;
     text-align: center;
-    margin: 1em 0;
+    width: fit-content;
+    margin: 1em auto;
+    font-size: 17px;
+    font-weight: bold;
 }
 
-.h3_show_tag a{
-    color: ;
-}
 
-.h3_show_tag a::before{
+.ttr_tag::before{
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f292";
@@ -227,12 +228,12 @@ nav.pagination span i:hover{
     display: block;
     width: 80px;
     height: 80px;
-    background-color: #fff;
+    background-color: #000;
     background-image: url('show_nav.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90% auto;
-    border: 2px solid;
+    border: 2px solid pink;
     border-radius: 50%;
     margin: 0 auto;
     overflow: hidden;
