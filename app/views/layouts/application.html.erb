@@ -21,12 +21,12 @@
           <div><%= link_to users_mypage_path do %><i class="fas fa-home"></i><% end %></div>
              <% end %>
         </div>
-       
       </header>
     
     <main>
-      <p class="notice"><%= notice %></p>
-   　　<p class="alert"><%= alert %></p>
+    <% flash.each do |key, value| %>
+    <%= content_tag :div, class: "flash_box" do %><%= content_tag :p, value, class: key %><% end %>
+    <% end %>
     <%= yield %>
     </main>
     

@@ -36,6 +36,23 @@ a{
     color: var(--ac-color);
 }
 
+/*flashのnotice,alertのdivの指定-------------------*/
+
+.flash_box{
+    border: 2px solid var(--ac-color);
+    border-radius: 3px;
+    padding: 1em;
+    margin: 5px;
+}
+
+.notice{
+    color: #000;
+}
+
+.alert{
+    color: red;
+}
+
 /*appヘッダーナビ-----*/
 
 header{
@@ -104,7 +121,7 @@ header .nav_avator img{
 /*<main>---------*/
 
 main{
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 
