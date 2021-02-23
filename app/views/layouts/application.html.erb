@@ -17,7 +17,7 @@
         <div class="left"><h1><%= link_to root_path do %><%= image_tag 'app_logo.png', alt: "Dsplay" %><% end %></h1></div>
         <div class="right">
           <% if user_signed_in? %>
-          <div><%= link_to me_path(current_user) do %><%= current_user.prof.name %><span class="nav_avator"><%= image_tag current_user.prof.avator.url, alt: "ユーザーアイコン" if current_user.prof.avator.present? %></span><% end %></div>
+          <div class="first"><%= link_to me_path(current_user) do %><span class="name"><%= current_user.prof.name %></span><span class="nav_avator"><%= image_tag current_user.prof.avator.url, alt: "ユーザーアイコン" if current_user.prof.avator.present? %></span><% end %></div>
           <div><%= link_to users_mypage_path do %><i class="fas fa-home"></i><% end %></div>
              <% end %>
         </div>
