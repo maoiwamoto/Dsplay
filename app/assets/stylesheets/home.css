@@ -43,6 +43,11 @@
     padding: 20px 5px;
 }
 
+.home_form_area{
+    width: 80%;
+    margin: 0 auto;
+}
+
 
 @media screen and (max-width: 769px) {
     

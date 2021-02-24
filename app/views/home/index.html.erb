@@ -21,5 +21,15 @@
     <h2>使用例の紹介</h2>
     <p>サンプルアカウントの紹介</p>
     <div class="item_index-container"></div>
+    
+    <% if user_signed_in? %>
+    <hr>
+    <% else %>
+    <div class="home_form_area">
+        <%= render('login') %>
+        <%= link_to "新規登録", new_user_registration_path %>
+        <%= link_to "パスワードをお忘れの場合", new_user_password_path %>
+    </div>
+    <% end %>
 
 </div>

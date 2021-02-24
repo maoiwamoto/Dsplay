@@ -1,6 +1,19 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+a{
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--main-color);
+}
+
+p{
+    margin: 0;
+}
+
 input {
 width: 100%;
 box-sizing: border-box;
@@ -18,6 +31,6 @@ input[type=checkbox]{
 }
 
 input[type=submit]{
-    background: #f7f6fb;
+    background: #eeeaec;
     outline: none;
 }
