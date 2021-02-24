@@ -16,6 +16,7 @@
         <div class="article_data">
             <span class="title"><%= @article.title %></span>
             <time><%= @article.created_at.strftime("%Y-%m-%d") %></time>
+        </div><%# article_data %>
 
     <div class="show_user_nav">
         <div class="show_avator">
@@ -26,17 +27,19 @@
             <% end %>
         </div>
         <div class="right">
-        <span class="pagetitle">ページタイトル</span>
-        <span class="username">ユーザー名</span>
+        <%= link_to me_path(@article.user.id), class: "pagetitle" do %>
+        <span>ページタイトル</span>
+        <% end %>
+        <span class="username"><%= @article.user.prof.name %></span>
             <div class="link_box">
-            <a href="#">一覧へ</a>
-            <%= link_to '編集', edit_article_path(@article) %> 
+            <%= link_to "back" , her_articles_path(@article.user.id), class: "back" %>
+            <% if user_signed_in? %>
+            <%= link_to "edit", edit_article_path(@article), class: "edit"%>
+            <% end %>
             </div>
         </div>
     </div>
             
             <%= render partial: 'show_nav', locals: { article: @article } %>
-            
-        </div><%# article_data %>
         
     </div>

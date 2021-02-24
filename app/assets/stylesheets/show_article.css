@@ -13,8 +13,7 @@
     height: 300px;
     position: relative;
     background-color: #000;
-    background-image: url('me_header.png');
-    background-position: center;
+    background-image: url('dia.png');
 }
 
 .photo_area img{

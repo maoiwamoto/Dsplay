@@ -29,7 +29,7 @@
     width: 100%;
     height: 300px;
     overflow: hidden;
-    background-image: url('me_header.png');
+    background-image: url('dia.png');
     background-color: #000;
     background-position: center;
 }
@@ -65,7 +65,7 @@
     border-radius: 20%;
     border: 3px solid;
     background-color: #fff;
-    background-image: url('icon.jpg');
+    background-image: url('witch.jpg');
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;

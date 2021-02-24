@@ -36,11 +36,40 @@
     display: block;
     font-size: 16px;
     font-weight: bold;
+    padding: 7px 1em;
+    line-height: 1;
 }
 
 .show_user_nav .username{
     display: block;
     font-size: 13px;
+}
+
+.show_user_nav .link_box{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.show_user_nav .link_box a{
+    display: block;
+    font-size: 11px;
+    padding: 10px 20px;
+}
+
+.show_user_nav .link_box a::before{
+    display: block;
+    font-size: 20px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.show_user_nav .link_box .back::before{
+    content: "\f0e2";
+}
+
+.show_user_nav .link_box .edit::before{
+    content: "\f5ac";
 }
 
 @media screen and (max-width:813px) {
@@ -66,16 +95,16 @@
     
     .show_user_nav .right{
         background: pink;
-        width: calc(100% - 100px);
+        width: calc(100% - 80px);
     }
     
     .show_user_nav .pagetitle{
-        text-align: center;
+    padding: 15px 1em;
     }
     
     .show_user_nav .link_box{
         background: skyblue;
-        text-align: right;
+        justify-content: flex-end;
     }
     
 }
