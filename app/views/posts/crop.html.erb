@@ -1,5 +1,8 @@
-
+<% content_for :css do %>
 <%= stylesheet_link_tag 'crop_style' %>
+<%= javascript_include_tag 'post_crop' %>
+<%= javascript_include_tag 'post_crop_js' %>
+<% end %>
 
 <div class="crop_html_container">
   
@@ -40,5 +43,3 @@
 
 </div>
 
-<%= javascript_include_tag 'post_crop' %>
-<%= javascript_include_tag 'post_crop_js' %>

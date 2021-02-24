@@ -1,6 +1,7 @@
+<% content_for :css do %>
 <%= javascript_include_tag "count_form" %>
+<% end %>
 
-<h2>プロフィール編集</h2>
 
 <%= form_with model: prof, local: true do |f| %>
 
