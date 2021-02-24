@@ -20,6 +20,7 @@
  --ac-color: #f48fb1;
  --main-color: #000;
  --base-color: #ccc;
+ --navbar-height: 50px;
 }
 
 *{
@@ -41,15 +42,14 @@ a:hover{
     opacity: 0.7;
 }
 
-.a_stroke{
+.a_line{
     display: block;
-    width: fit-content;
+    width: 80%;
     border: 2px solid;
     padding: 0.5em 1.5em;
-    margin: 1em 0;
-    margin-right: 0;
-    margin-left: auto;
+    margin: 1em auto;
     border-radius: 3px;
+    text-align: center;
 }
 
 
@@ -91,15 +91,19 @@ header{
     z-index: 99;
     top: 0;
     border-bottom: 1px solid;
-    height: 50px;
+    height: var(--navbar-height);
     background: rgba(255,255,255,0.9);
     display: flex;
     flex-wrap: no-wrap;
 }
 
+header h1{
+    height: 100%;
+}
+
 header h1 img{
     display: block;
-    height: 50px;
+    height: 100%;
 }
 
 header .right{
@@ -143,15 +147,15 @@ header .nav_avator img{
     object-fit: cover;
 }
 
-.right i{
+header .right i{
     font-size: 40px;
-    line-height: 50px;
+    line-height: var(--navbar-height);
 }
 
 /*<main>---------*/
 
 main{
-    padding-top: 50px;
+    padding-top: var(--navbar-height);
 }
 
 

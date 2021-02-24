@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag 'show_article' %>
+<%= stylesheet_link_tag 'show_user_nav' %>
 
 <div class="article_container">
         
@@ -13,12 +14,26 @@
         </div>
         
         <div class="article_data">
-            <h2><%= @article.title %></h2>
-            <p>ユーザー名：<%= @article.user.prof.name %></p>
+            <span class="title"><%= @article.title %></span>
             <time><%= @article.created_at.strftime("%Y-%m-%d") %></time>
-            <hr>
-            
-            <%= link_to 'Edit', edit_article_path(@article) %> 
+
+    <div class="show_user_nav">
+        <div class="show_avator">
+            <% if @article.user.prof.avator.present? %>
+            <%= link_to me_path(@article.user.id) do %>
+            <%= image_tag @article.user.prof.avator.url %>
+            <% end %>
+            <% end %>
+        </div>
+        <div class="right">
+        <span class="pagetitle">ページタイトル</span>
+        <span class="username">ユーザー名</span>
+            <div class="link_box">
+            <a href="#">一覧へ</a>
+            <%= link_to '編集', edit_article_path(@article) %> 
+            </div>
+        </div>
+    </div>
             
             <%= render partial: 'show_nav', locals: { article: @article } %>
             
