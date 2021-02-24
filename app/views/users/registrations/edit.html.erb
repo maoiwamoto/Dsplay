@@ -7,8 +7,9 @@
 
   <div class="field">
     <%= f.label :email, "メールアドレスの変更" %>
-    <p>（新しいメールアドレスを入力してください）</p>
-    <%= f.email_field :email, autofocus: true %>
+    <p>（メールアドレスを変更する場合、こちらのフォームに新しいメールアドレスを入力してください。<br>
+    パスワードのみ変更する場合、現在のメールアドレスを入力して送信してください。）</p>
+    <%= f.email_field :email, autofocus: true, autocomplate: true %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
