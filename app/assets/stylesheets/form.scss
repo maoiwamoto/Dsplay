@@ -1,0 +1,23 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+input {
+width: 100%;
+box-sizing: border-box;
+outline: 1px dotted rgba(0,0,0,0.2);
+border:none;
+background: #e6f8ff;
+padding: 1em;
+margin: 1em 0;
+}
+
+input[type=checkbox]{
+    width: auto;
+    margin: 1.5em 0;
+    outline: none;
+}
+
+input[type=submit]{
+    background: #f7f6fb;
+    outline: none;
+}
