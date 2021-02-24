@@ -1,3 +1,6 @@
+@import "prev_next_nav";
+@import "show_user_data_box";
+
 .article_container{
     background: rgba(255,255,255,0.5);
     margin: 0 auto;
@@ -38,4 +41,41 @@
 .body_area{
     background: #fff;
     padding: 20px;
+}
+
+@media screen and (max-width:813px) {
+    
+    .article_container{
+        padding: 0;
+        margin-top: 0;
+        border: none;
+    }
+
+    .show_user_nav{
+        position: static;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        border: 1px solid;
+    }
+    
+    .show_user_nav .show_avator{
+        margin: 0;
+    }
+    
+    .show_user_nav .right{
+        background: pink;
+        width: calc(100% - 80px);
+    }
+    
+    .show_user_nav .pagetitle{
+    padding: 15px 1em;
+    }
+    
+    .show_user_nav .link_box{
+        background: skyblue;
+        justify-content: flex-end;
+    }
+    
 }

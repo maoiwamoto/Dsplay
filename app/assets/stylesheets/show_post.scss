@@ -1,10 +1,7 @@
-
-img{
-    vertical-align: middle;
-}
+@import "prev_next_nav";
 
 .post_container{
-    width: 500px;
+    width: 600px;
     max-width: 100%;
     margin: 0 auto;
     background: #ccc;
@@ -43,7 +40,7 @@ img{
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);/* 指定した位置から真ん中にずらす */
-  -webkit- transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
   overflow-x: scroll;
   overflow-y: scroll;
   border: 5px solid #ccc;
