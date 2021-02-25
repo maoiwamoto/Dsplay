@@ -1,7 +1,13 @@
+<% content_for :css do %>
+<%= stylesheet_link_tag 'index' %>
+<% end %>
 
-<h1>Post一覧ページ</h1>
-
+<div class="index_wrapper">
+<h2>ユーザーの投稿一覧</h2>
 
 <div class="item_index_container">
 <%= render partial: 'post', collection: @posts, as: "post" %>
 </div>
+</div>
+
+<%= paginate @posts %>

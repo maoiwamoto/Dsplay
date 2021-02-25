@@ -1,19 +1,20 @@
 class TagsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_tag, only: %i[ edit update destroy ]
-  PER = 3
   
   def index
-    @tags = Tag.all
+    @tags = Tag.all.page(params[:page]).per(3)
   end
 
   def her_index
     @user = User.find_by(id: params[:id])
-    @tags = @user.tags.page(params[:page]).per(PER)
+    @tags = @user.tags.page(params[:page]).per(3)
   end
 
   def show
     @tag = Tag.find_by(id: params[:id])
+    @posts = @tag.posts.page(params[:page]).per(6)
+    @articles = @tag.articles.page(params[:page]).per(6)
   end
 
   def new

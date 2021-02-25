@@ -3,9 +3,8 @@
 <% end %>
 
 <div class="tag_cards_container">
-
-<h2>タグ一覧</h2>
-
+<h2>ユーザーのタグ一覧</h2>
  <%= render partial: 'tag', collection: @tags, as: "tag" %>
- 
  </div>
+
+<%= paginate @tags %>

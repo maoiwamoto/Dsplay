@@ -1,13 +1,15 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_post, only: %i[ edit update destroy ]
+  PER = 12
   
   def index
-      @posts = Post.all
+      @posts = Post.all.page(params[:page]).per(PER)
   end
 
   def her_index
       @user = User.find_by(id: params[:id])
+      @posts = @user.posts.page(params[:page]).per(PER)
   end
 
 
