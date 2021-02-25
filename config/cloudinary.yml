@@ -1,22 +1,22 @@
 ---
 development:
-  cloud_name: dhml9tng2
-  api_key: '262512585444458'
-  api_secret: 8SoXRgAgCpfTQMKqgVfXsjx8bGU
+  cloud_name: <%= Rails.application.credentials.cloudinary[:cloud_name] %>
+  api_key: <%= Rails.application.credentials.cloudinary[:api_key] %>
+  api_secret: <%= Rails.application.credentials.cloudinary[:api_secret] %>
   enhance_image_tag: true
   static_file_support: false
   secure: true
 production:
-  cloud_name: dhml9tng2
-  api_key: '262512585444458'
-  api_secret: 8SoXRgAgCpfTQMKqgVfXsjx8bGU
+  cloud_name: <%= Rails.application.credentials.cloudinary[:cloud_name] %>
+  api_key: <%= Rails.application.credentials.cloudinary[:api_key] %>
+  api_secret: <%= Rails.application.credentials.cloudinary[:api_secret] %>
   enhance_image_tag: true
   static_file_support: true
   secure: true
 test:
-  cloud_name: dhml9tng2
-  api_key: '262512585444458'
-  api_secret: 8SoXRgAgCpfTQMKqgVfXsjx8bGU
+  cloud_name: <%= Rails.application.credentials.cloudinary[:cloud_name] %>
+  api_key: <%= Rails.application.credentials.cloudinary[:api_key] %>
+  api_secret: <%= Rails.application.credentials.cloudinary[:api_secret] %>
   enhance_image_tag: true
   static_file_support: false
   secure: true

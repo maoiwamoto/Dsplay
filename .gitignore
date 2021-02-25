@@ -32,3 +32,4 @@
 
 .env
 /config/cloudinary.yml
+/config/credentials.yml.enc
