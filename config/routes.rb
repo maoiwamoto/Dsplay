@@ -29,5 +29,6 @@ Rails.application.routes.draw do
   get 'users/:id/posts' => 'posts#her_index', as: 'her_posts'
   get 'users/:id/tags' => 'tags#her_index', as: 'her_tags'
   get 'users/:id/articles' => 'articles#her_index', as: 'her_articles'
+  get 'crop' => 'posts#crop'
   
 end

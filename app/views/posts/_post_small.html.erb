@@ -1,6 +1,6 @@
-<li class="card post">
+<li class="card post" data-turbolinks="false">
     <%= image_tag post.image.tiny.url, alt: "サムネイル" %>
-    <%= link_to post_path(post),data: {"turbolinks" => false} do %>
+    <%= link_to post_path(post) do %>
     <span class="show">詳細を見る</span>
     <% end %>
     </li>

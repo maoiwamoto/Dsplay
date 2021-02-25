@@ -28,7 +28,7 @@ class PostsController < ApplicationController
       @post = current_user.posts.new(post_params)
       if @post.save
         if params[:post][:image].present?
-           render :crop
+          render :crop
         else
          redirect_to @post, notice: "Post was successfully created."
         end
