@@ -15,3 +15,7 @@
 //= require jquery_ujs
 //= require popper
 //= require jcrop
+
+$(function(){
+  setTimeout("$('.flash_box').fadeOut('slow')", 3000);
+  });
