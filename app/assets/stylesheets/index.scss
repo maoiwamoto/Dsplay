@@ -1,0 +1,16 @@
+@import "basic_grid_partial";
+
+.index_wrapper{
+    width: 75vw;
+    background: pink;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 769px) {
+
+.index_wrapper{
+    width: 100%;
+}
+
+}
