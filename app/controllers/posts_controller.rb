@@ -1,11 +1,13 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_post, only: %i[ edit update destroy ]
-
- 
+  
   def index
+      @posts = Post.all
+  end
+
+  def her_index
       @user = User.find_by(id: params[:id])
-      @posts = @user.posts
   end
 
 
@@ -26,9 +28,9 @@ class PostsController < ApplicationController
       @post = current_user.posts.new(post_params)
       if @post.save
         if params[:post][:image].present?
-          render :crop
+           render :crop
         else
-         redirect_to action: :index, id: current_user.id, notice: "Post was successfully created."
+         redirect_to @post, notice: "Post was successfully created."
         end
       else
         render :new, status: :unprocessable_entity
@@ -52,6 +54,7 @@ class PostsController < ApplicationController
     @post.destroy
       redirect_to her_posts_path(current_user.id), notice: "Post was successfully destroyed."
   end
+
 
   private
 

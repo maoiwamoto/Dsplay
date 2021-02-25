@@ -1,13 +1,12 @@
 class ImageUploader < CarrierWave::Uploader::Base
-  #include CarrierWave::MiniMagick
-  include Cloudinary::CarrierWave
+  include CarrierWave::MiniMagick
   
   def size_range
   0..2.megabytes
   end
 
   # Choose what kind of storage to use for this uploader:
-  #storage :file
+  storage :file
   # storage :fog
   after :remove, :delete_empty_upstream_dirs
 
@@ -40,6 +39,7 @@ class ImageUploader < CarrierWave::Uploader::Base
  end
  
   version :tiny do
+    process :crop
     process resize_to_fill: [120, 120]
   end
   

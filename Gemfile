@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'carrierwave'
+gem 'cloudinary'
 gem 'mini_magick', '~> 4.8'
 # cropping
 gem 'rails-assets-jcrop', source: 'https://rails-assets.org'

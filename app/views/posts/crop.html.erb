@@ -23,12 +23,12 @@
   
   
         <div class="croparea_box">
-        <%= image_tag @post.image_url(:thumb), alt: "サムネイル", id: "cropbox" %>
+        <%= cl_image_tag @post.image.thumb, alt: "サムネイル", id: "cropbox" %>
         </div>
         
         <h3>Preview</h3>
         <div class="preview_box">
-          <%= image_tag @post.image.url(:thumb), alt: "プレビュー画像", id: "preview" %>
+          <%= cl_image_tag @post.image.thumb, alt: "プレビュー画像", id: "preview" %>
         </div>
         
         <hr>

@@ -1,8 +1,6 @@
 
-<h1><%= @user.prof.name %>のPost一覧ページ</h1>
+<h1>Post一覧ページ</h1>
 
-<%= link_to 'New Post', new_post_path %>
-<hr>
 
 <div class="item_index_container">
 <%= render partial: 'post', collection: @posts, as: "post" %>

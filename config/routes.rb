@@ -16,7 +16,9 @@ Rails.application.routes.draw do
     get "logout", :to => "users/sessions#destroy"
   end
   
-  resources :articles, :posts, :tags
+  
+    resources :posts, :articles, :tags
+  
   resource :prof,only:[:edit,:update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
@@ -24,8 +26,8 @@ Rails.application.routes.draw do
   get 'home/' => 'home#index'
   get 'users/mypage' => 'users#mypage'
   get 'users/:id' => 'users#show', as: 'me'
+  get 'users/:id/posts' => 'posts#her_index', as: 'her_posts'
   get 'users/:id/tags' => 'tags#index', as: 'her_tags'
-  get 'users/:id/posts' => 'posts#index', as: 'her_posts'
   get 'users/:id/articles' => 'articles#index', as: 'her_articles'
   
 end

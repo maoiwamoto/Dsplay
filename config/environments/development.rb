@@ -60,6 +60,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
   Rails.application.configure do
+    config.web_console.whitelisted_ips = '219.124.140.6'
    # default url
    config.action_mailer.default_url_options = {
      protocol: 'https',

@@ -6,7 +6,7 @@
     <div class="post_container">
         
      <div class="main_img_area">
-      <%= image_tag @post.image.url, alt: "添付画像" %>
+      <%= cl_image_tag @post.image, alt: "添付画像" %>
         </div>
         
         <div class="post_data">
@@ -16,7 +16,7 @@
             <time><%= @post.created_at.strftime("%Y-%m-%d") %></time>
             <hr>
             <p>トリミング後（tags/index）</p>
-            <%=  image_tag @post.image.tiny.url %>
+            <%=  cl_image_tag @post.image.tiny %>
             <hr>
             <%= link_to 'Edit', edit_post_path(@post) %> 
            
