@@ -59,21 +59,22 @@ a:hover{
 
 /*-----------------------------------------------------*/
 
-@import "basic_grid_partial";
-
 
 
 /*flashのnotice,alertのdivの指定-------------------*/
 
 .flash_box{
-    border: 2px solid var(--ac-color);
-    border-radius: 3px;
     padding: 1em;
-    margin: 5px;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    z-index: 99;
 }
 
 .notice{
-    color: #000;
+    color: #fff;
 }
 
 .notice::before{
@@ -89,7 +90,7 @@ a:hover{
 }
 
 .alert{
-    color: red;
+    color: pink;
 }
 
 /*appヘッダーナビ-----*/

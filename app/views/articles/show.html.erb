@@ -34,7 +34,7 @@
         <span class="username"><%= @article.user.prof.name %></span>
             <div class="link_box">
             <%= link_to "back" , her_articles_path(@article.user.id), class: "back" %>
-            <% if user_signed_in? %>
+            <% if user_signed_in? && current_user.id == @article.user_id %>
             <%= link_to "edit", edit_article_path(@article), class: "edit"%>
             <% end %>
             </div>
