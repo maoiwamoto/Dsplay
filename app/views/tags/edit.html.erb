@@ -1,7 +1,10 @@
+<div class="form_wrapper">
+
 <h2>タグの編集</h2>
 
 <%= render 'form', tag: @tag %>
 
-<%= link_to 'タグの詳細ページにもどる', @tag %>
+<%= link_to 'タグの詳細ページにもどる', @tag, class: "a_line" %>
+<%= link_to 'タグを削除', @tag, method: :delete, data: { confirm: 'このタグを削除します。よろしいですか？' }, class: "a_main" %>
 
-<%= link_to 'Destroy', @tag, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

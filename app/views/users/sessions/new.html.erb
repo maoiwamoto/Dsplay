@@ -5,6 +5,8 @@
 <!--login-->
 
 <div class="form_wrapper">
+  
+<h2>ログイン</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <%= render "devise/shared/error_messages", resource: resource %>
@@ -38,10 +40,10 @@
   <div class="actions">
     <%= f.submit "ログイン" %>
   </div>
-  <%= link_to "パスワードをお忘れの場合", new_user_password_path %>
 <% end %>
 
-<%= link_to "新規登録", new_user_registration_path %>
+<%= link_to "新規登録", new_user_registration_path, class: "a_main" %>
+<%= link_to "パスワードをお忘れの場合", new_user_password_path, class: "a_line" %>
 
 </div>
 

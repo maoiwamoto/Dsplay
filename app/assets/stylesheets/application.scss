@@ -52,6 +52,17 @@ a:hover{
     text-align: center;
 }
 
+.a_main{
+    display: block;
+    width: 100%;
+    padding: 0.5em 1.5em;
+    margin: 1em auto;
+    border-radius: 3px;
+    text-align: center;
+    background: var(--main-color);
+    color: #fff;
+}
+
 hr{
     border: none;
     background-image: url('hr.png');

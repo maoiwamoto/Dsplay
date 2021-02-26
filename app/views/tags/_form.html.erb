@@ -1,5 +1,6 @@
 <% content_for :css do %>
 <%= javascript_include_tag "count_form" %>
+<%= stylesheet_link_tag 'form' %>
 <% end %>
 
 <%= form_with(model: tag, local: true) do |form| %>
