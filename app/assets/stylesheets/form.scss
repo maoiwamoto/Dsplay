@@ -50,6 +50,13 @@ padding: 1em;
 margin: 1em 0;
 }
 
+textarea {
+  /* 要素のサイズを可変から固定にする */
+  resize: none;
+  /* 要素がスクロールしないようにする */
+  overflow: hidden;
+}
+
 input[type=checkbox]{
     width: auto;
     margin: 1.5em 0;

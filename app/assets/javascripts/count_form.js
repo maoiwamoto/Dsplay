@@ -27,5 +27,10 @@ $(function(){
         thisCounter.text(countNum + "文字").css('color','inherit');
     }
   });
+  
+  // テキストエリアの高さ自動調整
+$("textarea").attr("rows", 1).on("input", e => {
+  $(e.target).height(0).innerHeight(e.target.scrollHeight);
+});
  
 });
