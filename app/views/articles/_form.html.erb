@@ -1,8 +1,9 @@
 <% content_for :css do %>
 <%= javascript_include_tag "count_form" %>
+<%= stylesheet_link_tag 'form' %>
 <% end %>
 
-<%= form_with(model: article, local: true) do |form| %>
+<%= bootstrap_form_with(model: article, local: true) do |form| %>
   <% if article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -15,36 +16,35 @@
   <% end %>
 
   <div class="field" id="countable">
-    <%= form.label :title, "タイトル" %>
-    <%= form.text_field :title, id: "input_text" %>
+    <%= form.text_field :title, id: "input_text", label: "タイトル" %>
     <p><span id="counter">0文字</span> / <span id="limit" data-count="20">最大文字数</span></p>
   </div>
 
   <div class="field" id="countable">
-    <%= form.label :body, "本文" %>
-    <%= form.text_area :body, id: "input_text" %>
+    <%= form.text_area :body, id: "input_text", label: "本文" %>
     <p><span id="counter">0文字</span> / <span id="limit" data-count="3000">最大文字数</span></p>
   </div>
   
-    <div class="field">
     <% if article.photo.present? %>
+    <div class="field">
     <div class="attached_img_area">
     <%=  image_tag article.photo.thumb.url, alt: "サムネイル" %>
     </div>
-    <label><%= form.check_box :remove_photo %>添付画像を削除する</label>
+    <div class="remove_checkbox"><%= form.check_box :remove_photo, label: "イメージ画像を削除する" %></div>
+    </div>
     <% end %>
+    
+    <div class="field">
     <%= form.hidden_field :photo_cache %>
-     <%= form.label :photo, "イメージ画像" %>
-     <%= form.file_field :photo %>
+     <%= form.file_field :photo, label: "イメージ画像" %>
     </div>
 
   <div class="field">
-    <%= form.label :tag_id, "タグの設定・変更" %>
     <p>この投稿と関連づける作成済みのタグを選んでください。<br>
     デフォルトでは未選択となっています。<br>
     すでにタグ付けがされている場合、先頭の空白行を選択することでタグの解除ができます。
     </p>
-    <%= form.collection_select(:tag_id, current_user.tags, :id, :name, include_blank: true) %>
+    <%= form.collection_select(:tag_id, current_user.tags, :id, :name, include_blank: true, label: "タグの設定") %>
   </div>
 
   <div class="actions">

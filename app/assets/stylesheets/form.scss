@@ -17,8 +17,14 @@ body{
     margin: 20px 0;
 }
 
+.remove_checkbox{
+    width: fit-content;
+    margin: 0 auto;
+}
+
 .actions{
     margin: 2.5em 0;
+    text-align: center;
 }
 
 #countable p{
@@ -78,8 +84,7 @@ input[type=file]{
 input[type=submit]{
     background: #eeeaec;
     color: #000;
-    width: 100%;
-    padding: 0.8em;
+    padding: 0.5em 1em;
 }
 
 input[type=submit]:hover{

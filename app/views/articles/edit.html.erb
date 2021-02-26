@@ -1,7 +1,10 @@
+<div class="form_wrapper">
+
 <h2>投稿の編集</h2>
 
 <%= render 'form', article: @article %>
 
-<%= link_to '作品ページにもどる', @article %> 
+<%= link_to '作品ページにもどる', @article, class: "a_line" %> 
+<%= link_to 'この投稿を削除する', @article, method: :delete, data: { confirm: 'この投稿を削除します。よろしいですか？' }, class: "a_main" %>
 
-<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
