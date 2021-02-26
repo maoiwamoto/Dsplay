@@ -1,10 +1,36 @@
 @import "prev_next_nav";
+@import "show_user_data_box";
 
 .post_container{
+    background: rgba(255,255,255,0.5);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
     width: 600px;
     max-width: 100%;
-    margin: 0 auto;
-    background: #ccc;
+    border: 1px solid;
+}
+
+.post_data{
+    padding: 10px;
+}
+
+.post_data .title{
+    display: block;
+    font-size: 21px;
+}
+
+.post_data .caption{
+    color: rgba(0,0,0,0.8);
+}
+
+.post_data time{
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .main_img_area{
@@ -63,6 +89,12 @@ background-image: url('stripe1.png');
 
 /*---------------------------------------*/
 
-@media screen and (max-width: 639px) {
-
+@media screen and (max-width:813px) {
+    
+    .post_container{
+        padding: 0;
+        margin-top: 0;
+        border: none;
+    }
+    
 }

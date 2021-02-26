@@ -11,19 +11,34 @@
         </div>
         
         <div class="post_data">
-            <h2><%= @post.title %></h2>
-            <p><%= safe_join(@post.caption.split("\n"),tag(:br)) %></p>
-            <p>ユーザー名：<%= @post.user.prof.name %></p>
+            <span class="title"><%= @post.title %></span>
+            <p class="caption"><%= safe_join(@post.caption.split("\n"),tag(:br)) %></p>
             <time><%= @post.created_at.strftime("%Y-%m-%d") %></time>
-            <hr>
-            <p>トリミング後（tags/index）</p>
-            <%=  cl_image_tag @post.image.tiny %>
-            <hr>
-            <%= link_to 'Edit', edit_post_path(@post) %> 
+        </div>
+
+<div class="show_user_nav">
+        <div class="show_avator">
+            <% if @post.user.prof.avator.present? %>
+            <%= link_to me_path(@post.user.id) do %>
+            <%= image_tag @post.user.prof.avator.url %>
+            <% end %>
+            <% end %>
+        </div>
+        <div class="right">
+        <%= link_to me_path(@post.user.id), class: "pagetitle" do %>
+        <span><%= @post.user.prof.pagetitle %></span>
+        <% end %>
+        <span class="username"><%= @post.user.prof.name %></span>
+            <div class="link_box">
+            <%= link_to "back" , her_posts_path(@post.user.id), class: "back" %>
+            <% if user_signed_in? && current_user.id == @post.user_id %>
+            <%= link_to "edit", edit_post_path(@post), class: "edit"%>
+            <% end %>
+            </div>
+        </div>
+    </div>
            
         <%= render partial: 'show_nav', locals: { post: @post } %>
-           
-        </div><%# post_data%>
         
     </div>
     

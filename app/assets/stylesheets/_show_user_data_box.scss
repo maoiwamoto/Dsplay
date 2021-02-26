@@ -17,7 +17,7 @@
     height: 80px;
     max-width: 100%;
     background-color: transparent;
-    background-image: url("crown.png");
+    background-image: url("leaf.png");
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 6px;
@@ -72,3 +72,36 @@
     content: "\f5ac";
 }
 
+
+@media screen and (max-width:813px) {
+    
+
+    .show_user_nav{
+        position: static;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        border: 1px solid;
+    }
+    
+    .show_user_nav .show_avator{
+        margin: 0;
+    }
+    
+    .show_user_nav .right{
+        background: pink;
+        width: calc(100% - 80px);
+    }
+    
+    .show_user_nav .pagetitle{
+    padding: 15px 1em;
+    font-size: 18px;
+    }
+    
+    .show_user_nav .link_box{
+        background: skyblue;
+        justify-content: flex-end;
+    }
+    
+}

@@ -29,7 +29,7 @@
         </div>
         <div class="right">
         <%= link_to me_path(@article.user.id), class: "pagetitle" do %>
-        <span>ページタイトル</span>
+        <span><%= @article.user.prof.pagetitle %></span>
         <% end %>
         <span class="username"><%= @article.user.prof.name %></span>
             <div class="link_box">
