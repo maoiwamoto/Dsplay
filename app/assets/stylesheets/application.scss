@@ -63,6 +63,13 @@ hr{
     height: 80px;
 }
 
+.center_wrapper{
+    width: 750px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 /*postとarticleのedit画面で既存の添付画像がはみ出ないように設定------------------------------------*/
 
 .attached_img_area img{
