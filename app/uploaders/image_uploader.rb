@@ -5,6 +5,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   def size_range
   0..2.megabytes
   end
+  
+  process :convert => 'jpeg' # 画像の保存形式
+  process :tags => ['post_image'] # 保存時に添付されるタグ（管理しやすいように適宜変更しましょう）
 
   # Choose what kind of storage to use for this uploader:
   #storage :file

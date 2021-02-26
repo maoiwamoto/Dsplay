@@ -4,6 +4,8 @@
 
 <!--login-->
 
+<div class="form_wrapper">
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field">
@@ -41,5 +43,5 @@
 
 <%= link_to "新規登録", new_user_registration_path %>
 
-
+</div>
 

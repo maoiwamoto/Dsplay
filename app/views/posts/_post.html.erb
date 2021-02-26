@@ -1,5 +1,5 @@
     <div class="card post" data-turbolinks="false">
-    <%#=  image_tag post.image.thumb.url, alt: "サムネイル" %>
+    <%=  cl_image_tag post.image.thumb, alt: "サムネイル" %>
     <%= link_to post_path(post) do %>
     <span class="data"><%= post.title %></span>
     <% end %>
