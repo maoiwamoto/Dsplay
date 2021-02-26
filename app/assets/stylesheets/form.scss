@@ -10,11 +10,11 @@ body{
     max-width: 100%;
     width: 700px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 2em 10px;
 }
 
 .field{
-    margin: 1em 0;
+    margin: 20px 0;
 }
 
 .actions{
@@ -49,10 +49,6 @@ a:hover{
     font-size: 0.8em;
 }
 
-input{
-    width: 100%;
-}
-
 textarea {
   /* 要素のサイズを可変から固定にする */
   resize: none;
@@ -60,10 +56,30 @@ textarea {
   overflow: hidden;
 }
 
+.form-control{
+    padding: 0.8em;/*インプットエリアの余白を指定*/
+    border-radius: 0;
+    border: none;
+    background: #daebf2;
+}
+
+.form-control:focus{
+    background: #f2daee;
+}
+
+
+input[type=file]{
+    background: #ccc;
+    padding: 0.8em 1.5em;
+    border-radius: 25px;
+    width: 100%;
+}
 
 input[type=submit]{
     background: #eeeaec;
     color: #000;
+    width: 100%;
+    padding: 0.8em;
 }
 
 input[type=submit]:hover{
