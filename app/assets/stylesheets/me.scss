@@ -1,12 +1,7 @@
 @import "basic_grid_partial";
 
-:root{
-    --item-box-w: 60vw;
-    --item-c: 3;
-}
-
 .me_container{ 
- width: 90vw;
+ width: 95vw;
  margin: 0 auto;
  display: flex;
 }
@@ -17,7 +12,8 @@
 }
 
 .me_container .main{
-    width: 65vw;
+    width: 70vw;
+    background: pink;
 }
 
 
@@ -108,10 +104,6 @@
 
 @media screen and (max-width: 769px) {
     
-    :root{
-    --item-box-w: 95vw;
-    --item-c: 2;
-}
     
 
     .me_container{
