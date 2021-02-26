@@ -6,6 +6,25 @@
     margin: 0 auto;
 }
 
+.tag_caption{
+    padding: 20px;
+}
+
+.tagname{
+    display: block;
+    font-size: 23px;
+    padding: 1em 10px;
+    text-indent: 1em;
+}
+
+.tagname::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f292";
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
 
 @media screen and (max-width: 769px) {
 

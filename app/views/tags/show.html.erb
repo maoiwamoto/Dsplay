@@ -3,14 +3,14 @@
 <% end %>
 
 <div class="index_wrapper">
-  <h2><%= @tag.name %></h2>
+  <span class="tagname"><%= @tag.name %></span>
   <% if @tag.caption.present? %>
-  <p><%= safe_join(@tag.caption.split("\n"),tag(:br)) %></p>
+  <p class="tag_caption"><%= safe_join(@tag.caption.split("\n"),tag(:br)) %></p>
   <% end %>
-  <hr>
-  このタグの作成者：<%= @tag.user.prof.name %>
-  <%= link_to 'Edit', edit_tag_path(@tag) %> 
-  <hr>
+  
+  <% if user_signed_in? && current_user.id == @tag.user_id %>
+  <%= link_to 'タグの編集', edit_tag_path(@tag), class: "a_line" %>
+  <% end %>
   
    <% if @tag.posts.present? %>
   <ul class="item_index_container">
