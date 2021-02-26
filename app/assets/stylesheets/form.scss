@@ -1,5 +1,6 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "rails_bootstrap_forms";
 
 body{
     font-family: "meiryo";
@@ -10,6 +11,14 @@ body{
     width: 700px;
     margin: 0 auto;
     padding: 0 10px;
+}
+
+.field{
+    margin: 1em 0;
+}
+
+.actions{
+    margin: 2.5em 0;
 }
 
 #countable p{
@@ -40,14 +49,8 @@ a:hover{
     font-size: 0.8em;
 }
 
-input,textarea {
-width: 100%;
-box-sizing: border-box;
-outline: 1px dotted rgba(0,0,0,0.2);
-border:none;
-background: #e6f8ff;
-padding: 1em;
-margin: 1em 0;
+input{
+    width: 100%;
 }
 
 textarea {
@@ -57,13 +60,17 @@ textarea {
   overflow: hidden;
 }
 
-input[type=checkbox]{
-    width: auto;
-    margin: 1.5em 0;
-    outline: none;
-}
 
 input[type=submit]{
     background: #eeeaec;
-    outline: none;
+    color: #000;
+}
+
+input[type=submit]:hover{
+     background: transparent;
+     color: #000;
+}
+
+.custom-file-label{
+    display: none;
 }

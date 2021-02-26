@@ -4,11 +4,11 @@
 
 <!--login-->
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", required: "required" %>
+    
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", required: "required", label: "メールアドレス" %>
           <% if alert %>
           <span>
             <strong>メールアドレスが正しくない可能性があります。</strong>
@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password, autofocus: "true", autocomplete: "current-password", placeholder: "パスワード" %>
+
+    <%= f.password_field :password, autofocus: "true", autocomplete: "current-password", placeholder: "パスワード", label: "パスワード" %>
           <% if alert %>
           <span>
             <strong>パスワードが正しくない可能性があります。</strong>
@@ -26,16 +26,16 @@
           <% end %>
   </div>
 
+<div class="field">
   <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me, "次回から自動的にログインする" %>
-    </div>
+      <%= f.check_box :remember_me, label: "次回から自動でログイン" %>
   <% end %>
+  </div>
 
   <div class="actions">
     <%= f.submit "ログイン" %>
   </div>
+
 <% end %>
 
 
