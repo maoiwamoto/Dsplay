@@ -5,8 +5,6 @@
 <div class="index_wrapper">
 <h1><%= @user.prof.name %>のPost一覧ページ</h1>
 
-<%= link_to 'New Post', new_post_path %>
-
 <div class="item_index_container">
 <%= render partial: 'post', collection: @user.posts, as: "post" %>
 </div>

@@ -2,7 +2,7 @@
 <%= stylesheet_link_tag 'index' %>
 <% end %>
 
-<div class="index_wrapper">
+<div class="index_wrapper" data-turbolinks='false'>
   <span class="tagname"><%= @tag.name %></span>
   <% if @tag.caption.present? %>
   <p class="tag_caption"><%= safe_join(@tag.caption.split("\n"),tag(:br)) %></p>

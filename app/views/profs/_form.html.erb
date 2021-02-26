@@ -4,12 +4,11 @@
 <% end %>
 
 
-<%= form_with model: prof, local: true do |f| %>
+<%= bootstrap_form_with model: prof, local: true do |f| %>
 
   <% if prof.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(prof.errors.count, "error") %> prohibited this profile from being saved:</h2>
-
       <ul>
       <% prof.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -19,47 +18,41 @@
   <% end %>
 
 <div class="field" id="countable">
-<%= f.label :name,"ユーザー名" %>
-<%= f.text_field :name, id: "input_text" %>
+<%= f.text_field :name, id: "input_text", label: "ユーザー名" %>
 <p><span id="counter">0文字</span> / <span id="limit" data-count="10">最大文字数</span></p>
 </div>
 <div class="field" id="countable">
-<%= f.label :pagetitle ,"ユーザーページタイトル" %>
-<%= f.text_field :pagetitle, id: "input_text", placeholder: "MyPage" %>
+<%= f.text_field :pagetitle, id: "input_text", placeholder: "MyPage", label: "ユーザーページタイトル" %>
 <p><span id="counter">0文字</span> / <span id="limit" data-count="30">最大文字数</span></p>
 </div>
 <div class="field" id="countable">
-<%= f.label :profile ,"プロフィール文" %>
-<%= f.text_area :profile, id: "input_text" %>
+<%= f.text_area :profile, id: "input_text", label: "プロフィール文" %>
 <p><span id="counter">0文字</span> / <span id="limit" data-count="500">最大文字数</span></p>
 </div>
 
-  <div class="field">
-    <% if prof.avator.present? %>
-    <div class="attached_img_area">
-    <%=  image_tag prof.avator.url, alt: "アイコン画像" %>
+<% if prof.avator.present? %>
+    <div class="field">
+    <div class="attached_img_area"><%=  image_tag prof.avator.url, alt: "アイコン画像" %></div>
+    <div class="remove_checkbox"><%= f.check_box :remove_avator, label: "アイコン画像を削除" %></div>
     </div>
-    <label><%= f.check_box :remove_avator %>アイコン画像を削除する</label>
-    <% end %>
+<% end %>
+    <div class="field">
     <%= f.hidden_field :avator_cache %>
-    
-<%= f.label :avator,"ユーザーアイコン画像" %>
-<%= f.file_field :avator %>
-   </div>
-
-  <div class="field">
-    <% if prof.headerimage.present? %>
-    <div class="attached_img_area">
-    <%= image_tag prof.headerimage.url, alt: "ヘッダー画像サムネイル" %>
+    <%= f.file_field :avator, label: "ユーザーアイコン" %>
     </div>
-    <label><%= f.check_box :remove_headerimage %>ヘッダー画像を削除する</label>
+
+<% if prof.headerimage.present? %>
+  <div class="field">
+    <div class="attached_img_area"><%= image_tag prof.headerimage.url, alt: "サムネイル" %></div>
+    <div class="remove_checkbox"><%= f.check_box :remove_headerimage, label: "ヘッダー画像を削除" %></div>
+    </div>
     <% end %>
+    <div class="field">
     <%= f.hidden_field :headerimage_cache %>
+    <%= f.file_field :headerimage, label: "ヘッダー画像" %>
+    </div>
 
-<%= f.label :headerimage,"ヘッダー画像" %>
-<%= f.file_field :headerimage %>
-   </div>
-
-
+<div class="actions">
 <%= f.submit "変更を保存する" %>
+</div>
 <% end %>

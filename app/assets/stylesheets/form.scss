@@ -27,6 +27,22 @@ body{
     text-align: center;
 }
 
+/*既存の添付画像がはみ出ないように設定------------------------------------*/
+
+.attached_img_area{
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.attached_img_area img{
+ max-width: 100%;
+ max-height: 100%;
+ width: auto;
+ height: auto;
+}
+
 #countable p{
     text-align: right;
     color: rgba(0,0,0,0.7);
@@ -75,7 +91,7 @@ textarea {
 
 
 input[type=file]{
-    background: #ccc;
+    background: #f2daee;
     padding: 0.8em 1.5em;
     border-radius: 25px;
     width: 100%;

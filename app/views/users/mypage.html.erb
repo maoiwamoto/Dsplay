@@ -1,9 +1,17 @@
+<div class="center_wrapper" data-turbolinks='false'>
+
 <h2>マイページ</h2>
 
-<% if user_signed_in? %>
+<%= link_to 'タグの新規作成', new_tag_path %>
+
+<%= link_to '画像の新規投稿', new_post_path %>
+
+<%= link_to '文章の新規投稿', new_article_path %>
+
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-<% end %>
 
 <%= link_to "プロフィール編集", edit_prof_path %>
 
 <%= link_to "ユーザー情報の変更", edit_user_registration_path %>
+
+</div>
