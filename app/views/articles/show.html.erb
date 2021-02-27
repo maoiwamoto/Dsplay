@@ -2,7 +2,7 @@
 <%= stylesheet_link_tag 'show_article' %>
 <% end %>
 
-<div class="article_container" data-turbolinks='false'>
+<div class="article_container">
         
      <div class="photo_area">
        <% if @article.photo.present? %>
@@ -35,7 +35,7 @@
             <div class="link_box">
             <%= link_to "back" , her_articles_path(@article.user.id), class: "back" %>
             <% if user_signed_in? && current_user.id == @article.user_id %>
-            <%= link_to "edit", edit_article_path(@article), class: "edit"%>
+            <%= link_to "edit", edit_article_path(@article), class: "edit",data: {"turbolinks"=>false}%>
             <% end %>
             </div>
         </div>

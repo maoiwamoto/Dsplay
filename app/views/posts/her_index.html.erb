@@ -3,10 +3,16 @@
 <% end %>
 
 <div class="index_wrapper">
-<h1><%= @user.prof.name %>のPost一覧ページ</h1>
+
+ <ul class="pan">
+  <li><%= link_to me_path(@user) do %><%= @user.prof.pagetitle %><% end %></li>
+  <li><%= @user.prof.name %>の画像投稿一覧</li>
+ </ul>
+ 
+ <hr class="app">
 
 <div class="item_index_container">
-<%= render partial: 'post', collection: @user.posts, as: "post" %>
+<%= render partial: 'post', collection: @posts, as: "post" %>
 </div>
 </div>
 

@@ -3,7 +3,13 @@
 <% end %>
 
 <div class="index_wrapper">
-<h1><%= @user.prof.name %>のArticle一覧</h1>
+
+ <ul class="pan">
+  <li><%= link_to me_path(@user) do %><%= @user.prof.pagetitle %><% end %></li>
+  <li><%= @user.prof.name %>の文章投稿一覧</li>
+ </ul>
+ 
+ <hr class="app">
 
 <div class="item_index_container">
 <%= render partial: 'article', collection: @articles, as: "article" %>
