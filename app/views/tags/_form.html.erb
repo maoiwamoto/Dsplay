@@ -3,7 +3,7 @@
 <%= stylesheet_link_tag 'form' %>
 <% end %>
 
-<%= form_with(model: tag, local: true) do |form| %>
+<%= bootstrap_form_with(model: tag, local: true) do |form| %>
   <% if tag.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
@@ -16,14 +16,12 @@
   <% end %>
 
   <div class="field" id="countable">
-    <%= form.label :name, "タグ名" %>
-    <%= form.text_field :name, id: "input_text" %>
+    <%= form.text_field :name, id: "input_text", label: "タグの名前" %>
     <p><span id="counter">0文字</span> / <span id="limit" data-count="20">最大文字数</span></p>
   </div>
   
     <div class="field" id="countable">
-    <%= form.label :caption, "タグの説明文" %>
-    <%= form.text_area :caption, id: "input_text" %>
+    <%= form.text_area :caption, id: "input_text", label: "タグの説明文" %>
     <p><span id="counter">0文字</span> / <span id="limit" data-count="1000">最大文字数</span></p>
   </div>
 

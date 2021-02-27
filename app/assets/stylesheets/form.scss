@@ -55,7 +55,8 @@ a{
 }
 
 a:hover{
-    color: red;
+    color: var(--ac-color);
+    opacity: 1;
 }
 
 .form_wrapper p{

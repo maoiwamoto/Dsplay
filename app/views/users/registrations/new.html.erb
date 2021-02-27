@@ -16,25 +16,22 @@
 ご利用のメールサービスの該当フォルダ等をご確認いただきますようお願いします。
 </p>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email, "メールアドレス" %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", label: "メールアドレス" %>
   </div>
 
   <div class="field">
-    <%= f.label :password, "パスワード" %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %>文字以上)</em>
+    <em class="min">(<%= @minimum_password_length %>文字以上)</em>
     <% end %>
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: "パスワード" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "パスワード", label: "パスワード" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "パスワード確認" %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワードを再入力" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワードを再入力", label: "パスワード確認" %>
   </div>
   
    <%= f.fields_for :prof do |f| %>

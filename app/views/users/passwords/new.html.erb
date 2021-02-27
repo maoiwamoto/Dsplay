@@ -12,12 +12,11 @@
         お送りしたメール内に記載のリンクから、再設定を完了してください。
       </p>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email, "ご登録時のメールアドレス" %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力", label: "ご登録時のメールアドレス" %>
   </div>
 
   <div class="actions">

@@ -7,21 +7,19 @@
 <h2>パスワードの再設定</h2>
 <p>以下のフォームから新しいパスワードを設定してください。</p>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+<%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
   <%= f.hidden_field :reset_password_token %>
 
   <div class="field">
-    <%= f.label :password, "新しいパスワード" %><br />
     <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %>文字以上)</em>
+      <em class="min">(<%= @minimum_password_length %>文字以上)</em>
     <% end %>
-    <%= f.password_field :password, autofocus: true %>
+    <%= f.password_field :password, autofocus: true, label: "新しいパスワード" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "新しいパスワードの確認" %><br />
-    <%= f.password_field :password_confirmation, placeholder: "新しいパスワードを再入力" %>
+    <%= f.password_field :password_confirmation, placeholder: "新しいパスワードを再入力", label: "新しいパスワードの確認" %>
   </div>
 
   <div class="actions">

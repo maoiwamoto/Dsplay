@@ -10,37 +10,33 @@
 
 <hr>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email, "メールアドレスの変更" %>
     <p>（メールアドレスを変更する場合、<br>こちらのフォームに新しいメールアドレスを入力してください。<br>
     パスワードのみ変更する場合、現在のメールアドレスを入力して送信してください。）</p>
-    <%= f.email_field :email, autofocus: true, autocomplate: true %>
+    <%= f.email_field :email, autofocus: true, autocomplate: true, label: "メールアドレスの変更" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <p>以下のアドレスへ確認メールをお送りしましたので、ご確認下さい。<br> <%= resource.unconfirmed_email %></p>
   <% end %>
 
   <div class="field">
-    <%= f.label :password, "新しいパスワード" %> <p>(パスワードを変更しない場合、空欄にしてください)</p>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, label: "新しいパスワード", placeholder: "パスワードを変更しない場合、空欄にしてください" %>
     <% if @minimum_password_length %>
       <span class="min"><%= @minimum_password_length %>文字以上</span>
     <% end %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "新しいパスワードの確認" %>
-    <%= f.password_field :password_confirmation, placeholder: "新しいパスワードを再入力" %>
+    <%= f.password_field :password_confirmation, placeholder: "新しいパスワードを再入力", label: "新しいパスワードの確認" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password, "現在のパスワード" %> 
     <p>（お手数ですが、確認のため現在のパスワードを入力し、送信ボタンを押してください）</p>
-    <%= f.password_field :current_password, placeholder: "現在のパスワードを入力" %>
+    <%= f.password_field :current_password, placeholder: "現在のパスワードを入力", label: "現在のパスワード" %>
   </div>
 
   <div class="actions">
@@ -55,7 +51,7 @@
 ボタンを押した後、確認フォームが表示されますので、OKを選択して削除を完了してください。<br>
 キャンセルを選択すると削除が取り消されます。</p>
 
-<%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "現在ご利用中のアカウントを削除します。よろしいですか？" }, method: :delete %>
+<%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "現在ご利用中のアカウントを削除します。よろしいですか？" }, method: :delete, class: "btn btn-dark" %>
 
 
 </div>

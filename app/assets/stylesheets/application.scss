@@ -15,7 +15,7 @@
 
  
 :root{
- --ac-color: #f48fb1;
+ --ac-color: #3d5afe;
  --main-color: #000;
  --base-color: #ccc;
  --navbar-height: 50px;
@@ -38,7 +38,8 @@ a{
 }
 
 a:hover{
-    opacity: 0.7;
+    opacity: 1;
+    color: var(--ac-color);
 }
 
 
