@@ -2,8 +2,8 @@
     <% if article.photo.present? %>
     <%=  image_tag article.photo.thumb.url, alt: "サムネイル" %>
     <% end %>
-        <div class="body_bg"><p><%= safe_join(article.body.truncate(150).split("\n"),tag(:br)) %></p></div>
+        <div class="body_bg"><p class="body"><%= safe_join(article.body.truncate(200).split("\n"),tag(:br)) %></p></div>
         <%= link_to article_path(article) do %>
-    <span class="data"><%= article.title.truncate(10) %></span>
+    <span class="data"><%= article.title.truncate(20) %></span>
     <% end %>
     </div>

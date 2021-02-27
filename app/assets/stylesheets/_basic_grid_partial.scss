@@ -37,9 +37,10 @@
     height: 100%;
 }
 
-.body_bg p{
+.body_bg .body{
     color: #fff;
     padding: 20px;
+    font-size: 1.6rem;
 }
 
 /*---------------------------------------*/
@@ -74,7 +75,7 @@
  background: linear-gradient(to bottom,transparent,#000);
  display: block;
  position: absolute;
- opacity: 0.5;
+ opacity: 0.8;
 }
 
 .item_index_container .cards .data{
@@ -85,6 +86,7 @@
     left: 0;
     padding: 5px;
     text-indent: 0.5em;
+    font-size: 1.6rem;
 }
 
 .item_index_container .cards a:hover{

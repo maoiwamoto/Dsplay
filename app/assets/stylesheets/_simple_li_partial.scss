@@ -12,7 +12,7 @@ ul.list_item_container{
     overflow: hidden;
 }
 
-.list_item_container .card{
+.list_item_container .cards{
     background: rgba(0,0,0,0.8);
     overflow: hidden;
     position: relative;
@@ -51,10 +51,8 @@ ul.list_item_container{
   -webkit-transform: translateY(-50%); /* Safari用 */
   transform: translateY(-50%);
   
- color: #fafafa;
-    font-family: "yu gothic";
-    font-size: 16px;
-    
+   color: #fafafa;
+    font-size: 1.6rem;
     text-shadow: 0 1px 8px #000;
 }
 
@@ -76,7 +74,7 @@ ul.list_item_container{
 
 /*a部分の指定（共通）*/
 
-.list_item_container .card a{
+.list_item_container .cards a{
     display: block;
     position: absolute;
     width: 100%;
@@ -86,7 +84,7 @@ ul.list_item_container{
     color: #fff;
 }
 
-.list_item_container .card a .show{
+.list_item_container .cards a .show{
   position: absolute;
   display: inline-block;
   width: 100%;
@@ -94,7 +92,7 @@ ul.list_item_container{
   display: none;
 }
 
-.list_item_container .card a::after{
+.list_item_container .cards a::after{
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f00e";
@@ -102,12 +100,12 @@ ul.list_item_container{
     position: absolute;
     bottom: 0;
     right: 0;
-    font-size: 25px;
+    font-size: 2.5rem;
     padding: 5px;
 }
 
 
-.list_item_container .card a:hover{
+.list_item_container .cards a:hover{
     opacity: 1;
 }
 

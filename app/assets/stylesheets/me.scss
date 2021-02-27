@@ -84,11 +84,17 @@
 .user_info .pagetitle{
     display: block;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 1.75rem;
 }
 
 .user_info .user_name{
     display: block;
+    font-size: 1.6rem;
+    color: rgba(0,0,0,0.8);
+}
+
+.user_info .prof_text{
+    font-size: 1.5rem;
 }
 
 /*---------------------------------------------------*/

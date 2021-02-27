@@ -20,9 +20,10 @@
     background-image: url("leaf.png");
     background-repeat: no-repeat;
     background-size: contain;
-    border-radius: 6px;
+    background-position: center;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 50%;
 }
 
 .show_user_nav .show_avator img{
@@ -34,7 +35,7 @@
 
 .show_user_nav .pagetitle{
     display: block;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
     padding: 7px 1em;
     line-height: 1;
@@ -42,7 +43,7 @@
 
 .show_user_nav .username{
     display: block;
-    font-size: 13px;
+    font-size: 1.3rem;
 }
 
 .show_user_nav .link_box{
@@ -53,13 +54,13 @@
 
 .show_user_nav .link_box a{
     display: block;
-    font-size: 11px;
+    font-size: 1.1rem;
     padding: 10px 20px;
 }
 
 .show_user_nav .link_box a::before{
     display: block;
-    font-size: 20px;
+    font-size: 2.0rem;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
 }
@@ -83,25 +84,28 @@
         display: flex;
         align-items: center;
         border: 1px solid;
+
     }
     
     .show_user_nav .show_avator{
         margin: 0;
+        margin-right: 10px;
+        width: 100px;
+        height: 100px;
     }
     
     .show_user_nav .right{
-        background: pink;
         width: calc(100% - 80px);
     }
     
     .show_user_nav .pagetitle{
     padding: 15px 1em;
-    font-size: 18px;
+    font-size: 1.8rem;
+    background: #daebf2;
     }
     
-    .show_user_nav .link_box{
-        background: skyblue;
-        justify-content: flex-end;
+    .show_user_nav .username{
+        padding: 1em;
     }
     
 }
