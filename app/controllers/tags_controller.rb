@@ -28,7 +28,7 @@ class TagsController < ApplicationController
     @tag = current_user.tags.new(tag_params)
 
       if @tag.save
-        redirect_to @tag, notice: "Tag was successfully created."
+        redirect_to @tag, notice: "タグを新規作成しました"
       else
         render :new, status: :unprocessable_entity
       end
@@ -36,7 +36,7 @@ class TagsController < ApplicationController
 
   def update
       if @tag.update(tag_params)
-        redirect_to @tag, notice: "Tag was successfully updated."
+        redirect_to @tag, notice: "タグの情報を更新しました"
       else
         render :edit, status: :unprocessable_entity
       end
@@ -44,7 +44,7 @@ class TagsController < ApplicationController
 
   def destroy
     @tag.destroy
-      redirect_to her_tags_path(current_user.id), notice: "Tag was successfully destroyed."
+      redirect_to her_tags_path(current_user.id), notice: "タグを削除しました"
   end
 
   private

@@ -8,8 +8,10 @@
   <p class="tag_caption"><%= safe_join(@tag.caption.split("\n"),tag(:br)) %></p>
   <% end %>
   
+  <%= link_to 'タグ一覧へもどる', her_tags_path(@tag.user_id), class: "a_line" %>
+  
   <% if user_signed_in? && current_user.id == @tag.user_id %>
-  <%= link_to 'タグの編集', edit_tag_path(@tag), class: "a_line" %>
+  <%= link_to 'タグの編集', edit_tag_path(@tag), class: "a_main" %>
   <% end %>
   
    <% if @tag.posts.present? %>

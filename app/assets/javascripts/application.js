@@ -17,5 +17,5 @@
 //= require jcrop
 
 $(function(){
-  setTimeout("$('.flash_box').fadeOut('slow')", 3000);
+  setTimeout("$('.flash_box').fadeOut('slow')", 5000);
   });

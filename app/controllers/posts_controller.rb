@@ -32,7 +32,7 @@ class PostsController < ApplicationController
         if params[:post][:image].present?
           render :crop
         else
-         redirect_to @post, notice: "Post was successfully created."
+         redirect_to @post, notice: "新規投稿が完了しました"
         end
       else
         render :new, status: :unprocessable_entity
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
       if params[:post][:image].present?
         render :crop
       else
-        redirect_to @post, notice: "Post was successfully updated."
+        redirect_to @post, notice: "投稿を更新しました"
       end
       else
         render :edit, status: :unprocessable_entity
@@ -54,7 +54,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-      redirect_to her_posts_path(current_user.id), notice: "Post was successfully destroyed."
+      redirect_to her_posts_path(current_user.id), notice: "投稿が削除されました"
   end
 
 

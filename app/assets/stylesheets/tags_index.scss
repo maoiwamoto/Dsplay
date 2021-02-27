@@ -4,12 +4,12 @@
     width: 750px;
     max-width: 100%;
     margin: 0 auto;
+    padding: 2em 0;
 }
 
 .tag_card{
     margin: 35px 0;
-    padding-left: 35px;
-    padding-bottom: 20px;
+    padding: 20px 35px;
     position: relative;
 }
 
@@ -27,9 +27,9 @@
 }
 
 .tag_card .tagname{
-    font-size: 23px;
+    font-size: 22px;
     display: block;
-    padding: 1em 0;
+    padding: 1em 5px;
 }
 
 .tag_card .tagname::before{
@@ -43,7 +43,7 @@
 @media screen and (max-width: 639px) {
 
 .tag_card{
-    padding-left: 0;
+    padding: 20px 0;
     position: static;
 }
 

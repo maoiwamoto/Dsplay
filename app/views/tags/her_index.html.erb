@@ -3,7 +3,11 @@
 <% end %>
 
 <div class="tag_cards_container">
- <h2>ユーザー名のタグ一覧ページ</h2>
+ 
+ <ul class="pan">
+  <li><%= link_to me_path(@user) do %><%= @user.prof.pagetitle %><% end %></li>
+  <li><%= @user.prof.name %>のタグ一覧</li>
+ </ul>
 
  <%= render partial: 'tag', collection: @tags, as: "tag" %>
  </div>

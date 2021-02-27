@@ -226,6 +226,29 @@ nav.pagination span i:hover{
   opacity: 0.5;
 }
 
+/*------------パンくずリスト-----------------------------*/
+
+.pan{
+    list-style-type: none;
+    background: pink;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1em;
+    font-size: 17px;
+    line-height: 2em;
+}
+
+.pan li a{
+    color: var(--ac-color);
+}
+
+.pan li::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0da";
+    padding: 0 1em;
+}
 
 
 @media screen and (max-width: 415px) {

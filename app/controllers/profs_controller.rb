@@ -8,7 +8,7 @@ end
 def update
     if @prof.update(prof_params)
         redirect_to controller: :users, action: :show, id: current_user.id
-        flash[:notice] = "プロフィールが更新されました"
+        flash[:notice] = "プロフィールを更新しました"
     else
         render :edit
     end
