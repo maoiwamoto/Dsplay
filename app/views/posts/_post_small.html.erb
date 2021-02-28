@@ -1,5 +1,9 @@
 <li class="cards post" data-turbolinks="false">
-    <%= cl_image_tag post.image.tiny, alt: "サムネイル" %>
+            <% if post.crop_w.nil? %>
+            <%= cl_image_tag post.image.safe, alt: "サムネイル" %>
+            <% else %>
+            <%= cl_image_tag post.image.tiny, alt: "サムネイル" %>
+            <% end %>
     <%= link_to post_path(post) do %>
     <span class="show">詳細を見る</span>
     <% end %>

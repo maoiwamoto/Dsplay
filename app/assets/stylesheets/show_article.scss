@@ -44,21 +44,24 @@
     color: rgba(0,0,0,0.8);
 }
 
+.article_data{
+    padding: 10px;
+}
+
 .article_data .title{
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     display: block;
     text-align: right;
     text-indent: 0.5em;
-    padding: 10px 15px;
     line-height: 1;
+    padding: 0.5em 0;
 }
 
 .article_data time{
     display: block;
     text-align: right;
-    padding: 10px 15px;
-    border-top: 1px solid #ccc;
     font-size: 1.2rem;
+    border-top: 1px solid #ccc;
 }
 
 @media screen and (max-width:813px) {

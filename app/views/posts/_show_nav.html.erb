@@ -3,7 +3,11 @@
         <% if post.previous.present? %>
         <div class="show_nav_item">
         <%= link_to post_path(post.previous) do %>
-        <span><%= cl_image_tag post.previous.image.tiny, alt: "アイコン" %></span>
+        <span><% if post.previous.crop_w.nil? %>
+            <%= cl_image_tag post.previous.image.safe, alt: "サムネイル" %>
+            <% else %>
+            <%= cl_image_tag post.previous.image.tiny, alt: "サムネイル" %>
+            <% end %></span>
         <%= post.previous.title %>
         <% end %></div>
         <% end %>
@@ -11,7 +15,11 @@
         <% if post.next.present? %>
         <div class="show_nav_item">
         <%= link_to post_path(post.next) do %>
-        <span><%= cl_image_tag post.next.image.tiny, alt: "アイコン" %></span>
+        <span><% if post.next.crop_w.nil? %>
+            <%= cl_image_tag post.next.image.safe, alt: "サムネイル" %>
+            <% else %>
+            <%= cl_image_tag post.next.image.tiny, alt: "サムネイル" %>
+            <% end %> </span>
         <%= post.next.title %>
         <% end %></div>
         <% end %>
@@ -30,7 +38,11 @@
         <% if post.prev_tag.present? %>
         <div class="show_nav_item">
         <%= link_to post_path(post.prev_tag) do %>
-        <span><%= cl_image_tag post.prev_tag.image.tiny, alt: "アイコン" %></span>
+        <span><% if post.prev_tag.crop_w.nil? %>
+            <%= cl_image_tag post.prev_tag.image.safe, alt: "サムネイル" %>
+            <% else %>
+            <%= cl_image_tag post.prev_tag.image.tiny, alt: "サムネイル" %>
+            <% end %></span>
         <%= post.prev_tag.title %>
         <% end %></div>
         <% end %>
@@ -38,7 +50,11 @@
         <% if post.next_tag.present? %>
         <div class="show_nav_item">
         <%= link_to post_path(post.next_tag) do %>
-        <span><%= cl_image_tag post.next_tag.image.tiny, alt: "アイコン" %></span>
+        <span><% if post.next_tag.crop_w.nil? %>
+            <%= cl_image_tag post.next_tag.image.safe, alt: "サムネイル" %>
+            <% else %>
+            <%= cl_image_tag post.next_tag.image.tiny, alt: "サムネイル" %>
+            <% end %></span>
         <%= post.next_tag.title %>
         <% end %></div>
         <% end %>
