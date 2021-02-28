@@ -7,7 +7,7 @@
 <%= bootstrap_form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(post.errors.count, "件のエラー") %> により投稿を保存できませんでした:</h2>
       <ul>
       <% post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -17,7 +17,7 @@
   <% end %>
 
   <div class="field" id="countable">
-    <%= form.text_field :title, id: "input_text", label: "タイトル" %>
+    <%= form.text_field :title, id: "input_text", label: "タイトル(必須)" %>
     <p><span id="counter">0文字</span> / <span id="limit" data-count="35">最大文字数</span></p>
   </div>
   
