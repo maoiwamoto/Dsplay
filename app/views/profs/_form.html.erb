@@ -4,11 +4,11 @@
 <% end %>
 
 
-<%= bootstrap_form_with model: prof, local: true do |f| %>
+<%= bootstrap_form_with(model: prof, local: true, label_errors: true) do |f| %>
 
   <% if prof.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(prof.errors.count, "error") %> prohibited this profile from being saved:</h2>
+      <h2><%= pluralize(prof.errors.count, "件のエラー") %> により投稿を保存できませんでした:</h2>
       <ul>
       <% prof.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -18,15 +18,15 @@
   <% end %>
 
 <div class="field" id="countable">
-<%= f.text_field :name, id: "input_text", label: "ユーザー名" %>
-<p><span id="counter">0文字</span> / <span id="limit" data-count="10">最大文字数</span></p>
+<%= f.text_field :name, id: "input_text", label: "ユーザー名(必須)" %>
+<p><span id="counter">0文字</span> / <span id="limit" data-count="15">最大文字数</span></p>
 </div>
 <div class="field" id="countable">
-<%= f.text_field :pagetitle, id: "input_text", placeholder: "MyPage", label: "ユーザーページタイトル" %>
+<%= f.text_field :pagetitle, id: "input_text", placeholder: "MyPage", label: "ユーザーページタイトル(必須)" %>
 <p><span id="counter">0文字</span> / <span id="limit" data-count="35">最大文字数</span></p>
 </div>
 <div class="field" id="countable">
-<%= f.text_area :profile, id: "input_text", label: "プロフィール文" %>
+<%= f.text_area :profile, id: "input_text", label: "プロフィール文(必須)" %>
 <p><span id="counter">0文字</span> / <span id="limit" data-count="500">最大文字数</span></p>
 </div>
 

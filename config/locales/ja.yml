@@ -14,3 +14,16 @@ ja:
     title: "タイトル"
     image: "画像ファイル"
     caption: "キャプション"
+   article:
+    title: "タイトル"
+    body: "本文"
+    photo: "イメージ画像"
+   tag:
+    name: "タグ名"
+    caption: "タグの説明文"
+   prof:
+    name: "ユーザー名"
+    pagetitle: "ユーザーページタイトル"
+    profile: "プロフィール文"
+    avator: "ユーザーアイコン"
+    headerimage: "ヘッダー画像"
