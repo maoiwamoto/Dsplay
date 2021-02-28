@@ -78,3 +78,5 @@ gem 'devise', '~> 4.2'
 # bootstrap
 gem 'bootstrap', '~> 5.0.0.beta1'
 gem "bootstrap_form", "~> 4.0"
+
+gem "administrate"

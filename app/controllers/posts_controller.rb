@@ -30,6 +30,7 @@ class PostsController < ApplicationController
       @post = current_user.posts.new(post_params)
       if @post.save
         if params[:post][:image].present?
+          @post.reload
           render :crop
         else
          redirect_to @post, notice: "新規投稿が完了しました"

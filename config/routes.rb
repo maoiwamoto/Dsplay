@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   
   
+  devise_for :admin_users
+  namespace :admin do
+      resources :users
+      resources :articles
+      resources :posts
+      resources :profs
+      resources :tags
+
+      root to: "users#index"
+    end
     devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions',
