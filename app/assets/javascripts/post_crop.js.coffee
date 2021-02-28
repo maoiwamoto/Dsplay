@@ -1,5 +1,5 @@
 # crop.coffee
-$ ->
+$(document).on 'turbolinks:load', ->
   new ImageCrop()
 
 class ImageCrop

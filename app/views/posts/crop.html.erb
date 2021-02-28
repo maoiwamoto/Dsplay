@@ -32,13 +32,19 @@
         </div>
         
         <hr>
-       <%= form_for(@post) do |f| %>
-          <% %w[x y w h].each do |attribute| %>
-            <%= f.text_field "crop_#{attribute}" %>
-              <% end %>
+       <%#= form_for(@post) do |f| %>
+          <%# %w[x y w h].each do |attribute| %>
+            <%#= f.text_field "crop_#{attribute}" %>
+              <%# end %>
+              
+              <%= form_with(model: @post, local: true) do |f| %>
+              <%= f.text_field :crop_x, id: "post_crop_x" %>
+              <%= f.text_field :crop_y, id: "post_crop_y" %>
+              <%= f.text_field :crop_w, id: "post_crop_w" %>
+              <%= f.text_field :crop_h, id: "post_crop_h" %>
               
               
-          <div class="form-actions"><%= f.submit "アイコンを作成する" %></div>
+          <div class="actions"><%= f.submit "アイコンを作成する" %></div>
         <% end %>
         
         
