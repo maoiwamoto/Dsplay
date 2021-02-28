@@ -43,6 +43,7 @@ class PostsController < ApplicationController
   def update
       if @post.update_attributes(post_params)
       if params[:post][:image].present?
+        @post.reload
         render :crop
       else
         redirect_to @post, notice: "投稿を更新しました"

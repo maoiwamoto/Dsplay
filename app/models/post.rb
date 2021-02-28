@@ -5,13 +5,7 @@ class Post < ApplicationRecord
   validates :title, presence: true,length: {maximum: 35}
   validates :caption, length: {maximum: 1000}
   validates :image, presence: true
-  
-  attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
-  after_update :crop_image
 
-  def crop_image
-    image.recreate_versions! if crop_x.present?
-  end
   
   def user
     return User.find_by(id: self.user_id)

@@ -36,6 +36,8 @@
           <% %w[x y w h].each do |attribute| %>
             <%= f.text_field "crop_#{attribute}" %>
               <% end %>
+              
+              
           <div class="form-actions"><%= f.submit "アイコンを作成する" %></div>
         <% end %>
         

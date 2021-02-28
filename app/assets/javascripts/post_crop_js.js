@@ -1,7 +1,7 @@
 var ImageCrop,
   bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-$(document).on('turbolinks:load', function() {
+$(function() {
   return new ImageCrop();
 });
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_28_061327) do
+ActiveRecord::Schema.define(version: 2021_02_28_090420) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -44,6 +44,10 @@ ActiveRecord::Schema.define(version: 2021_02_28_061327) do
     t.datetime "updated_at", null: false
     t.string "image"
     t.integer "user_id"
+    t.integer "crop_x"
+    t.integer "crop_y"
+    t.integer "crop_w"
+    t.integer "crop_h"
     t.index ["tag_id"], name: "index_posts_on_tag_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end

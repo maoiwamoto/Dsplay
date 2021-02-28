@@ -6,7 +6,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   0..2.megabytes
   end
   
-  process :convert => 'jpeg' # 画像の保存形式
+  process :convert => 'jpg' # 画像の保存形式
   process :tags => ['post_image'] # 保存時に添付されるタグ（管理しやすいように適宜変更しましょう）
 
   # Choose what kind of storage to use for this uploader:
@@ -35,22 +35,20 @@ class ImageUploader < CarrierWave::Uploader::Base
  end
  
   version :tiny do
+    cloudinary_transformation :transformation => [
+        {:width => 400, :height => 900, :crop => :limit}]
+    process :custom_crop
+  end
+  
+  version :safe do
     process resize_to_fill: [120, 120]
   end
   
-  def crop
-    if model.crop_x.present?
-      resize_to_limit(400, 900)
-      manipulate! do |img|
-        x = model.crop_x.to_i
-        y = model.crop_y.to_i
-        w = model.crop_w.to_i
-        h = model.crop_h.to_i
-        # [[w, h].join('x'),[x, y].join('+')].join('+') => "wxh+x+y"
-        img.crop([[w, h].join('x'),[x, y].join('+')].join('+'))
-      end
-    end
+  def custom_crop
+    return :x => model.crop_x, :y => model.crop_y, 
+      :width => model.crop_w, :height => model.crop_h, :crop => :crop
   end
+  
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
