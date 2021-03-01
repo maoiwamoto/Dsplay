@@ -4,8 +4,8 @@
 
 <!--login-->
 
-<%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<%= render "devise/shared/error_messages", resource: resource %>
+<%= bootstrap_form_with(model: @user, url: user_session_path, method: :post, local: true, class: "new_user", id: "new_user", label_errors: true) do |f| %>
+<%= render "users/shared/error_messages", resource: resource %>
   <div class="field">
     
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", required: "required", label: "メールアドレス" %>

@@ -27,3 +27,7 @@ ja:
     profile: "プロフィール文"
     avator: "ユーザーアイコン"
     headerimage: "ヘッダー画像"
+   user:
+    password: "パスワード"
+    email: "メールアドレス"
+    current_password: "現在登録しているパスワード"

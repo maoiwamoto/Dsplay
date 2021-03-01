@@ -8,7 +8,7 @@
   
 <h2>ログイン</h2>
 
-<%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= bootstrap_form_with(model: @user, url: user_session_path, method: :post, local: true, class: "new_user", id: "new_user") do |f| %>
 <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", required: "required", label: "メールアドレス" %>

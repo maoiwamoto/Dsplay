@@ -35,7 +35,7 @@ ja:
       updated: 'パスワードが正しく変更されました。'
       updated_not_active: 'パスワードが正しく変更されました。'
     registrations:
-      destroyed: 'アカウントを削除しました。またのご利用をお待ちしております。'
+      destroyed: 'Dsplayをご利用いただきありがとうございました。アカウントは正常に削除されました。またのご利用をお待ちしております。'
       signed_up: 'メールアドレスの確認が完了しました。'
       signed_up_but_inactive: 'ログインするためには、アカウントを有効化してください。'
       signed_up_but_locked: 'アカウントが凍結されているためログインできません。'
@@ -58,5 +58,5 @@ ja:
       not_found: 'は見つかりませんでした。'
       not_locked: 'は凍結されていません。'
       not_saved:
-        one: "エラーが発生したため %{resource} は保存されませんでした:"
-        other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした:"
+        one: "エラーが発生したため送信できませんでした:"
+        other: "%{count} 件のエラーが発生したため送信できませんでした:"

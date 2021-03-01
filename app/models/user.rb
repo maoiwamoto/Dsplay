@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :articles, dependent: :destroy
   has_many :tags, dependent: :destroy
   has_one :prof, dependent: :destroy
+  attr_accessor :profs_attributes
   accepts_nested_attributes_for :prof
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
