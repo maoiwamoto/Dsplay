@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
       root to: "users#index"
     end
+    
+    
     devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions',
@@ -33,7 +35,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   root to: "home#index"
-  get 'home/' => 'home#index'
+  get 'home' => 'home#index'
+  get 'terms' => 'home#terms'
   get 'users/mypage' => 'users#mypage'
   get 'users/:id' => 'users#show', as: 'me'
   get 'users/:id/posts' => 'posts#her_index', as: 'her_posts'

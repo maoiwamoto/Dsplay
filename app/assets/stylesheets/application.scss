@@ -43,7 +43,7 @@ body {
 
 body p{
     font-size: 1.6rem;
-    margin: 0.8em;
+    margin: 0.85em;
 }
 
 h2,h3{
@@ -281,6 +281,16 @@ nav.pagination span i:hover{
     content: "\f0da";
     padding: 0 1em;
 }
+
+/*利用規約のOLの設定--------------------------------------------------*/
+
+ol{
+    padding: 0;
+    margin: 35px;
+}
+
+
+/*-------------------------------------------------*/
 
 
 @media screen and (max-width: 415px) {
