@@ -24,14 +24,14 @@
   </div>
 
   <div class="field">
-    <% if @minimum_password_length %>
-    <em class="min">(<%= @minimum_password_length %>文字以上)</em>
-    <% end %>
     <%= f.password_field :password, autocomplete: "new-password", placeholder: "パスワード", label: "パスワード" %>
   </div>
 
   <div class="field">
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワードを再入力", label: "パスワード確認" %>
+    <% if @minimum_password_length %>
+    <em class="min">(<%= @minimum_password_length %>文字以上)</em>
+    <% end %>
   </div>
   
    <%= f.fields_for :prof do |attributes| %>

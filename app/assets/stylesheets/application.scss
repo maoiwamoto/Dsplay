@@ -19,6 +19,8 @@
  --main-color: #000;
  --base-color: #ccc;
  --navbar-height: 50px;
+ --font-def: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+ --font-mincho: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
 *{
@@ -36,16 +38,25 @@ html {
 body {
 	/* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
 	font-size: 1.6em;
-	font-family: "Helvetica Neue",
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo,
-    sans-serif;
+	font-family: var(--font-def);
 }
 
 body p{
     font-size: 1.6rem;
+    margin: 0.8em;
+}
+
+h2,h3{
+    font-family: var(--font-mincho);
+    padding: 0.8em;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 1.9rem;
 }
 
 img{
@@ -65,9 +76,9 @@ a:hover{
 
 .a_line{
     display: block;
-    width: 100%;
+    width: 95%;
     border: 2px solid;
-    padding: 0.5em 1.5em;
+    padding: 0.8em;
     margin: 1em auto;
     border-radius: 3px;
     text-align: center;
@@ -75,8 +86,8 @@ a:hover{
 
 .a_main{
     display: block;
-    width: 100%;
-    padding: 0.5em 1.5em;
+    width: 95%;
+    padding: 0.8em;
     margin: 1em auto;
     border-radius: 3px;
     text-align: center;
@@ -252,7 +263,6 @@ nav.pagination span i:hover{
 
 .pan{
     list-style-type: none;
-    background: pink;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
