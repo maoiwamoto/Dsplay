@@ -11,6 +11,7 @@
     grid-auto-rows: calc(var(--item-box-w) / var(--item-c));
     grid-gap: 8px;
     margin: 0 auto;
+    margin-bottom: 8px;
     overflow: hidden;
 }
 
@@ -39,8 +40,11 @@
 
 .body_bg .body{
     color: #fff;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    padding: 15px;
     font-size: 1.6rem;
+    font-family: var(--font-mincho);
 }
 
 /*---------------------------------------*/
