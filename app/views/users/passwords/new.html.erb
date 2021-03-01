@@ -12,7 +12,7 @@
         お送りしたメール内に記載のリンクから、再設定を完了してください。
       </p>
 
-<%= bootstrap_form_with(model: @user, url: user_password_path, method: :post, local: true, class: "new_user", id: "new_user") do |f| %>
+<%= bootstrap_form_with(model: @user, url: user_password_path, method: :post, local: true, label_errors: true, class: "new_user", id: "new_user") do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
