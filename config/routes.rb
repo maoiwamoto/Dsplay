@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   
   root to: "home#index"
   get 'home' => 'home#index'
-  get 'terms' => 'home#terms'
+  get 'terms' => 'home#terms', as: 'terms'
   get 'users/mypage' => 'users#mypage'
   get 'users/:id' => 'users#show', as: 'me'
   get 'users/:id/posts' => 'posts#her_index', as: 'her_posts'

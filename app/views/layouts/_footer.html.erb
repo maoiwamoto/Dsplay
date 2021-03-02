@@ -1,0 +1,27 @@
+<footer>
+    
+    <div class="footer_flexbox">
+    <div class="footer_i">
+        <ul>
+            <li>このサイトについて</li>
+            <li>ガイドライン</li>
+            <li>メニュー</li>
+        </ul>
+    </div>
+    <div class="footer_i">
+        <ul>
+            <li><%= link_to "ご利用規約", terms_path %></li>
+            <li>プライバシーポリシー</li>
+            <li>運営アカウント</li>
+        </ul>
+    </div>
+    <div class="footer_i">
+        <%= link_to root_path do %><%= image_tag 'footer_logo_w.png', alt: "Dsplay イラスト・小説・写真 創作系投稿サービス", class: "footer_logo" %><% end %>
+    </div>
+    </div>
+    
+    <div class="c">
+        <p>(c) Dsplay 2021</p>
+    </div>
+    
+</footer>

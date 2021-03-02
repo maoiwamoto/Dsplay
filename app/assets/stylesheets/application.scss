@@ -282,6 +282,61 @@ nav.pagination span i:hover{
     padding: 0 1em;
 }
 
+/*フッターの設定----------------------------------------------------------------*/
+
+footer{
+    background: #000;
+}
+
+.footer_flexbox{
+    display: flex;
+    flex-wrap: no-wrap;
+    width: 100%;
+    justify-content: space-around;
+    align-items: top;
+    padding: 25px 0;
+    color: #fff;
+}
+
+.footer_i{
+    max-width: calc(100% / 3);
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.footer_i ul{
+    font-size: 1.5rem;
+    line-height: 2em;
+    list-style-type: circle;
+}
+
+.footer_i ul li a{
+    color: #ccc;
+}
+
+.footer_i ul li a:hover{
+    color: var(--ac-color);
+}
+
+.footer_logo{
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.c{
+    background: var(--ac-color);
+}
+
+.c p{
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+}
+
+
 /*利用規約のOLの設定--------------------------------------------------*/
 
 ol{
@@ -297,6 +352,29 @@ ol{
 
 header .first .name{
     display: none;
+}
+}
+
+@media screen and (max-width: 639px) {
+
+.footer_flexbox{
+    display: inherit;
+    padding: 10px 0;
+}
+
+.footer_i{
+    max-width: 95%;
+    border-bottom: 1px solid #fff;
+}
+
+.footer_i:last-child{
+    border-bottom: none;
+}
+
+.footer_i ul{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1.6rem;
 }
 
 }
