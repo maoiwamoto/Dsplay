@@ -3,7 +3,7 @@
         <% if article.previous.present? %>
         <div class="show_nav_item">
         <%= link_to article_path(article.previous) do %>
-        <span><%= image_tag article.previous.photo.tiny.url, alt: "アイコン" if article.previous.photo.present? %></span>
+        <span><%= cl_image_tag article.previous.photo.tiny, alt: "アイコン" if article.previous.photo.present? %></span>
         <%= article.previous.title %>
         <% end %></div>
         <% end %>
@@ -11,7 +11,7 @@
         <% if article.next.present? %>
         <div class="show_nav_item">
         <%= link_to article_path(article.next) do %>
-        <span><%= image_tag article.next.photo.tiny.url, alt: "アイコン" if article.next.photo.present? %></span>
+        <span><%= cl_image_tag article.next.photo.tiny, alt: "アイコン" if article.next.photo.present? %></span>
         <%= article.next.title %>
         <% end %></div>
         <% end %>
@@ -30,7 +30,7 @@
         <% if article.prev_tag.present? %>
         <div class="show_nav_item">
         <%= link_to article_path(article.prev_tag) do %>
-        <span><%= image_tag article.prev_tag.photo.tiny.url, alt: "アイコン" if article.prev_tag.photo.present? %></span>
+        <span><%= cl_image_tag article.prev_tag.photo.tiny, alt: "アイコン" if article.prev_tag.photo.present? %></span>
         <%= article.prev_tag.title %>
         <% end %></div>
         <% end %>
@@ -38,7 +38,7 @@
         <% if article.next_tag.present? %>
         <div class="show_nav_item">
         <%= link_to article_path(article.next_tag) do %>
-        <span><%= image_tag article.next_tag.photo.tiny.url, alt: "アイコン" if article.next_tag.photo.present? %></span>
+        <span><%= cl_image_tag article.next_tag.photo.tiny, alt: "アイコン" if article.next_tag.photo.present? %></span>
         <%= article.next_tag.title %>
         <% end %></div>
         <% end %>

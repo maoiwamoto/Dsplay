@@ -170,6 +170,7 @@ header{
 
 header h1{
     height: 100%;
+    width: fit-content;
 }
 
 header h1 img{
@@ -229,6 +230,8 @@ header .right i{
 
 main{
     padding-top: var(--navbar-height);
+    padding-bottom: 50px;
+    min-height: 100vh;
 }
 
 
@@ -322,7 +325,6 @@ footer{
     display: block;
     width: 200px;
     margin: 0 auto;
-    max-width: 100%;
 }
 
 .c{

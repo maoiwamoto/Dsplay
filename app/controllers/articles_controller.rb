@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-      if @article.update(article_params)
+      if @article.update_attributes(article_params)
         redirect_to @article, notice: "投稿を更新しました"
       else
         render :edit, status: :unprocessable_entity
@@ -53,7 +53,7 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:title, :body, :tag_id, :photo, :photo_cache, :remove_photo)
+      params.require(:article).permit(:title, :body, :tag_id, :photo, :photo_cache)
     end
     
     

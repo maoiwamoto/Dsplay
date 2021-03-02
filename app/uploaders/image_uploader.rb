@@ -13,21 +13,21 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Choose what kind of storage to use for this uploader:
   #storage :file
   # storage :fog
-  after :remove, :delete_empty_upstream_dirs
+  #after :remove, :delete_empty_upstream_dirs
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
+  #def store_dir
+  #  "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  #end
   
-    def delete_empty_upstream_dirs
-    path = ::File.expand_path(store_dir, root)
-    Dir.delete(path) # fails if path not empty dir
+    #def delete_empty_upstream_dirs
+    #path = ::File.expand_path(store_dir, root)
+    #Dir.delete(path) # fails if path not empty dir
 
-    rescue SystemCallError
-    true # nothing, the dir is not empty
-    end
+    #rescue SystemCallError
+    #true # nothing, the dir is not empty
+    #end
 
 
   # Create different versions of your uploaded files:
@@ -55,6 +55,14 @@ class ImageUploader < CarrierWave::Uploader::Base
   # For images you might use something like this:
   def extension_whitelist
   %w(jpg jpeg png)
+  end
+  
+  def url(*args)
+  if cached?
+  "/#{cache_path}"
+  else
+  super
+  end
   end
   
 

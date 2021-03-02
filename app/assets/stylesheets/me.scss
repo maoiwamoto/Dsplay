@@ -8,7 +8,8 @@
 
 .me_container .side{
     width: 25vw;
-    outline: 1px solid;
+    border: 1px solid;
+    padding-bottom: 20px;
 }
 
 .me_container .main{
@@ -120,11 +121,11 @@
     
     .me_container .side{
         width: 100%;
+        border: none;
     }
     
     .me_container .main{
         width: 100%;
-        padding: 0;
     }
     
     .me_container .main_avator{

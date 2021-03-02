@@ -24,7 +24,7 @@
   <div class="field">
     <% if @post.image.present? %>
     <div class="attached_img_area">
-    <%=  cl_image_tag @post.image.thumb, alt: "サムネイル" %>
+    <%=  cl_image_tag post.image.thumb, alt: "サムネイル" %>
     </div>
     <% end %>
     <%= form.hidden_field :image_cache %>
