@@ -65,5 +65,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
   end
   
+  def  public_id 
+  return model.id
+  end 
+  
 
 end

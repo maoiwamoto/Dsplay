@@ -1,24 +1,25 @@
 class PhotoUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
-  process resize_to_limit: [600, 500]
+
+process :convert => 'jpg' # 画像の保存形式  
+process :quality => 'auto'
+process :tags => ['article_photo']
+cloudinary_transformation :transformation => [
+        {:width => 600, :height => 500, :crop => "limit"}]
   
   def size_range
   0..2.megabytes
   end
-  
-   process :convert => 'jpg' # 画像の保存形式
-   process :quality => 'auto'
-   process :tags => ['article_photo'] # 保存時に添付されるタグ（管理しやすいように適宜変更しましょう）
 
 
  version :thumb do
-   process resize_to_limit: [450, 500]
+   cloudinary_transformation :transformation => [
+        {:width => 450, :height => 450, :crop => "fill", :gravity => "auto"}]
  end
  
    version :tiny do
     cloudinary_transformation :transformation => [
-        {:width => 450, :height => 500, :crop => "limit"}]
-    process resize_to_fill: [120, 120]
+        {:width => 120, :height => 120, :crop => "fill", :gravity => "auto"}]
   end
   
   def extension_whitelist
