@@ -11,19 +11,18 @@
 }
 
 .post_data{
-    padding: 10px;
+    padding: 10px 5px;
 }
 
 .post_data .title{
     display: block;
-    font-size: 1.75rem;
+    font-size: 1.8rem;
     padding: 0.5em 0.7em;
-    font-weight: bold;
-    color: rgba(0,0,0,0.6);
 }
 
 .post_data .caption{
     color: rgba(0,0,0,0.8);
+    font-size: 1.6rem;
 }
 
 .post_data time{

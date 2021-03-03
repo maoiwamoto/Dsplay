@@ -6,17 +6,14 @@
     padding: 2em 0;
 }
 
-.tag_caption{
-    padding: 20px;
-}
 
-.tagname{
+.index_wrapper .tagname{
     display: block;
     font-size: 2.3rem;
-    padding: 1em 0.6em;
+    padding: 0.5em 0.7em;
 }
 
-.tagname::before{
+.index_wrapper .tagname::before{
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f292";

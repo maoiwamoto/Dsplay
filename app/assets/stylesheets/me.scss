@@ -7,13 +7,13 @@
 .me_container{ 
  width: 95vw;
  margin: 0 auto;
+ margin-top: 10px;
  display: flex;
 }
 
 .me_container .side{
     width: 25vw;
     border: 1px solid;
-    padding-bottom: 20px;
 }
 
 .me_container .main{
@@ -47,16 +47,16 @@
 
 .me_container .prof_z{
     width: 100%;
-    height: 250px;
+    height: 230px;
     position: relative;
 }
 
 .me_container .prof_box{
     width: 100%;
-    height: calc(100% + 50px);
+    height: calc(100% + 60px);
     position: absolute;
     left: 0;
-    top: -50px;
+    top: -60px;
 }
 
 .me_container .prof_box::after{
@@ -99,7 +99,7 @@
 .user_info .pagetitle{
     display: block;
     font-weight: bold;
-    font-size: 1.75rem;
+    font-size: 1.67rem;
 }
 
 .user_info .user_name{
@@ -116,21 +116,59 @@
 /*---------------------------------------------------*/
 
 
-.me_container ul.side_menu{
+.me_container .her_side_menu{
     list-style-type: none;
+    padding: 7px;
 }
 
-.me_container .side_menu li{
-    padding: 20px;
+.me_container .her_side_menu li{
+  border: 2px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  margin-bottom: 7px;
 }
+
+.me_container .her_side_menu li a{
+    display: block;
+    padding: 1em;
+    font-size: 1.4rem;
+}
+
+.me_container .her_side_menu li a:hover{
+    color: inherit;
+    opacity: 0.7;
+}
+
+.me_container .her_side_menu li a::before{
+ font-family: "Font Awesome 5 Free";
+ font-weight: 900;
+ font-size: 2.5rem;
+ padding-right: 0.7em;
+ color: var(--ac-color);
+ vertical-align: middle;
+}
+
+.her_side_menu .post::before{
+  content: "\f302";
+}
+
+.her_side_menu .article::before{
+  content: "\f036";
+}
+
+.her_side_menu .tag::before{
+  content: "\f292";
+}
+
+
+
 
 @media screen and (max-width: 769px) {
-    
     
 
     .me_container{
         display: inherit;
         width: 100%;/*vwじゃなくてパーセント指定*/
+        margin: 0;
     }
     
     .me_container .side{
@@ -148,6 +186,33 @@
     
     .me_container .user_info{
         text-align: center;
+}
+
+.her_side_menu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.her_side_menu li{
+    width: calc(100% / 3);
+    height: 100%;
+    margin: 0 4px;
+}
+
+.her_side_menu li a{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.her_side_menu li a::before{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 0;
 }
     
 }

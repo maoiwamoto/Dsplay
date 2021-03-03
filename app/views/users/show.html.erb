@@ -1,3 +1,7 @@
+<% content_for :title do %>
+    <%= @user.prof.pagetitle %>
+<% end %>
+
 <% content_for :css do %>
 <%= stylesheet_link_tag 'me' %>
 <% end %>
@@ -19,10 +23,10 @@
        </div>
    </div>
     
-    <ul class="side_menu">
-    <li><%= link_to "画像投稿一覧", her_posts_path(@user) %></li>
-    <li><%= link_to "文章投稿一覧", her_articles_path(@user) %></li>
-    <li><%= link_to "タグ一覧", her_tags_path(@user) %></li>
+    <ul class="her_side_menu">
+    <li><%= link_to "images", her_posts_path(@user), class: "post" %></li>
+    <li><%= link_to "notes", her_articles_path(@user), class: "article" %></li>
+    <li><%= link_to "tags", her_tags_path(@user), class: "tag" %></li>
     </ul>
         
 </div>
@@ -30,14 +34,12 @@
         <div class="main">
 
         <% if @user.posts.present? %>
-        <h2>posts</h2>
         <div class="item_index_container">
          <%= render partial: 'posts/post', collection: @user.posts.limit(6).order('id DESC'), as: "post" %>
         </div>
         <% end %>
         
         <% if @user.articles.present? %>
-        <h2>articles</h2>
         <div class="item_index_container">
          <%= render partial: 'articles/article', collection: @user.articles.limit(6).order('id DESC'), as: "article" %>
         </div>

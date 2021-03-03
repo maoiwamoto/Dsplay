@@ -1,3 +1,7 @@
+<% content_for :title do %>
+<%= @article.title %>
+<% end %>
+
 <% content_for :css do %>
 <%= stylesheet_link_tag 'show_article' %>
 <% end %>
@@ -40,7 +44,5 @@
             </div>
         </div>
     </div>
-            
             <%= render partial: 'show_nav', locals: { article: @article } %>
-        
     </div>

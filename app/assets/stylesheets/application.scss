@@ -17,10 +17,10 @@
 :root{
  --ac-color: #8c9eff;
  --main-color: #000;
- --base-color: #ccc;
+ --base-color: #fafafa;
  --navbar-height: 50px;
- --font-def: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
  --font-mincho: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+ --font-gothic: "Helvetica Neue",Arial,"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }
 
 *{
@@ -38,7 +38,7 @@ html {
 body {
 	/* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
 	font-size: 1.6em;
-	font-family: var(--font-def);
+	font-family: var(--font-gothic);
 }
 
 body p{
@@ -313,7 +313,7 @@ footer{
 
 .footer_logo{
     display: block;
-    width: 200px;
+    height: 130px;
     margin: 0 auto;
 }
 

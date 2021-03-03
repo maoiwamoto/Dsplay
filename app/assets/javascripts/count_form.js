@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+$(function(){
     
     function countInputText(input) {
         const piyo = $(input).parents('#countable').find('#counter');
