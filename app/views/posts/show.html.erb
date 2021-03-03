@@ -34,14 +34,12 @@
             <div class="link_box">
             <%= link_to "index", her_posts_path(@post.user.id), class: "index" %>
             <% if user_signed_in? && current_user.id == @post.user_id %>
-            <%= link_to "edit", edit_post_path(@post), class: "edit",data: {"turbolinks"=>false} %>
+            <%= link_to "edit", edit_post_path(@post), class: "edit" %>
             <% end %>
             </div>
         </div>
     </div>
-           
         <%= render partial: 'show_nav', locals: { post: @post } %>
-        
     </div>
     
   

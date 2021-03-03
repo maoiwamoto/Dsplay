@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function(){
     
 const imgModal = $('<div id="img_modal">');
 const bgArea = $('<div id="img_modal_bg">');

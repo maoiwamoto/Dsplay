@@ -2,15 +2,15 @@
 
 <h2>マイページ</h2>
 
-<%= link_to 'タグの新規作成', new_tag_path,data: {"turbolinks"=>false} %>
+<%= link_to 'タグの新規作成', new_tag_path %>
 
-<%= link_to '画像の新規投稿', new_post_path,data: {"turbolinks"=>false} %>
+<%= link_to '画像の新規投稿', new_post_path %>
 
-<%= link_to '文章の新規投稿', new_article_path,data: {"turbolinks"=>false} %>
+<%= link_to '文章の新規投稿', new_article_path %>
 
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 
-<%= link_to "プロフィール編集", edit_prof_path,data: {"turbolinks"=>false} %>
+<%= link_to "プロフィール編集", edit_prof_path %>
 
 <%= link_to "ユーザー情報の変更", edit_user_registration_path %>
 

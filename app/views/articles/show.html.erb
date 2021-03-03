@@ -35,7 +35,7 @@
             <div class="link_box">
             <%= link_to "index" , her_articles_path(@article.user.id), class: "index" %>
             <% if user_signed_in? && current_user.id == @article.user_id %>
-            <%= link_to "edit", edit_article_path(@article), class: "edit",data: {"turbolinks"=>false} %>
+            <%= link_to "edit", edit_article_path(@article), class: "edit" %>
             <% end %>
             </div>
         </div>

@@ -66,6 +66,7 @@ img{
 a{
     text-decoration: none;
     color: var(--main-color);
+    transition : all 0.5s;
 }
 
 a:hover{

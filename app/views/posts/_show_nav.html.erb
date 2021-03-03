@@ -1,4 +1,4 @@
-<div class="show_nav" data-turbolinks="false"><%# 前後のレコードに移動するナビゲーション %>
+<div class="show_nav"><%# 前後のレコードに移動するナビゲーション %>
                 
         <% if post.previous.present? %>
         <div class="show_nav_item">
@@ -26,14 +26,13 @@
                 
         </div><%# show_nav %>
         
-        
         <% if post.tag_id.present? %>
         
         <%= link_to tag_path(post.tag), class: "ttr_tag" do %>
         <%= post.tag.name %>
         <% end %>
         
-        <div class="show_nav" data-turbolinks="false"><%# 同じタグに属する前後のレコードに移動するナビゲーション %>
+        <div class="show_nav"><%# 同じタグに属する前後のレコードに移動するナビゲーション %>
                 
         <% if post.prev_tag.present? %>
         <div class="show_nav_item">
