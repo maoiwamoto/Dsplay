@@ -1,6 +1,11 @@
 class AvatorUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
-  process resize_to_fill: [100, 100]
+  include Cloudinary::CarrierWave
+  
+process :convert => 'jpg' # 画像の保存形式  
+process :quality => 'auto'
+process :tags => ['user_avator']
+cloudinary_transformation :transformation => [
+{:width => 120, :height => 120, :crop => "fill", :gravity => "auto"}]
   
   def size_range
   0..2.megabytes
@@ -9,30 +14,17 @@ class AvatorUploader < CarrierWave::Uploader::Base
    def extension_whitelist
    %w(jpg jpeg png)
    end
-
-  # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
-  after :remove, :delete_empty_upstream_dirs
-
-  # Override the directory where uploaded files will be stored.
-  # This is a sensible default for uploaders that are meant to be mounted:
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+   
+  def url(*args)
+  if cached?
+  "/#{cache_path}"
+  else
+  super
+  end
   end
   
-    def delete_empty_upstream_dirs
-    path = ::File.expand_path(store_dir, root)
-    Dir.delete(path) # fails if path not empty dir
-
-    rescue SystemCallError
-    true # nothing, the dir is not empty
-    end
-
-  # Override the directory where uploaded files will be stored.
-  # This is a sensible default for uploaders that are meant to be mounted:
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
+  def  public_id 
+  return "avatar/" + model.user_id.to_s
+  end 
 
 end

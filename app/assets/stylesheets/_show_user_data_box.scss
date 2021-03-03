@@ -101,9 +101,10 @@
     }
     
     .show_user_nav .pagetitle{
-    padding: 15px 1em;
+    padding: 1em;
     font-size: 1.8rem;
-    background: #daebf2;
+    border: 2px solid;
+    border-radius: 25%;
     }
     
     .show_user_nav .username{

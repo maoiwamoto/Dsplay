@@ -22,7 +22,7 @@
         <div class="show_avator">
             <% if @post.user.prof.avator.present? %>
             <%= link_to me_path(@post.user.id) do %>
-            <%= image_tag @post.user.prof.avator.url %>
+            <%= cl_image_tag @post.user.prof.avator %>
             <% end %>
             <% end %>
         </div>

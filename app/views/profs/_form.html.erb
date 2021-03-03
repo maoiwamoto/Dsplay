@@ -18,22 +18,22 @@
   <% end %>
 
 <div class="field" id="countable">
-<%= f.text_field :name, id: "input_text", label: "ユーザー名(必須)" %>
+<%= f.text_field :name, id: "input_text", label: "ユーザー名(※)" %>
 <p><span id="counter">0文字</span> / <span id="limit" data-count="15">最大文字数</span></p>
 </div>
 <div class="field" id="countable">
-<%= f.text_field :pagetitle, id: "input_text", placeholder: "MyPage", label: "ユーザーページタイトル(必須)" %>
+<%= f.text_field :pagetitle, id: "input_text", placeholder: "MyPage", label: "ユーザーページタイトル(※)" %>
 <p><span id="counter">0文字</span> / <span id="limit" data-count="35">最大文字数</span></p>
 </div>
 <div class="field" id="countable">
-<%= f.text_area :profile, id: "input_text", label: "プロフィール文(必須)" %>
+<%= f.text_area :profile, id: "input_text", label: "プロフィール文(※)" %>
 <p><span id="counter">0文字</span> / <span id="limit" data-count="500">最大文字数</span></p>
 </div>
 
 <% if prof.avator.present? %>
     <div class="field">
-    <div class="attached_img_area"><%=  image_tag prof.avator.url, alt: "アイコン画像" %></div>
-    <div class="remove_checkbox"><%= f.check_box :remove_avator, label: "アイコン画像を削除" %></div>
+    <div class="attached_img_area"><%= image_tag(prof.avator.url) %></div>
+    <%= f.check_box :remove_avator, label: "このアイコンを削除する" %>
     </div>
 <% end %>
     <div class="field">
@@ -43,8 +43,8 @@
 
 <% if prof.headerimage.present? %>
   <div class="field">
-    <div class="attached_img_area"><%= image_tag prof.headerimage.url, alt: "サムネイル" %></div>
-    <div class="remove_checkbox"><%= f.check_box :remove_headerimage, label: "ヘッダー画像を削除" %></div>
+    <div class="attached_img_area"><%= image_tag(prof.headerimage.url) %></div>
+    <%= f.check_box :remove_headerimage, label: "このヘッダーを削除する" %>
     </div>
     <% end %>
     <div class="field">

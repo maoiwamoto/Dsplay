@@ -9,6 +9,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   process :convert => 'jpg' # 画像の保存形式
   process :quality => 'auto'
   process :tags => ['post_image'] # 保存時に添付されるタグ（管理しやすいように適宜変更しましょう）
+  cloudinary_transformation :transformation => [
+        {:width => 1000, :height => 1200, :crop => "limit"}]
 
   # Choose what kind of storage to use for this uploader:
   #storage :file
@@ -32,17 +34,19 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
  version :thumb do
-  process resize_to_limit: [400, 900]
+      cloudinary_transformation :transformation => [
+        {:width => 450, :height => 800, :crop => "limit"}]
  end
  
   version :tiny do
     cloudinary_transformation :transformation => [
-        {:width => 400, :height => 900, :crop => :limit}]
+        {:width => 450, :height => 800, :crop => "limit"}]
     process :custom_crop
   end
   
   version :safe do
-    process resize_to_fill: [120, 120]
+        cloudinary_transformation :transformation => [
+        {:width => 120, :height => 120, :crop => "fill", :gravity => "auto"}]
   end
   
   def custom_crop

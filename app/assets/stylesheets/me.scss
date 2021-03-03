@@ -58,15 +58,16 @@
 }
 
 .me_container .main_avator{
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 20%;
-    border: 3px solid;
+    border: 2px solid #fafafa;
     background-color: #fff;
     background-image: url('witch.jpg');
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
+    box-shadow: 0 0 0px 3px #000;
 }
 
 .me_container .main_avator img{

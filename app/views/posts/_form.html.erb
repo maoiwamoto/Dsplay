@@ -23,9 +23,7 @@
   
   <div class="field">
     <% if @post.image.present? %>
-    <div class="attached_img_area">
-    <%=  cl_image_tag post.image.thumb, alt: "サムネイル" %>
-    </div>
+    <div class="attached_img_area"><%=  image_tag(post.image.url) %></div>
     <% end %>
     <%= form.hidden_field :image_cache %>
     <%= form.file_field :image, label: "添付画像" %>
