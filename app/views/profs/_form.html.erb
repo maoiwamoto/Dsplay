@@ -33,7 +33,7 @@
 <% if prof.avator.present? %>
     <div class="field">
     <div class="attached_img_area"><%= image_tag(prof.avator.url) %></div>
-    <%= f.check_box :remove_avator, label: "このアイコンを削除する" %>
+    <div class="rm_check"><%= f.check_box :remove_avator, label: "このアイコンを削除する" %></div>
     </div>
 <% end %>
     <div class="field">
@@ -44,7 +44,7 @@
 <% if prof.headerimage.present? %>
   <div class="field">
     <div class="attached_img_area"><%= image_tag(prof.headerimage.url) %></div>
-    <%= f.check_box :remove_headerimage, label: "このヘッダーを削除する" %>
+    <div class="rm_check"><%= f.check_box :remove_headerimage, label: "このヘッダーを削除する" %></div>
     </div>
     <% end %>
     <div class="field">

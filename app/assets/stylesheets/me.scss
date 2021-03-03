@@ -1,5 +1,9 @@
 @import "basic_grid_partial";
 
+:root{
+    --avatar-size: 120px;
+}
+
 .me_container{ 
  width: 95vw;
  margin: 0 auto;
@@ -43,23 +47,32 @@
 
 .me_container .prof_z{
     width: 100%;
-    height: 200px;
+    height: 250px;
     position: relative;
 }
 
 .me_container .prof_box{
-    max-width: 100%;
+    width: 100%;
     height: calc(100% + 50px);
     position: absolute;
     left: 0;
-    right: 0;
     top: -50px;
-    margin: auto;
+}
+
+.me_container .prof_box::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(to top,#fff,transparent);
 }
 
 .me_container .main_avator{
-    width: 110px;
-    height: 110px;
+    width: var(--avatar-size);
+    height: var(--avator-size);
     border-radius: 20%;
     border: 2px solid #fafafa;
     background-color: #fff;
@@ -78,7 +91,7 @@
 }
 
 .me_container .user_info{
-    height: calc(100% - 100px);
+    height: calc(100% - var(--avatar-size));
     overflow-y: scroll;
     padding: 20px;
 }

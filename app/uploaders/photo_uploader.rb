@@ -36,6 +36,6 @@ cloudinary_transformation :transformation => [
   
   def  public_id 
   return model.id
-  end 
+  end
  
 end

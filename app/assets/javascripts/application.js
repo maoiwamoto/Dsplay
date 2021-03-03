@@ -16,6 +16,7 @@
 //= require popper
 //= require jcrop
 
+
 $(function(){
-  setTimeout("$('.flash_box').fadeOut('slow')", 5000);
+  setTimeout("$('.flash_box').fadeOut('slow')", 4800);
   });
