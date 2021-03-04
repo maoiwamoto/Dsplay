@@ -14,11 +14,13 @@
 .me_container .side{
     width: 25vw;
     border: 1px solid;
+    background: var(--base-color);
+    height: fit-content;
 }
 
 .me_container .main{
     width: 70vw;
-    background: pink;
+    height: auto;
 }
 
 
@@ -67,20 +69,20 @@
     bottom: 0;
     width: 100%;
     height: 25%;
-    background: linear-gradient(to top,#fff,transparent);
+    background: linear-gradient(to top,var(--base-color),transparent);
 }
 
 .me_container .main_avator{
     width: var(--avatar-size);
-    height: var(--avator-size);
+    height: var(--avatar-size);
     border-radius: 20%;
-    border: 2px solid #fafafa;
+    border: 2px solid var(--base-color);
     background-color: #fff;
     background-image: url('witch.jpg');
     background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
     overflow: hidden;
-    box-shadow: 0 0 0px 3px #000;
 }
 
 .me_container .main_avator img{
@@ -99,18 +101,18 @@
 .user_info .pagetitle{
     display: block;
     font-weight: bold;
-    font-size: 1.67rem;
+    font-size: 1em;
 }
 
 .user_info .user_name{
     display: block;
-    font-size: 1.6rem;
+    font-size: 0.9em;
     color: rgba(0,0,0,0.8);
     padding: 0.3em;
 }
 
 .user_info .prof_text{
-    font-size: 1.5rem;
+    font-size: 1em;
 }
 
 /*---------------------------------------------------*/
@@ -118,12 +120,10 @@
 
 .me_container .her_side_menu{
     list-style-type: none;
-    padding: 7px;
+    padding: 15px 7px;
 }
 
 .me_container .her_side_menu li{
-  border: 2px solid rgba(0,0,0,0.2);
-  border-radius: 3px;
   margin-bottom: 7px;
 }
 
@@ -131,10 +131,11 @@
     display: block;
     padding: 1em;
     font-size: 1.4rem;
+    background: #000;
+    color: var(--base-color);
 }
 
 .me_container .her_side_menu li a:hover{
-    color: inherit;
     opacity: 0.7;
 }
 
@@ -174,6 +175,8 @@
     .me_container .side{
         width: 100%;
         border: none;
+        border-bottom: 1px solid;
+        margin-bottom: 10px;
     }
     
     .me_container .main{

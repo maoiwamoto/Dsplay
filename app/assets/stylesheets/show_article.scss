@@ -39,9 +39,10 @@
 
 .body_area{
     background: #fff;
+    border-radius: 0 0 1em 1em;
     color: rgba(0,0,0,0.8);
     padding: 35px 5px;
-    font-size: 1.6rem;
+    font-size: 1em;
 }
 
 .article_data{
@@ -49,7 +50,7 @@
 }
 
 .article_data .title{
-    font-size: 2.3rem;
+    font-size: 1.2em;
     font-weight: bold;
     display: block;
     text-align: right;
@@ -62,7 +63,7 @@
 .article_data time{
     display: block;
     text-align: right;
-    font-size: 1.25rem;
+    font-size: 0.9em;
     padding: 1em;
     border-top: 1px solid #ccc;
 }

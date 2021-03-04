@@ -17,7 +17,7 @@
 :root{
  --ac-color: #8c9eff;
  --main-color: #000;
- --base-color: #fafafa;
+ --base-color: #eceff1;
  --navbar-height: 50px;
  --font-mincho: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
  --font-gothic: "Helvetica Neue",Arial,"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
@@ -39,10 +39,12 @@ body {
 	/* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
 	font-size: 1.6em;
 	font-family: var(--font-gothic);
+	background: linear-gradient(175deg, #fff 52%, var(--base-color) 52%);
+	background-attachment: fixed;
 }
 
 body p{
-    font-size: 1.6rem;
+    font-size: 1.65rem;
     margin: 0.85em;
 }
 
@@ -52,11 +54,11 @@ h2,h3{
 }
 
 h2{
-    font-size: 2.5rem;
+    font-size: 2em;
 }
 
 h3{
-    font-size: 1.9rem;
+    font-size: 1.5em;
 }
 
 img{
@@ -119,29 +121,28 @@ a:hover{
     z-index: 99;
 }
 
+.flash_box p::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
 .notice{
     color: #fff;
 }
 
 .notice::before{
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
     content: "\f005";
-    margin-right: 1em;
     color: #ffedab;
-    vertical-align: middle;
 }
 
 .alert{
-    color: pink;
+    color: #f50057;
 }
 
 .alert::before{
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
     content: "\f12a";
-    margin-right: 1em;
-    vertical-align: middle;
 }
 
 /*appヘッダーナビ-----*/
@@ -155,7 +156,6 @@ header{
     height: var(--navbar-height);
     background: rgba(255,255,255,0.9);
     display: flex;
-    flex-wrap: no-wrap;
 }
 
 header h1{
@@ -259,8 +259,8 @@ nav.pagination span i:hover{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 1em;
-    font-size: 1.7rem;
+    padding: 1em;
+    font-size: 1em;
     line-height: 2em;
 }
 
@@ -273,6 +273,10 @@ nav.pagination span i:hover{
     font-weight: 900;
     content: "\f0da";
     padding: 0 1em;
+}
+
+.pan li:last-child::after{
+    display: none;
 }
 
 /*フッターの設定----------------------------------------------------------------*/
@@ -298,7 +302,7 @@ footer{
 }
 
 .footer_i ul{
-    font-size: 1.5rem;
+    font-size: 1em;
     line-height: 2em;
     list-style-type: circle;
 }
@@ -313,7 +317,7 @@ footer{
 
 .footer_logo{
     display: block;
-    height: 130px;
+    height: 110px;
     margin: 0 auto;
 }
 
@@ -326,6 +330,7 @@ footer{
     padding: 10px 0;
     text-align: center;
     color: #fff;
+    font-size: 0.8em;
 }
 
 

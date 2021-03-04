@@ -35,7 +35,7 @@
 
 .show_user_nav .pagetitle{
     display: block;
-    font-size: 1.5rem;
+    font-size: 1em;
     font-weight: bold;
     padding: 7px 1em;
     line-height: 1;
@@ -56,6 +56,7 @@
     display: block;
     font-size: 1.1rem;
     padding: 10px 20px;
+    letter-spacing: 1px;
 }
 
 .show_user_nav .link_box a::before{
@@ -102,10 +103,9 @@
     
     .show_user_nav .pagetitle{
     padding: 1em;
-    font-size: 1.5rem;
     border: 2px solid;
     border-radius: 30px;
-    box-shadow: 2px 3px 1px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
     }
     
     .show_user_nav .username{

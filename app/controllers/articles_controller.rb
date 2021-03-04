@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_article, only: %i[ edit update destroy ]
-  PER = 12
+  PER = 6
   
   def index
     @articles = Article.all.page(params[:page]).per(PER)
