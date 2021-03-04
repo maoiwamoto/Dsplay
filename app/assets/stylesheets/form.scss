@@ -62,16 +62,16 @@ a:hover{
 }
 
 h2{
-    font-size: 2em;
+    font-size: 1.7em;
 }
 
 h3{
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 .form_wrapper p{
-    font-size: 0.98em;
-    color: #6c272d;
+    font-size: 1em;
+    color: #5c6bc0;
 }
 
 .min{
@@ -91,12 +91,14 @@ textarea {
     padding: 0.8em;/*インプットエリアの余白を指定*/
     border-radius: 0;
     border: none;
-    background: #e8eaf6;
+    background: #fafafa;
     font-size: 1em;
+    outline: 1px solid #ccc;
 }
 
 .form-control:focus{
-    background: #f2daee;
+    background: #424242;
+    color: var(--base-color);
 }
 
 label{

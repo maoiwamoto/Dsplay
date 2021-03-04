@@ -17,7 +17,7 @@
   <% end %>
 
   <div class="field" id="countable">
-    <%= form.text_field :title, id: "input_text", label: "タイトル(必須)" %>
+    <%= form.text_field :title, id: "input_text", label: "タイトル(※)" %>
     <p><span id="counter">0文字</span> / <span id="limit" data-count="35">最大文字数</span></p>
   </div>
   
@@ -26,7 +26,7 @@
     <div class="attached_img_area"><%=  image_tag(post.image.url) %></div>
     <% end %>
     <%= form.hidden_field :image_cache %>
-    <%= form.file_field :image, label: "添付画像" %>
+    <%= form.file_field :image, label: "添付画像(※)" %>
   </div>
   
   
