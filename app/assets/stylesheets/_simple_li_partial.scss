@@ -2,7 +2,7 @@
     --grid-li-width: 120px;
 }
 
-ul.list_item_container{
+.list_item_container{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill,var(--grid-li-width));
@@ -30,6 +30,7 @@ ul.list_item_container{
     height: 100%;
     background: linear-gradient(to top,transparent,rgba(255,255,255,0.6));
     text-align: center;
+    color: #000;
 }
 
 .list_item_container .article .txt_area span{
@@ -38,7 +39,6 @@ ul.list_item_container{
   top: 50%;
   -webkit-transform: translateY(-50%); /* Safari用 */
   transform: translateY(-50%);
-   color: #000;
     font-size: 1.45rem;
 }
 
@@ -65,9 +65,8 @@ ul.list_item_container{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.2);
     opacity: 0;
-    color: #000;
 }
 
 .list_item_container .cards a .show{
@@ -76,19 +75,6 @@ ul.list_item_container{
   width: 100%;
   bottom: 0;
   display: none;
-}
-
-.list_item_container .cards a::after{
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f245";
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 1.7rem;
-    padding: 5px;
-    color: #fff;
 }
 
 
@@ -100,7 +86,7 @@ ul.list_item_container{
 
 @media screen and (max-width: 639px) {
 
-    ul.list_item_container{
+    .list_item_container{
       width: 95vw;
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: calc(95vw / 3);

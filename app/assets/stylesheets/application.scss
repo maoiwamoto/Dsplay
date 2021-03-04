@@ -15,9 +15,10 @@
 
  
 :root{
- --ac-color: #8c9eff;
+ --ac-color: #7986cb;
  --main-color: #000;
  --base-color: #eceff1;
+ --sub-color: #fce4ec;
  --navbar-height: 50px;
  --font-mincho: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
  --font-gothic: "Helvetica Neue",Arial,"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
@@ -227,29 +228,29 @@ main{
 
 /*ページネーション設定*/
 
-nav.pagination{
+.pagination{
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-nav.pagination span{
+.pagination span{
     margin: 0 10px;
 }
 
-nav.pagination span.center_space{
+.pagination span.center_space{
     display: block;
     width: 50px;
     margin: 0;
 }
 
-nav.pagination span i{
+.pagination span i{
    line-height: 1.5;
    font-size: 4.0rem;
 }
 
-nav.pagination span i:hover{
-  opacity: 0.5;
+.pagination span i:hover{
+  opacity: 0.9;
 }
 
 /*------------パンくずリスト-----------------------------*/

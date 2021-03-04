@@ -3,12 +3,12 @@
   
   <% if tag.posts.present? %>
   <ul class="list_item_container">
-  <%= render partial: 'posts/post_small', collection: tag.posts.limit(12), as: "post" %>
+  <%= render partial: 'posts/post_small', collection: tag.posts.limit(6).order('id DESC'), as: "post" %>
   </ul>
   <% end %>
   <% if tag.articles.present? %>
   <ul class="list_item_container">
-  <%= render partial: 'articles/article_small', collection: tag.articles.limit(12), as: "article" %>
+  <%= render partial: 'articles/article_small', collection: tag.articles.limit(6).order('id DESC'), as: "article" %>
   </ul>
   <% end %>
   

@@ -8,7 +8,7 @@
 <div class="tag_cards_container">
  
  <ul class="pan">
-  <li><%= link_to me_path(@user) do %><%= @user.prof.pagetitle %><% end %></li>
+  <li><%= link_to "#{@user.prof.pagetitle}", me_path(@user) %></li>
   <li><%= @user.prof.name %>のタグ一覧</li>
  </ul>
 

@@ -12,16 +12,14 @@
         
     <div class="header_area"><%= cl_image_tag @user.prof.headerimage, alt: "ヘッダー画像" if @user.prof.headerimage.present? %></div>
     
-    <div class="prof_z">
-      <div class="prof_box">
          <div class="main_avator"><%= cl_image_tag @user.prof.avator, alt: "ユーザーアイコン" if @user.prof.avator.present? %></div>
-           <div class="user_info">
+         
+        <div class="user_info">
              <span class="pagetitle"><%= @user.prof.pagetitle %></span>
              <span class="user_name"><%= @user.prof.name %></span>
              <p class="prof_text"><%= safe_join(@user.prof.profile.split("\n"),tag(:br)) %></p>
           </div>
-       </div>
-   </div>
+         
     
     <ul class="her_side_menu">
     <li><%= link_to "images", her_posts_path(@user), class: "post" %></li>
@@ -34,12 +32,14 @@
         <div class="main">
 
         <% if @user.posts.present? %>
+        <h2>images</h2>
         <div class="item_index_container">
          <%= render partial: 'posts/post', collection: @user.posts.limit(6).order('id DESC'), as: "post" %>
         </div>
         <% end %>
         
         <% if @user.articles.present? %>
+        <h2>notes</h2>
         <div class="item_index_container">
          <%= render partial: 'articles/article', collection: @user.articles.limit(6).order('id DESC'), as: "article" %>
         </div>

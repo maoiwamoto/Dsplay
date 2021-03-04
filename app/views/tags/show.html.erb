@@ -20,7 +20,7 @@
   
    <% if @tag.posts.present? %>
   <ul class="item_index_container">
-  <%= render partial: 'posts/post', collection: @tag.posts, as: "post" %>
+  <%= render partial: 'posts/post', collection: @posts, as: "post" %>
   </ul>
   <% end %>
   
@@ -28,7 +28,7 @@
   
   <% if @tag.articles.present? %>
   <ul class="item_index_container">
-  <%= render partial: 'articles/article', collection: @tag.articles, as: "article" %>
+  <%= render partial: 'articles/article', collection: @articles, as: "article" %>
   </ul>
   <% end %>
   
