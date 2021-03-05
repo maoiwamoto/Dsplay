@@ -14,7 +14,7 @@
 }
 
 .list_item_container .cards{
-    background: rgba(140,158,255,0.6);
+    background: rgba(140,158,255,0.5);
     overflow: hidden;
     position: relative;
     overflow: hidden;
@@ -22,24 +22,27 @@
 
 
 
-/*articleの指定*/
+/*articleの指定-----------------------------------------------*/
 
-.list_item_container .article .txt_area{
+.list_item_container .article img{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top,transparent,rgba(255,255,255,0.6));
-    text-align: center;
-    color: #000;
+    display: block;
+    object-fit: cover;
+    filter: sepia(50%);
 }
 
-.list_item_container .article .txt_area span{
- display: inline-block;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%); /* Safari用 */
-  transform: translateY(-50%);
-    font-size: 1.45rem;
+.list_item_container .article .title{
+ position: absolute;
+ display: block;
+ width: 100%;
+ font-size: 1.45rem;
+ background: #000;
+ padding: 0 5px;
+ color: #fff;
+ bottom: 0;
+ white-space: nowrap;
 }
 
 
@@ -65,7 +68,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.3);
     opacity: 0;
 }
 

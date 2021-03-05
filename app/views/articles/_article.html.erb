@@ -1,9 +1,7 @@
 <div class="cards article">
-    <% if article.photo.present? %>
-    <%=  cl_image_tag article.photo.thumb, alt: "サムネイル" %>
-    <% end %>
+    <%=  cl_image_tag article.photo.thumb, alt: "サムネイル" if article.photo.present? %>
         <div class="body_bg"><p class="body"><%= safe_join(article.body.truncate(200).split("\n"),tag(:br)) %></p></div>
         <%= link_to article_path(article) do %>
-    <span class="data"><%= article.title.truncate(20) %></span>
+    <span class="data"><%= article.title.truncate(15) %></span>
     <% end %>
     </div>

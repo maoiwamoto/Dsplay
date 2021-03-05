@@ -29,7 +29,6 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'carrierwave', '~> 1.3.1'
 gem 'cloudinary', '1.11.1'
-gem 'mini_magick', '~> 4.8'
 # cropping
 gem 'rails-assets-jcrop', source: 'https://rails-assets.org'
 # ページネーション
