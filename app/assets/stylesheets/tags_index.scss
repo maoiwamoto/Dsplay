@@ -41,7 +41,11 @@
     vertical-align: middle;
 }
 
-@media screen and (max-width: 639px) {
+.tag_card .a_line{
+    width: 100%;
+}
+
+@media screen and (max-width: 567px) {
 
 .tag_card{
     padding: 20px 0;
@@ -50,6 +54,10 @@
 
 .tag_card::before{
     display: none;
+}
+
+.tag_card .a_line{
+    width: 95%;
 }
 
 }

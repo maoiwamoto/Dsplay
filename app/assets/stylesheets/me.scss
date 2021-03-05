@@ -1,8 +1,5 @@
 @import "basic_grid_partial";
 
-:root{
-    --avatar-size: 120px;
-}
 
 .me_container{ 
  width: 95vw;
@@ -43,6 +40,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 
 /*---------------------------------------------*/
@@ -50,8 +48,8 @@
 
 
 .me_container .main_avator{
-    width: var(--avatar-size);
-    height: var(--avatar-size);
+    width: 120px;
+    height: 120px;
     border-radius: 20%;
     border: 3px solid var(--base-color);
     background-color: #fff;
@@ -60,7 +58,12 @@
     background-size: contain;
     background-repeat: no-repeat;
     overflow: hidden;
-    margin-top: -60px;
+    
+    position: relative;
+    top: -60px;
+    left: 0;
+    margin-bottom: -60px;
+    z-index: 5;
 }
 
 .me_container .main_avator img{
@@ -107,6 +110,7 @@
     display: block;
     padding: 1em;
     font-size: 1.4rem;
+    letter-spacing: 0.5px;
     background: #000;
     color: var(--base-color);
 }
@@ -161,7 +165,7 @@
     
     .me_container .main_avator{
         margin: 0 auto;
-        margin-top: -60px;
+        margin-bottom: -60px;
     }
     
     .me_container .user_info{
