@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   belongs_to :user
   belongs_to :tag, optional: true
   mount_uploader :image, ImageUploader
-  validates :title, presence: true,length: {maximum: 35}
+  validates :title, presence: true,length: {maximum: 25}
   validates :caption, length: {maximum: 1000}
   validates :image, presence: true
 

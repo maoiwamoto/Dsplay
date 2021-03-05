@@ -24,8 +24,12 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background: rgba(255,255,255,0.5);
+    background: transparent;
     border-radius: 1em;
+}
+
+.tag_navbox{
+    background: rgba(255,255,255,0.6);
 }
 
 .show_nav a{
@@ -35,7 +39,7 @@
 .show_nav .show_nav_item{
     text-align: center;
     width: 50%;
-    margin: 1em 0.8em;
+    padding: 1em 0.8em;
 }
 
 .show_nav_item span{
@@ -53,7 +57,7 @@
     overflow: hidden;
 }
 
-.tag .show_nav_item span{
+.tag_navbox .show_nav_item span{
     border: 2px solid var(--ac-color);
 }
 

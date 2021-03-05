@@ -22,9 +22,9 @@
          
     
     <ul class="her_side_menu">
-    <li><%= link_to "images", her_posts_path(@user), class: "posts" %></li>
-    <li><%= link_to "notes", her_articles_path(@user), class: "articles" %></li>
-    <li><%= link_to "tags", her_tags_path(@user), class: "tags" %></li>
+    <li><%= link_to "image", her_posts_path(@user), class: "posts" %></li>
+    <li><%= link_to "writing", her_articles_path(@user), class: "articles" %></li>
+    <li><%= link_to "tag", her_tags_path(@user), class: "tags" %></li>
     </ul>
         
 </div>
@@ -39,7 +39,7 @@
         <% end %>
         
         <% if @user.articles.present? %>
-        <h2>notes</h2>
+        <h2>writings</h2>
         <div class="item_index_container">
          <%= render partial: 'articles/article', collection: @user.articles.limit(6).order('id DESC'), as: "article" %>
         </div>
