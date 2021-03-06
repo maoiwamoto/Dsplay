@@ -13,9 +13,10 @@
  *= require jcrop
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
  
 :root{
- --ac-color: #7986cb;
+ --ac-color: #8c9eff;
  --main-color: #000;
  --base-color: #eceff1;
  --sub-color: #fce4ec;
@@ -149,7 +150,7 @@ a:hover{
 }
 
 .mypage_nav li img{
-    width: 80px;
+    width: 70px;
     margin-bottom: 5px;
 }
 

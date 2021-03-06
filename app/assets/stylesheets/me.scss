@@ -4,13 +4,13 @@
 .me_container{ 
  width: 95vw;
  margin: 0 auto;
- margin-top: 10px;
  display: flex;
 }
 
 .me_container .side{
     width: 25vw;
     border: 1px solid;
+    border-top: none;
     background: var(--base-color);
     height: fit-content;
 }
@@ -19,10 +19,6 @@
     width: 70vw;
     height: auto;
 }
-
-
-
-/*--------------------------------------------------*/
 
 /*------------------------------------*/
 
@@ -44,6 +40,16 @@
 }
 
 /*---------------------------------------------*/
+
+
+.me_ttr{
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+
+
+
+/*------------------------------------------------*/
 
 
 
@@ -80,7 +86,8 @@
 .user_info .pagetitle{
     display: block;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.15em;
+    font-family: var(--font-mincho);
 }
 
 .user_info .user_name{
@@ -99,33 +106,28 @@
 
 .me_container .her_side_menu{
     list-style-type: none;
-    padding: 15px 7px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid rgba(0,0,0,0.3);
 }
 
-.me_container .her_side_menu li{
-  margin-bottom: 7px;
-}
-
-.me_container .her_side_menu li a{
-    display: block;
-    padding: 1em;
-    font-size: 1.4rem;
+.me_container .her_side_menu a{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em 1.8em;
+    font-size: 0.9rem;
     letter-spacing: 0.5px;
-    background: #000;
-    color: var(--base-color);
-}
-
-.me_container .her_side_menu li a:hover{
-    opacity: 0.7;
 }
 
 .me_container .her_side_menu li a::before{
  font-family: "Font Awesome 5 Free";
  font-weight: 900;
  font-size: 2.5rem;
- padding-right: 0.7em;
  color: var(--ac-color);
- vertical-align: middle;
+ display: block;
+ margin-bottom: 5px;
 }
 
 .her_side_menu .posts::before{
@@ -143,7 +145,7 @@
 
 
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 812px) {
     
 
     .me_container{
@@ -155,8 +157,7 @@
     .me_container .side{
         width: 100%;
         border: none;
-        border-bottom: 1px dashed;
-        margin-bottom: 10px;
+        border-bottom: 1px solid;
     }
     
     .me_container .main{
@@ -170,33 +171,13 @@
     
     .me_container .user_info{
         text-align: center;
-}
+    }
 
-.her_side_menu{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    text-align: center;
-}
-
-.her_side_menu li{
-    width: calc(100% / 3);
-    height: 100%;
-    margin: 0 4px;
-}
-
-.her_side_menu li a{
-    margin: 0;
-    font-size: 1.2rem;
-}
-
-.her_side_menu li a::before{
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 5px;
-    padding: 0;
-}
+    .me_container .her_side_menu{
+        justify-content: center;
+    }
     
+    .me_container .her_side_menu a{
+        padding: 1em 3.5em;
+    }
 }

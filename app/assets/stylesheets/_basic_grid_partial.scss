@@ -1,5 +1,5 @@
 :root{
-    --item-box-w: 67vw;
+    --item-box-w: 67vw;/*---70vw（ユーザーページの.mainの幅）以下で指定*/
     --item-c: 3;
 }
 
@@ -84,7 +84,7 @@
 }
 
 .item_index_container .cards .data{
-    color: #fff;
+    color: var(--sub-color);
     display: block;
     position: absolute;
     bottom: 0;
@@ -104,7 +104,7 @@
 /*---------------------------------------*/
 
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 812px) {
 
 :root{
     --item-box-w: 95vw;

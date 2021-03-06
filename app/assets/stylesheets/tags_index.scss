@@ -15,9 +15,9 @@
 
 .tag_card::before{
     content: "";
-    width: 4px;
+    width: 8px;
     height: 100%;
-    background: linear-gradient(to bottom,#000,transparent);
+    background: linear-gradient(to bottom,var(--base-color),transparent);
     background-size: auto 150%;
     display: block;
     position: absolute;
@@ -27,7 +27,7 @@
 }
 
 .tag_card .tagname{
-    font-size: 1.25em;
+    font-size: 1.4em;
     display: block;
     padding: 1.1em 0.6em;
     line-height: 1;

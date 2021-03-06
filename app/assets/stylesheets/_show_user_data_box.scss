@@ -98,7 +98,7 @@
     }
     
     .show_user_nav .right{
-        width: calc(100% - 80px);
+        width: calc(100% - 100px);
     }
     
     .show_user_nav .pagetitle{
@@ -109,6 +109,15 @@
     
     .show_user_nav .username{
         padding: 1em;
+    }
+    
+    .show_user_nav .link_box{
+        justify-content: flex-end;
+        border-top: 1px solid #ccc;
+    }
+    
+    .show_user_nav .link_box a::before{
+        font-size: 2.6rem;
     }
     
 }
