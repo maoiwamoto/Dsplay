@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
   
-  devise_for :admin_users
+  devise_for :admin_users,skip: :all
+  devise_for :admin_users, only: %i(sign_in sign_out session)
   namespace :admin do
       resources :users
       resources :articles
