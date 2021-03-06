@@ -40,7 +40,7 @@
       <%= attributes.hidden_field :profile %>
   <% end %>
   
-  <p>ご登録の前に、下記のご利用規約とプライバシーポリシーをご確認くださいますようお願いします。</p>
+  <p>ご登録の前に、下記のご利用規約と<%= link_to "プライバシーポリシー", privacy_path %>をご確認くださいますようお願いします。</p>
   
   <div class="field">
     <%= render('terms') %>

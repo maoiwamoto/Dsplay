@@ -49,6 +49,10 @@ body p{
     margin: 0.85em;
 }
 
+p.right{
+    text-align: right;
+}
+
 h2,h3{
     font-family: var(--font-mincho);
     padding: 1.6rem;
