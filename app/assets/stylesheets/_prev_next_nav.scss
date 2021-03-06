@@ -4,8 +4,8 @@
     display: block;
     text-align: center;
     width: fit-content;
-    margin: 2em auto;
-    font-size: 1.1em;
+    margin: 1.5em auto;
+    font-size: 1.2em;
     font-weight: bold;
     line-height: 1;
     color: var(--ac-color);
@@ -24,11 +24,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background: transparent;
-}
-
-.tag_navbox{
-    background: rgba(0,0,0,0.07);
 }
 
 .show_nav a{

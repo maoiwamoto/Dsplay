@@ -26,23 +26,21 @@
     <div class="show_user_nav">
         <div class="show_avator">
             <% if @article.user.prof.avator.present? %>
-            <%= link_to me_path(@article.user.id) do %>
+            <%= link_to me_path(@article.user_id) do %>
             <%= cl_image_tag @article.user.prof.avator %>
             <% end %>
             <% end %>
         </div>
-        <div class="right">
-        <%= link_to me_path(@article.user.id), class: "pagetitle" do %>
+        <%= link_to me_path(@article.user_id), class: "pagetitle" do %>
         <span><%= @article.user.prof.pagetitle %></span>
         <% end %>
         <span class="username"><%= @article.user.prof.name %></span>
             <div class="link_box">
-            <%= link_to "index" , her_articles_path(@article.user.id), class: "index" %>
+            <%= link_to "一覧" , her_articles_path(@article.user.id), class: "index" %>
             <% if user_signed_in? && current_user.id == @article.user_id %>
-            <%= link_to "edit", edit_article_path(@article), class: "edit" %>
+            <%= link_to "編集", edit_article_path(@article), class: "edit" %>
             <% end %>
             </div>
-        </div>
     </div>
             <%= render partial: 'show_nav', locals: { article: @article } %>
     </div>

@@ -24,20 +24,20 @@
 <div class="show_user_nav">
         <div class="show_avator">
             <% if @post.user.prof.avator.present? %>
-            <%= link_to me_path(@post.user.id) do %>
+            <%= link_to me_path(@post.user_id) do %>
             <%= cl_image_tag @post.user.prof.avator %>
             <% end %>
             <% end %>
         </div>
         <div class="right">
-        <%= link_to me_path(@post.user.id), class: "pagetitle" do %>
+        <%= link_to me_path(@post.user_id), class: "pagetitle" do %>
         <span><%= @post.user.prof.pagetitle %></span>
         <% end %>
         <span class="username"><%= @post.user.prof.name %></span>
             <div class="link_box">
-            <%= link_to "index", her_posts_path(@post.user.id), class: "index" %>
+            <%= link_to "一覧", her_posts_path(@post.user.id), class: "index" %>
             <% if user_signed_in? && current_user.id == @post.user_id %>
-            <%= link_to "edit", edit_post_path(@post), class: "edit" %>
+            <%= link_to "編集", edit_post_path(@post), class: "edit" %>
             <% end %>
             </div>
         </div>
