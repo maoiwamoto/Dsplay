@@ -110,7 +110,48 @@ a:hover{
     padding: 10px;
 }
 
-/*-----------------------------------------------------*/
+.credit{
+    display: block;
+    width: fit-content;
+    text-align: right;
+    margin: 1em 0 1em auto;
+    color: var(--ac-color);
+}
+
+.credit::before{
+    content: "Image by";
+    display: inline;
+    margin-right: 5px;
+    color: #000;
+}
+
+/*マイページ設定-----------------------------------------------------*/
+
+.mypage_nav{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mypage_nav li{
+    width: calc(50% - 10px);
+    border: 1px solid;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 1em;
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.mypage_nav li img{
+    width: 80px;
+    margin-bottom: 5px;
+}
 
 
 

@@ -2,16 +2,34 @@
 
 <h2>マイページ</h2>
 
-<%= link_to 'タグの新規作成', new_tag_path %>
+<ul class="mypage_nav">
 
-<%= link_to '画像の新規投稿', new_post_path %>
+<li>
+<%= link_to new_post_path do %><%= image_tag 'mypage/1.png', alt: "アイコン" %><% end %>
+<%= link_to '画像投稿', new_post_path %></li>
 
-<%= link_to '文章の新規投稿', new_article_path %>
+<li>
+<%= link_to new_article_path do %><%= image_tag 'mypage/2.png', alt: "アイコン" %><% end %>
+<%= link_to '文章投稿', new_article_path %></li>
 
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<li>
+<%= link_to new_tag_path do %><%= image_tag 'mypage/3.png', alt: "アイコン" %><% end %>
+<%= link_to 'タグ作成', new_tag_path %></li>
 
-<%= link_to "プロフィール編集", edit_prof_path %>
+<li>
+<%= link_to edit_prof_path do %><%= image_tag 'mypage/4.png', alt: "アイコン" %><% end %>
+<%= link_to "プロフィール", edit_prof_path %></li>
 
-<%= link_to "ユーザー情報の変更", edit_user_registration_path %>
+<li>
+<%= link_to edit_user_registration_path do %><%= image_tag 'mypage/5.png', alt: "アイコン" %><% end %>
+<%= link_to "登録情報の変更", edit_user_registration_path %></li>
+
+<li>
+<%= link_to destroy_user_session_path do %><%= image_tag 'mypage/6.png', alt: "アイコン" %><% end %>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+
+</ul>
+
+<%= link_to 'icons8', 'https://icons8.jp', target: '_blank', class: "credit" %>
 
 </div>
