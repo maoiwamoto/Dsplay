@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   
   def mypage
+    @user = current_user
   end
   
   def show

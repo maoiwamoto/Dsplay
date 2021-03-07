@@ -25,7 +25,7 @@
 <%= link_to "登録情報の変更", edit_user_registration_path %></li>
 
 <li>
-<%= link_to destroy_user_session_path do %><%= image_tag 'mypage/6.png', alt: "アイコン" %><% end %>
+<%= link_to destroy_user_session_path, method: :delete do %><%= image_tag 'mypage/6.png', alt: "アイコン" %><% end %>
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
 
 </ul>

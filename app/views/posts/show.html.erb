@@ -18,7 +18,7 @@
             <% if @post.caption.present? %>
             <p class="caption"><%= safe_join(@post.caption.split("\n"),tag(:br)) %></p>
             <% end %>
-            <time><%= @post.created_at.strftime("%Y-%m-%d %H:%M") %></time>
+            <time><%= @post.created_at.strftime("%Y-%m-%d") %></time>
         </div>
 
 <div class="show_user_nav">
@@ -29,7 +29,6 @@
             <% end %>
             <% end %>
         </div>
-        <div class="right">
         <%= link_to me_path(@post.user_id), class: "pagetitle" do %>
         <span><%= @post.user.prof.pagetitle %></span>
         <% end %>
@@ -40,7 +39,6 @@
             <%= link_to "編集", edit_post_path(@post), class: "edit" %>
             <% end %>
             </div>
-        </div>
     </div>
         <%= render partial: 'show_nav', locals: { post: @post } %>
     </div>
