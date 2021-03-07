@@ -92,9 +92,11 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
+  Rails.application.configure do
   # default url
    config.action_mailer.default_url_options = {
-     :host => 'dsplay.herokuapp.com'
+     protocol: 'https',
+     host: 'dsplay.herokuapp.com'
    }
    # mail setting
    config.action_mailer.raise_delivery_errors = true
@@ -107,6 +109,7 @@ Rails.application.configure do
      :authentication => :plain,
      :enable_starttls_auto => true
    }
+ end
   
   
 end
