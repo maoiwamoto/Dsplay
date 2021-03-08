@@ -94,18 +94,18 @@ Rails.application.configure do
   
   Rails.application.configure do
   # default url
-   config.action_mailer.default_url_options = {
-     protocol: 'https',
-     host: 'dsplay.herokuapp.com'
-   }
+   #config.action_mailer.default_url_options = {
+    # protocol: 'https',
+    # host: 'dsplay.herokuapp.com'
+   #}
    # mail setting
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   port: 587,
-  address: 'smtp.mailgun.org',
-  domain: ENV['DOMAIN_NAME'],
-  user_name: ENV['SMTP_USER_NAME'],
-  password: ENV['SMTP_PASSWORD'],
+  address: "smtp.mailgun.org",
+  domain: ENV["DOMAIN_NAME"],
+  user_name: ENV["SMTP_USER_NAME"],
+  password: ENV["SMTP_PASSWORD"],
   authentication: :plain
 }
  end
