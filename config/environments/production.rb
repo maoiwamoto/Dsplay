@@ -95,8 +95,8 @@ Rails.application.configure do
   Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'https://dsplay.herokuapp.com/'
-  config.action_mailer.default_url_options = { host: host }
+  host = 'dsplay.herokuapp.com'
+  config.action_mailer.default_url_options = { protocol: 'https', host: host }
   ActionMailer::Base.smtp_settings = {
      :port => ENV["MAILGUN_SMTP_PORT"],
      :address => ENV["MAILGUN_SMTP_SERVER"],
