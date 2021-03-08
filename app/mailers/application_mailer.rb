@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: ENV["SMTP_USER_NAME"]
+  default from: ENV["MAILGUN_SMTP_LOGIN"]
   layout 'mailer'
 end
