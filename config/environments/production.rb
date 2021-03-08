@@ -96,7 +96,7 @@ Rails.application.configure do
   # default url
    config.action_mailer.default_url_options = {
      protocol: 'https',
-     host: 'dsplay.herokuapp.com'
+     host: 'https://dsplay.herokuapp.com/'
    }
    # mail setting
   config.action_mailer.delivery_method = :smtp
