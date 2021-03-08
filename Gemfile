@@ -80,5 +80,3 @@ gem 'bootstrap', '~> 5.0.0.beta1'
 gem "bootstrap_form", "~> 4.0"
 
 gem "administrate"
-
-gem 'mailgun-ruby', '~>1.2.3'
