@@ -76,11 +76,11 @@
   overflow-scrolling: touch; 
 -webkit-overflow-scrolling: touch;
 
-background-color: rgba(0,0,0,0.5);
-background-image: url('mini_logo1.png');
+background-color: linear-gradient(to top,rgba(0,0,0,0.5),transparent);
+background-image: image-url('mini_logo1.png');
 background-repeat: no-repeat;
 background-position: right 20px bottom 20px;
-background-size: 200px auto;
+background-size: 150px auto;
 }
 
 

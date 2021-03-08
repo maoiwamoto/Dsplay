@@ -26,7 +26,7 @@
     width: 100%;
     height: 300px;
     overflow: hidden;
-    background-image: url('dia.png');
+    background-image: image-url('dia.png');
     background-color: #000;
     background-position: center;
 }
@@ -59,7 +59,7 @@
     border-radius: 20%;
     border: 3px solid var(--base-color);
     background-color: #fff;
-    background-image: url('witch.jpg');
+    background-image: image-url('witch.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

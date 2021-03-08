@@ -27,7 +27,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -95,7 +95,7 @@ Rails.application.configure do
   Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'dsplay.herokuapp.com'
+  host = 'https://dsplay.herokuapp.com/'
   config.action_mailer.default_url_options = { protocol: 'https', host: host }
   ActionMailer::Base.smtp_settings = {
      :port => ENV["MAILGUN_SMTP_PORT"],
