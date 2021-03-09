@@ -60,17 +60,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   %w(jpg jpeg png)
   end
   
-  def url(*args)
-  if cached?
-  "/#{cache_path}"
-  else
-  super
-  end
+  def  public_id
   end
   
-  def  public_id 
-  return model.id
-  end
-  
-
 end

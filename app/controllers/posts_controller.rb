@@ -26,15 +26,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    
       @post = current_user.posts.new(post_params)
       if @post.save
-        if params[:post][:image].present?
           @post.reload
+          flash.now[:notice] = '新規投稿を作成しました'
           render :crop
-        else
-         redirect_to @post, notice: "新規投稿が完了しました"
-        end
       else
         render :new, status: :unprocessable_entity
       end
@@ -42,12 +38,7 @@ class PostsController < ApplicationController
 
   def update
       if @post.update_attributes(post_params)
-      if params[:post][:image].present?
-        @post.reload
-        render :crop
-      else
         redirect_to @post, notice: "投稿を更新しました"
-      end
       else
         render :edit, status: :unprocessable_entity
       end

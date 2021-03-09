@@ -1,7 +1,7 @@
 @import "simple_li_partial";
 
 .tag_cards_container{
-    width: 800px;
+    width: 740px;
     max-width: 100%;
     margin: 0 auto;
     padding: 2em 0;
@@ -9,12 +9,12 @@
 
 .tag_card{
     margin: 30px 0;
-    padding: 20px 30px;
+    padding: 20px 0;
     position: relative;
 }
 
 .tag_card .tagname{
-    font-size: 1.4em;
+    font-size: 1.5em;
     display: block;
     padding: 1.1em 0.6em;
     line-height: 1;
@@ -23,24 +23,17 @@
 .tag_card .tagname::before{
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
+    font-size: 2em;
     content: "\f292";
-    padding-right: 10px;
+    padding-right: 16px;
     vertical-align: middle;
-}
-
-.tag_card .a_line{
-    width: 100%;
+    opacity: 0.7;
 }
 
 @media screen and (max-width: 567px) {
 
 .tag_card{
     padding: 20px 0;
-    position: static;
-}
-
-.tag_card .a_line{
-    width: 95%;
 }
 
 }

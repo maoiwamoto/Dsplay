@@ -22,14 +22,24 @@
   </div>
   
   <div class="field">
-    <% if @post.image.present? %>
-    <div class="attached_img_area"><%=  image_tag(post.image.url) %></div>
+    <% if post.image.present? %>
+    <div class="attached_img_area">
+      <% if post.image_cache %>
+      <%= image_tag "/#{post.image.cache_path}" %>
+      <% else %>
+      <%= cl_image_tag(post.image.thumb) %>
+      <% end %>
+    </div>
     <% end %>
+    
+    <% if post.id.nil? %>
     <%= form.hidden_field :image_cache %>
     <%= form.file_field :image, label: "添付画像(※)" %>
+    <% else %>
+    <%= form.hidden_field :image_cache %>
+    <% end %>
   </div>
-  
-  
+
 
   <div class="field" id="countable">
     <%= form.text_area :caption, id: "input_text", label: "説明文" %>

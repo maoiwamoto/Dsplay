@@ -3,7 +3,6 @@
 }
 
 .list_item_container{
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill,var(--grid-li-width));
     grid-auto-rows: var(--grid-li-width);
@@ -19,7 +18,6 @@
     position: relative;
     overflow: hidden;
 }
-
 
 
 /*articleの指定-----------------------------------------------*/

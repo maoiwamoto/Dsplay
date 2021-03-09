@@ -119,13 +119,13 @@
     padding: 10px 17px;
     font-size: 1.0rem;
     letter-spacing: 0.5px;
+    color: var(--ac-color);
 }
 
 .me_container .her_side_menu li a::before{
  font-family: "Font Awesome 5 Free";
  font-weight: 900;
  font-size: 2.5rem;
- color: var(--ac-color);
  display: block;
  margin-bottom: 5px;
 }
