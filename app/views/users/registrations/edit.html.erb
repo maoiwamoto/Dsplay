@@ -20,7 +20,7 @@
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <p>以下のアドレスへ確認メールをお送りしましたので、ご確認下さい。<br> <%= resource.unconfirmed_email %></p>
+    <p>以下のアドレスへ認証メールをお送りしましたので、ご確認下さい。<br> <%= resource.unconfirmed_email %></p>
   <% end %>
 
   <div class="field">
