@@ -60,7 +60,13 @@ class ImageUploader < CarrierWave::Uploader::Base
   %w(jpg jpeg png)
   end
   
-  def  public_id
+  if Rails.env.development? || Rails.env.test? 
+     def  public_id
+       return "test/post/" + (0...8).map{ ('A'..'Z').to_a[rand(26)] }.join.to_s
+     end
+  else
+    def public_id
+    end
   end
   
 end

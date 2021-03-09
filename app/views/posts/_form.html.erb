@@ -21,8 +21,8 @@
     <p><span id="counter">0文字</span> / <span id="limit" data-count="25">最大文字数</span></p>
   </div>
   
-  <div class="field">
     <% if post.image.present? %>
+    <div class="field">
     <div class="attached_img_area">
       <% if post.image_cache %>
       <%= image_tag "/#{post.image.cache_path}" %>
@@ -30,15 +30,17 @@
       <%= cl_image_tag(post.image.thumb) %>
       <% end %>
     </div>
+    </div>
     <% end %>
     
     <% if post.id.nil? %>
+    <div class="field">
     <%= form.hidden_field :image_cache %>
     <%= form.file_field :image, label: "添付画像(※)" %>
+    </div>
     <% else %>
     <%= form.hidden_field :image_cache %>
     <% end %>
-  </div>
 
 
   <div class="field" id="countable">

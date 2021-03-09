@@ -22,9 +22,16 @@ cloudinary_transformation :transformation => [
   super
   end
   end
+
   
-  def  public_id 
-  return "avatar/" + model.user_id.to_s
-  end 
+  if Rails.env.development? || Rails.env.test? 
+     def  public_id
+       return "test/avatar/" + model.user_id.to_s
+     end
+  else
+     def  public_id 
+     return "avatar/" + model.user_id.to_s
+     end
+  end
 
 end

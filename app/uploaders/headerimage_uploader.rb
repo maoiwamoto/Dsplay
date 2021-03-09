@@ -24,8 +24,14 @@ cloudinary_transformation :transformation => [
   end
   end
   
-  def  public_id 
-  return "header/" + model.user_id.to_s
-  end 
+  if Rails.env.development? || Rails.env.test? 
+     def  public_id
+       return "test/header/" + model.user_id.to_s
+     end
+  else
+     def  public_id 
+     return "header/" + model.user_id.to_s
+     end
+  end
 
 end

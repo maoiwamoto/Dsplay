@@ -32,10 +32,14 @@
     </div>
     <% end %>
     
+    <% if article.id.nil? %>
+    <%= form.hidden_field :photo_cache %>
+    <% else %>
     <div class="field">
     <%= form.hidden_field :photo_cache %>
      <%= form.file_field :photo, label: "イメージ画像" %>
     </div>
+    <% end %>
 
   <div class="field">
     <p>この投稿と関連づける作成済みのタグを選んでください。<br>
