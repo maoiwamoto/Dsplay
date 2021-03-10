@@ -133,6 +133,7 @@ a:hover{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .mypage_nav li{
@@ -144,14 +145,20 @@ a:hover{
     
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     font-size: 0.9em;
     font-weight: bold;
 }
 
 .mypage_nav li img{
-    width: 70px;
+    height: 120px;
+    max-width: 100%;
+    margin: 0 auto;
     margin-bottom: 5px;
+    display: block;
+    object-fit: contain;
+    filter: sepia(5%);
 }
 
 
