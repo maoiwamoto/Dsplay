@@ -4,7 +4,7 @@ class ApplicationMailer < ActionMailer::Base
   default from: ENV["GMAIL_ADDRESS"]
   layout 'mailer'
   else
-  default from: ENV["MAILGUN_SMTP_LOGIN"]
+  default from: 'Dsplay<["MAILGUN_SMTP_LOGIN"]>'
   layout 'mailer'
   end
 
