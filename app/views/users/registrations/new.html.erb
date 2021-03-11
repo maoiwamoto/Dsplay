@@ -13,7 +13,8 @@
 
 <h3>メールが届かない場合</h3>
 <p>迷惑メールとして振り分けられている可能性があるため、<br>
-ご利用のメールサービスの該当フォルダ等をご確認いただきますようお願いします。
+ご利用のメールサービスの該当フォルダ等をご確認いただきますようお願いします。<br>
+「postmaster@dsplay.icu」の受信許可設定を行ってください。
 </p>
 
 <%= bootstrap_form_with(model: @user, url: user_registration_path, method: :post, local: true, label_errors: true, class: "new_user", id: "new_user",) do |f| %>
