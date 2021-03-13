@@ -11,7 +11,8 @@
     width: 25vw;
     border: 1px solid;
     border-top: none;
-    background: var(--base-color);
+    background: rgba(0,0,0,0.8);
+    color: rgba(255,255,255,0.8);
     height: fit-content;
 }
 
@@ -93,12 +94,14 @@
 .user_info .user_name{
     display: block;
     font-size: 0.95em;
-    color: rgba(0,0,0,0.8);
     padding: 0.3em;
+    color: var(--ac-color);
+    border-bottom: 1px solid;
 }
 
 .user_info .prof_text{
     font-size: 1em;
+    color: var(--base-color);
 }
 
 /*---------------------------------------------------*/
@@ -109,7 +112,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    border-top: 1px solid rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(0,0,0,0.5);
 }
 
 .me_container .her_side_menu a{

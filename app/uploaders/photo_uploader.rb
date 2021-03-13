@@ -2,10 +2,10 @@ class PhotoUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
 process :convert => 'jpg' # 画像の保存形式  
-process :quality => 'auto'
+process :quality => 'auto:eco'
 process :tags => ['article_photo']
 cloudinary_transformation :transformation => [
-        {:width => 600, :height => 500, :crop => "limit"}]
+        {:width => 600, :height => 600, :crop => "limit"}]
   
   def size_range
   0..2.megabytes
@@ -24,14 +24,6 @@ cloudinary_transformation :transformation => [
   
   def extension_whitelist
   %w(jpg jpeg png)
-  end
-  
-  def url(*args)
-  if cached?
-  "/#{cache_path}"
-  else
-  super
-  end
   end
   
   if Rails.env.development? || Rails.env.test? 

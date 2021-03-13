@@ -27,7 +27,13 @@
   
     <% if article.photo.present? %>
     <div class="field">
-    <div class="attached_img_area"><%= image_tag(article.photo.url) %></div>
+    <div class="attached_img_area">
+      <% if article.photo_cache %>
+      <%= image_tag "/#{article.photo.cache_path}" %>
+      <% else %>
+      <%= cl_image_tag(article.photo.thumb) %>
+      <% end %>
+    </div>
     <div class="rm_check"><%= form.check_box :remove_photo, label: "この画像を削除する" %></div>
     </div>
     <% end %>
