@@ -135,6 +135,44 @@ a:hover{
     margin: 0 auto;
     margin-bottom: 1em;
     border: 2px solid var(--ac-color);
+    border-radius: 10px;
+}
+
+.howto h3{
+  margin: 0;
+  padding: 50px 1em;
+}
+
+h4{
+  margin: 40px 0;
+  padding: 1em;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 4px 4px 0 var(--base-color);
+  font-size: 1em;
+}
+
+.contents{
+  margin: 0 auto;
+  padding: 1em;
+  width: 85%;
+  background: rgba(0,0,0,0.5);
+  list-style-type: none;
+}
+
+.contents li{
+  line-height: 2.5em;
+}
+
+.contents li::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-right: 1em;
+    content: "\f058";
+}
+
+.contents li a{
+  color: #fff;
 }
 
 /*マイページ設定-----------------------------------------------------*/
