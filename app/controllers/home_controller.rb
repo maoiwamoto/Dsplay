@@ -9,4 +9,7 @@ class HomeController < ApplicationController
     def privacy
     end
     
+    def howto
+    end
+    
 end

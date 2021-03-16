@@ -126,6 +126,17 @@ a:hover{
     color: #000;
 }
 
+/*使い方ページ---------------------------------*/
+
+.howto img{
+    width: 450px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    border: 2px solid var(--ac-color);
+}
+
 /*マイページ設定-----------------------------------------------------*/
 
 .mypage_nav{
