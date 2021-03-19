@@ -65,10 +65,34 @@ h2{
 
 h3{
     font-size: 1.4em;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+h3::before{
+  content: "";
+  display: inline-block;
+  background-image: image_url("clo_h.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  margin-right: 0.8em;
+  vertical-align: middle;
 }
 
 img{
     vertical-align: middle;
+}
+
+img.center{
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+figure{
+  text-align: center;
 }
 
 a{
@@ -104,26 +128,15 @@ a:hover{
     color: #fff;
 }
 
+.a_txt{
+  text-decoration: underline;
+}
+
 .center_wrapper{
     width: 750px;
     max-width: 100%;
     margin: 0 auto;
     padding: 10px;
-}
-
-.credit{
-    display: block;
-    width: fit-content;
-    text-align: right;
-    margin: 1em 0 1em auto;
-    color: var(--ac-color);
-}
-
-.credit::before{
-    content: "Image by";
-    display: inline;
-    margin-right: 5px;
-    color: #000;
 }
 
 /*使い方ページ---------------------------------*/
