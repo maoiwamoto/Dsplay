@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   get 'howto' => 'home#howto', as: 'howto'
   get 'about' => 'home#about', as: 'about'
   get 'contact' => 'home#contact', as: 'contact'
+  get 'guide' => 'home#guide', as: 'guide'
   get 'users/mypage' => 'users#mypage'
   get 'users/:id' => 'users#show', as: 'me'
   get 'users/:id/posts' => 'posts#her_index', as: 'her_posts'
