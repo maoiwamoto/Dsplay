@@ -61,12 +61,12 @@ Rails.application.configure do
   
   Rails.application.configure do
     config.web_console.whitelisted_ips = '219.124.140.6'
-   # default url
-   config.action_mailer.default_url_options = {
+    default url
+    config.action_mailer.default_url_options = {
      protocol: 'https',
      host: ENV["CLOUD9_APP_ROOT_URL"]
    }
-   # mail setting
+    mail setting
    config.action_mailer.raise_delivery_errors = true
    config.action_mailer.delivery_method = :smtp
    config.action_mailer.smtp_settings = {

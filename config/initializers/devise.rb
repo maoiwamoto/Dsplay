@@ -25,7 +25,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   if Rails.env.development? || Rails.env.test? 
-  config.mailer_sender = ENV["GMAIL_ADDRESS"]
+  config.mailer_sender = ENV["MAIL_SMTP_LOGIN"]
   else
   config.mailer_sender = ENV["MAIL_SMTP_LOGIN"]
   end
