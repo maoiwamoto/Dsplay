@@ -157,6 +157,17 @@ a:hover{
     padding: 10px;
 }
 
+hr{
+  border: none;
+  height: 50px;
+  width: 100%;
+  background-image: image_url("hr.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 50px auto;
+}
+
 /*使い方ページ---------------------------------*/
 
 .howto img{
