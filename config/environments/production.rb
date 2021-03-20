@@ -98,10 +98,10 @@ Rails.application.configure do
   host = 'https://dsplay.herokuapp.com'
   config.action_mailer.default_url_options = { protocol: 'https', host: host }
   ActionMailer::Base.smtp_settings = {
-     :port => ENV["MAILGUN_SMTP_PORT"],
-     :address => ENV["MAILGUN_SMTP_SERVER"],
-     :user_name => ENV["MAILGUN_SMTP_LOGIN"],
-     :password => ENV["MAILGUN_SMTP_PASSWORD"],
+     :port => ENV["MAIL_SMTP_PORT"],
+     :address => ENV["MAIL_SMTP_SERVER"],
+     :user_name => ENV["MAIL_SMTP_LOGIN"],
+     :password => ENV["MAIL_SMTP_PASSWORD"],
      :domain => host,
      :authentication => :plain,
   }
