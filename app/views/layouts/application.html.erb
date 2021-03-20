@@ -20,7 +20,9 @@
           <% if user_signed_in? %>
           <div class="first"><%= link_to me_path(current_user) do %><span class="name"><%= current_user.prof.name %></span><span class="nav_avator"><%= cl_image_tag current_user.prof.avator, alt: "ユーザーアイコン" if current_user.prof.avator.present? %></span><% end %></div>
           <div><%= link_to users_mypage_path do %><i class="fas fa-home"></i><% end %></div>
-             <% end %>
+          <% else %>
+          <div><%= link_to "ログイン", login_path, class: "header_a a_button" %></div>
+          <% end %>
         </div>
       </header>
     

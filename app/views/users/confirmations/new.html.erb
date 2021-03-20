@@ -1,4 +1,4 @@
-<h2>Resend confirmation instructions</h2>
+<h2>メールの再送信確認</h2>
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
@@ -9,8 +9,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
+    <%= f.submit "認証メールを再送する" %>
   </div>
 <% end %>
-
-<%= render "users/shared/links" %>
