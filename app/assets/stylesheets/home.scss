@@ -21,8 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 90%;
-    justify-content: center;
+    width: 95%;
 }
 
 .intro img{
@@ -33,14 +32,15 @@
 }
 
 .intro p{
-    font-size: 1.3rem;
+    font-size: 0.9em;
 }
 
 .intro{
     text-align: center;
-    width: calc(100% / 3);
-    background: silver;
+    width: calc((100% / 3) - 10px);
     padding: 20px 5px;
+    margin: 5px;
+    border: 1px solid;
 }
 
 
@@ -56,7 +56,7 @@
     }
     
     .intro{
-    width: 50%;
-}
+    width: 100%;
+    }
 
 }
