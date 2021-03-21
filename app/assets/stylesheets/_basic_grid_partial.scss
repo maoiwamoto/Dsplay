@@ -103,12 +103,16 @@
 
 /*---------------------------------------*/
 
-
 @media screen and (max-width: 812px) {
-
 :root{
     --item-box-w: 95vw;
     --item-c: 2;
 }
+}
 
+@media screen and (max-width: 415px) {
+:root{
+    --item-box-w: 95vw;
+    --item-c: 1;
+}
 }

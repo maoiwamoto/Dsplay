@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_user!, except: [:show, :index, :her_index]
   before_action :set_post, only: %i[ edit update destroy ]
   PER = 6
   
