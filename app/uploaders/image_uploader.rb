@@ -9,7 +9,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   process :quality => 'auto:eco'
   process :tags => ['post_image'] # 保存時に添付されるタグ（管理しやすいように適宜変更しましょう）
   cloudinary_transformation :transformation => [
-        {:width => 800, :height => 1200, :crop => "limit"}]
+        {:width => 800, :height => 1000, :crop => "limit"}]
 
   # Choose what kind of storage to use for this uploader:
   #storage :file

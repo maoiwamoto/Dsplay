@@ -36,7 +36,7 @@
 .show_user_nav .pagetitle{
     display: block;
     font-size: 1.1em;
-    font-weight: bold;
+    font-weight: normal;
     font-family: var(--font-mincho);
     padding: 7px 1em;
     line-height: 1;
@@ -45,12 +45,14 @@
 .show_user_nav .username{
     display: block;
     font-size: 1.3rem;
+    opacity: 0.5;
 }
 
 .show_user_nav .link_box{
     display: flex;
     width: 100%;
     justify-content: center;
+    opacity: 0.8;
 }
 
 .show_user_nav .link_box a{
@@ -109,6 +111,7 @@
     
     .show_user_nav .username{
         padding: 3px;
+        opacity: 1;
     }
     
     .show_user_nav .link_box{
