@@ -23,7 +23,7 @@
  --sub-color: #8bc34a;
  --navbar-height: 50px;
  --font-mincho: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "メイリオ",'Noto Serif JP',serif;
- --font-gothic: "Helvetica Neue",Arial,"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+ --font-gothic: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ","Helvetica Neue",Arial,sans-serif;
 }
 
 *{
@@ -89,6 +89,14 @@ h4{
   box-shadow: 4px 4px 0 var(--base-color);
   font-size: 1em;
   border-left: 5px solid #000;
+}
+
+b{
+  color: #1a237e;
+}
+
+strong span{
+  color: #d81b60;
 }
 
 img{
@@ -169,6 +177,12 @@ hr{
   margin: 50px auto;
 }
 
+.basic_list{
+  list-style-type: disc;
+  margin: 1em 2em;
+  background: pink;
+}
+
 /*使い方ページ---------------------------------*/
 
 .howto img{
@@ -196,7 +210,7 @@ hr{
 }
 
 .contents li{
-  line-height: 2.5;
+  line-height: 2.8;
 }
 
 .contents li::before{
