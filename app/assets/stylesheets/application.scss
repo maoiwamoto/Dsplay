@@ -179,9 +179,26 @@ hr{
 
 .basic_list{
   list-style-type: disc;
-  margin: 1em 2em;
-  background: pink;
+  margin: 1em 3em;
+  line-height: 1.8;
 }
+
+.table{
+  border: 1px solid rgba(0,0,0,0.7);
+  margin: 2em 0;
+}
+
+.table dt{
+  background: rgba(0,0,0,0.9);
+  color: #fafafa;
+  padding: 0.7em 1em;
+}
+
+.table dd{
+  padding: 0.7em 1em;
+  color: rgba(0,0,0,0.8);
+}
+
 
 /*使い方ページ---------------------------------*/
 
