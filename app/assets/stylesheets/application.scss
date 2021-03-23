@@ -92,11 +92,18 @@ h4{
 }
 
 b{
-  color: #1a237e;
+  color: #3e2723;
+}
+
+em{
+  color: #424242;
+  font-style: normal;
+  font-weight: bold;
+  background: linear-gradient(transparent 50%, rgba(164,213,189,0.6) 50%);
 }
 
 strong span{
-  color: #d81b60;
+  color: #7c4dff;
 }
 
 img{
@@ -186,6 +193,7 @@ hr{
 .table{
   border: 1px solid rgba(0,0,0,0.7);
   margin: 2em 0;
+  padding: 4px;
 }
 
 .table dt{

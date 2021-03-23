@@ -26,7 +26,7 @@
   <div class="field">
     <%= f.password_field :password, label: "新しいパスワード", placeholder: "パスワードを変更しない場合、空欄にしてください" %>
     <% if @minimum_password_length %>
-      <span class="min"><%= @minimum_password_length %>文字以上</span>
+      <em class="min"><%= @minimum_password_length %>文字以上</em>
     <% end %>
   </div>
 
