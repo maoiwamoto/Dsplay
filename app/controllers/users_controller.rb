@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   
-  before_action :authenticate_user!, except: [:show]
+  before_action :authenticate_user!, except: [:show, :index]
+  PER = 3
+  
+  def index
+    @users = User.all.page(params[:page]).per(PER)
+  end
   
   def mypage
     @user = current_user

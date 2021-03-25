@@ -26,8 +26,8 @@ Rails.application.routes.draw do
     get "login", :to => "users/sessions#new"
   end
   
-  
-    resources :posts, :articles, :tags
+  resources :users, :only => [:index]
+  resources :posts, :articles, :tags, :expect => [:index]
   
   resource :prof,only:[:edit,:update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
