@@ -8,7 +8,7 @@ cloudinary_transformation :transformation => [
         {:width => 600, :height => 600, :crop => "limit"}]
   
   def size_range
-  0..2.megabytes
+  0..3.megabytes
   end
 
 

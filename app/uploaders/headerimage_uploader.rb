@@ -8,7 +8,7 @@ cloudinary_transformation :transformation => [
         {:width => 800, :height => 300, :crop => "fill_pad", :gravity => "auto", :background  => "auto"}]
   
   def size_range
-  0..2.megabytes
+  0..3.megabytes
   end
   
   def extension_whitelist

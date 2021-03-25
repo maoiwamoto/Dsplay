@@ -6,13 +6,14 @@
             <li><%= link_to "このサイトについて", about_path %></li>
             <li><%= link_to "使い方", howto_path %></li>
             <li><%= link_to "ガイドライン", guide_path %></li>
+            <li>公式アカウント</li>
         </ul>
     </div>
     <div class="footer_i">
         <ul>
             <li><%= link_to "ご利用規約", terms_path %></li>
             <li><%= link_to "プライバシーポリシー", privacy_path %></li>
-            <li>運営アカウント</li>
+            <li><%= link_to "運営ブログ", "https://dsplay.icu/", target: :_blank, rel: "noopener noreferrer" %></li>
             <li><%= link_to "お問い合わせ", contact_path %></li>
         </ul>
     </div>
@@ -22,7 +23,7 @@
     </div>
     
     <div class="c">
-        <p>(c) Dsplay 2021</p>
+        <p><i class="fas fa-copyright"></i> 2021 Dsplay</p>
     </div>
     
 </footer>

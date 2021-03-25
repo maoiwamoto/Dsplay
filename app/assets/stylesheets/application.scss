@@ -155,15 +155,14 @@ a:hover{
 
 .a_txt{
   text-decoration: underline;
-  color: #3f51b5;
+  color: #536dfe;
 }
 
 .a_button{
-  border: 1px solid;
   border-radius: 3px;
   padding: 5px 1em;
-  font-weight: bold;
-  color: var(--ac-color);
+  color: #fafafa;
+  background: #000;
 }
 
 .center_wrapper{
@@ -197,7 +196,7 @@ hr{
 }
 
 .table dt{
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.8);
   color: #fafafa;
   padding: 0.7em 1em;
 }

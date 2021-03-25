@@ -2,7 +2,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
   
   def size_range
-  0..2.megabytes
+  0..3.megabytes
   end
   
   process :convert => 'jpg' # 画像の保存形式
