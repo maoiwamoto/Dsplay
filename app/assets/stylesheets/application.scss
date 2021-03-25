@@ -232,8 +232,8 @@ hr{
 .contents{
   margin: 0 auto;
   padding: 1em;
-  width: 90%;
-  background: rgba(0,0,0,0.5);
+  width: 95%;
+  background: rgba(0,0,0,0.6);
   list-style-type: none;
 }
 
@@ -247,6 +247,7 @@ hr{
     vertical-align: middle;
     margin-right: 1em;
     content: "\f058";
+    text-shadow: 2px 2px 0 #fff;
 }
 
 .contents li a{
@@ -255,6 +256,20 @@ hr{
 
 .contents span{
   color: #fafafa;
+}
+
+.contents ol{
+  margin: auto 0 auto 3em;
+  list-style-type: lower-roman;
+}
+
+.contents ol li a{
+  color: #c5cae9;
+  padding-left: 0.6em;
+}
+
+.contents ol li:before{
+  display: none;
 }
 
 /*問い合わせフォーム--------------------------------------------------*/
