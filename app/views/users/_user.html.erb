@@ -1,3 +1,15 @@
     <div style="background: pink;">
-    <p><%= user.prof.name %></p>
+    <p>ユーザー名：<%= user.prof.name %></p>
+    
+    <% if user.articles.present? || user.posts.present? %>
+    <% if user.articles.size >= user.posts.size %>
+    <div class="item_index_container">
+    <%= render partial: 'articles/article', collection: user.articles.limit(6).order('id DESC'), as: "article" %>
+    </div>
+    <% else %>
+    <div class="item_index_container">
+    <%= render partial: 'posts/post', collection: user.posts.limit(6).order('id DESC'), as: "post" %>
+    </div>
+    <% end %>
+    <% end %>
     </div>

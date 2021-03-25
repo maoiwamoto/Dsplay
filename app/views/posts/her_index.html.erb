@@ -13,9 +13,16 @@
   <li><%= @user.prof.name %>の画像投稿一覧</li>
  </ul>
 
+<% if @user.posts.present? %>
 <div class="item_index_container">
 <%= render partial: 'post', collection: @posts, as: "post" %>
 </div>
+<%= paginate @posts %>
+<% else %>
+<p>投稿が一件もありません。</p>
+<% if user_signed_in? %>
+<%= link_to "投稿する", new_post_path, class: "a_line" %>
+<% end %>
+<% end %>
 </div>
 
-<%= paginate @posts %>

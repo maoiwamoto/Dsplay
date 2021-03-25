@@ -11,8 +11,14 @@
   <li><%= link_to "#{@user.prof.pagetitle}", me_path(@user) %></li>
   <li><%= @user.prof.name %>のタグ一覧</li>
  </ul>
-
- <%= render partial: 'tag', collection: @tags, as: "tag" %>
- </div>
-
+ 
+<% if @user.tags.present? %>
+<%= render partial: 'tag', collection: @tags, as: "tag" %>
 <%= paginate @tags %>
+<% else %>
+<p>タグが一件もありません。</p>
+<% if user_signed_in? %>
+<%= link_to "タグを新規作成する", new_tag_path, class: "a_line" %>
+<% end %>
+<% end %>
+</div>
