@@ -106,6 +106,10 @@ strong span{
   color: #7c4dff;
 }
 
+sup{
+  font-size: 0.65em;
+}
+
 img{
     vertical-align: middle;
 }
@@ -527,7 +531,7 @@ footer{
 
 /*利用規約のOLの設定--------------------------------------------------*/
 
-ol{
+ol.term{
     padding: 0;
     margin: 35px;
 }
