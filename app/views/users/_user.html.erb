@@ -1,7 +1,23 @@
-    <div style="background: pink;">
-    <p>ユーザー名：<%= user.prof.name %></p>
+    <div class="user_list_card">
+    <div class="header_back">
+        <%= cl_image_tag user.prof.headerimage, alt: "ヘッダー画像" if user.prof.headerimage.present? %>
+    </div>
+    <div class="info_wrapper">
+    <div class="user_icon_area">
+        <span class="user_card_icon">
+        <%= cl_image_tag user.prof.avator, alt: "ユーザーアイコン" if user.prof.avator.present? %>
+        </span>
+    </div>
+    <%= link_to "#{user.prof.pagetitle}", me_path(user.id), class: "user_card_title" %>
+    <div class="user_profile_box">
+    <p><%= safe_join(user.prof.profile.truncate(90,separator: "\n").split("\n"),tag(:br)) %></p>
+    <%= link_to "詳細を見る", me_path(user.id), class: "user_card_link" %>
+    </div>
+    </div>
+    </div>
     
     <% if user.articles.present? || user.posts.present? %>
+    <div class="user_card_workarea">
     <% if user.articles.size >= user.posts.size %>
     <div class="item_index_container">
     <%= render partial: 'articles/article', collection: user.articles.limit(6).order('id DESC'), as: "article" %>
@@ -11,5 +27,7 @@
     <%= render partial: 'posts/post', collection: user.posts.limit(6).order('id DESC'), as: "post" %>
     </div>
     <% end %>
-    <% end %>
     </div>
+    <% end %>
+    
+    <hr>
