@@ -1,6 +1,10 @@
     <div class="user_list_card">
     <div class="header_back">
-        <%= cl_image_tag user.prof.headerimage, alt: "ヘッダー画像" if user.prof.headerimage.present? %>
+        <% if user.prof.headerimage.present? %>
+        <%= cl_image_tag user.prof.headerimage, alt: "ヘッダー画像", class: "present_img" %>
+        <% else %>
+        <%= image_tag ("forest.jpg"), class: "sub_img" %>
+        <% end %>
     </div>
     <div class="info_wrapper">
     <div class="user_icon_area">
@@ -11,20 +15,20 @@
     <%= link_to "#{user.prof.pagetitle}", me_path(user.id), class: "user_card_title" %>
     <div class="user_profile_box">
     <p><%= safe_join(user.prof.profile.truncate(90,separator: "\n").split("\n"),tag(:br)) %></p>
-    <%= link_to "詳細を見る", me_path(user.id), class: "user_card_link" %>
+    <%= link_to "詳細を見る", me_path(user.id), class: "user_card_link", "aria-label" => "#{user.prof.name}のユーザーページへ" %>
     </div>
     </div>
     </div>
     
     <% if user.articles.present? || user.posts.present? %>
-    <div class="user_card_workarea">
+    <div class="user_work_area">
     <% if user.articles.size >= user.posts.size %>
     <div class="item_index_container">
-    <%= render partial: 'articles/article', collection: user.articles.limit(6).order('id DESC'), as: "article" %>
+    <%= render partial: 'articles/article', collection: user.articles.limit(3).order('id DESC'), as: "article" %>
     </div>
     <% else %>
     <div class="item_index_container">
-    <%= render partial: 'posts/post', collection: user.posts.limit(6).order('id DESC'), as: "post" %>
+    <%= render partial: 'posts/post', collection: user.posts.limit(3).order('id DESC'), as: "post" %>
     </div>
     <% end %>
     </div>

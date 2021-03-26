@@ -112,7 +112,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    border-top: 1px solid rgba(0,0,0,0.5);
+    border-top: 1px solid rgba(0,0,0,0.4);
 }
 
 .me_container .her_side_menu a{
@@ -121,9 +121,8 @@
     text-align: center;
     padding: 10px 17px;
     font-size: 1.0rem;
-    font-family: 'Raleway', sans-serif;
     letter-spacing: 0.5px;
-    color: var(--ac-color);
+    color: rgba(255,255,255,0.5);
 }
 
 .me_container .her_side_menu li a::before{

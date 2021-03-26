@@ -25,25 +25,32 @@
 /*ユーザープロフィール一覧設定--------------------------------------------*/
 
 .user_list_card{
-    background-color: rgba(0,0,0,0.5);
-    background-image: image_url("dia.png");
-    width: 100%;
+    width: 67vw;/*グリッドカードの幅と同じに設定*/
     height: 350px;
     position: relative;
+    margin: 0 auto;
 }
 
 .header_back{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top,rgba(0,0,0,0.5),transparent);
 }
 
-.header_back img{
+.header_back .present_img{
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: sepia(30%) brightness(60%);
+}
+
+.header_back .sub_img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
 }
 
 .header_back::after{
@@ -54,8 +61,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.6);
+    background: linear-gradient(to top,rgba(0,0,0,0.7),transparent);
 }
+
 
 .info_wrapper{
     position: absolute;
@@ -83,7 +91,7 @@
     background-position: center;
     background-size: contain;
     background-color: #ccc;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 .user_card_icon img{
@@ -117,7 +125,7 @@
     margin: 0;
     margin: 0.8em 0.3em;
     padding: 0;
-    font-size: 0.8em;
+    font-size: 1.3rem;
     width: fit-content;
     max-height: 6em;
     overflow: hidden;
@@ -130,16 +138,21 @@
     margin-right: 0;
     margin-left: auto;
     display: inline-block;
-    padding: 0.2em 0.9em;
+    padding: 0.5em 0.9em;
     font-size: 1em;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.9);
     color: #000;
     font-weight: 500;
     font-family: var(--font-mincho);
+    line-height: 1;
 }
 
-.user_card_workarea{
-    padding: 20px 0;
+.user_card_link:hover{
+    background: #000;
+}
+
+.user_work_area{
+    padding: 10px 0;
 }
 
 
@@ -153,7 +166,8 @@
 }
 
 .user_list_card{
-    height: 450px;
+    height: 400px;
+    width: 100%;
 }
 
 .info_wrapper{
