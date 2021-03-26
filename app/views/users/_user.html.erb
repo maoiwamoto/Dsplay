@@ -3,13 +3,17 @@
         <% if user.prof.headerimage.present? %>
         <%= cl_image_tag user.prof.headerimage, alt: "ヘッダー画像", class: "present_img" %>
         <% else %>
-        <%= image_tag ("forest.jpg"), class: "sub_img" %>
+        <%= image_tag ("forest.jpg"), class: "sub_img", alt: "ヘッダー画像" %>
         <% end %>
     </div>
     <div class="info_wrapper">
     <div class="user_icon_area">
         <span class="user_card_icon">
-        <%= cl_image_tag user.prof.avator, alt: "ユーザーアイコン" if user.prof.avator.present? %>
+        <% if user.prof.avator.present? %>
+        <%= cl_image_tag user.prof.avator, alt: "ユーザーアイコン" %>
+        <% else %>
+        <%= image_tag ("witch.jpg"), alt: "ユーザーアイコン" %>
+        <% end %>
         </span>
     </div>
     <%= link_to "#{user.prof.pagetitle}", me_path(user.id), class: "user_card_title" %>

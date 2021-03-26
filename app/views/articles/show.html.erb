@@ -29,11 +29,13 @@
             <%= link_to me_path(@article.user_id) do %>
             <%= cl_image_tag @article.user.prof.avator %>
             <% end %>
+            <% else %>
+            <%= link_to me_path(@article.user_id) do %>
+            <%= image_tag ('witch.jpg'), alt: "ユーザーアイコン" %>
+            <% end %>
             <% end %>
         </div>
-        <%= link_to me_path(@article.user_id), class: "pagetitle" do %>
-        <span><%= @article.user.prof.pagetitle %></span>
-        <% end %>
+        <%= link_to "#{@article.user.prof.pagetitle}", me_path(@article.user_id), class: "pagetitle" %>
         <span class="username"><%= @article.user.prof.name %></span>
             <div class="link_box">
             <%= link_to "一覧" , her_articles_path(@article.user.id), class: "index" %>

@@ -17,10 +17,6 @@
     height: 80px;
     max-width: 100%;
     background-color: #fff;
-    background-image: image-url("gem.png");
-    background-repeat: no-repeat;
-    background-size: 75% auto;
-    background-position: center;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 50%;
@@ -30,7 +26,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .show_user_nav .pagetitle{
