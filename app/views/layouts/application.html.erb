@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <%= render "layouts/google_analytics" %>
     <title><%= content_for?(:title) ? yield(:title) : "Dsplay" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
