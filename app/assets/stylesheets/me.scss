@@ -88,9 +88,17 @@
     display: block;
     font-size: 1em;
     line-height: 1;
-    padding: 0 2em 1em 2em;
+    padding: 0 1.8em 1em 1.8em;
     text-align: right;
     color: rgba(0,0,0,0.8);
+}
+
+.user_name::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f5b7";
+    padding-right: 0.7em;
+    vertical-align: middle;
 }
 
 .prof_text{
