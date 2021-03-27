@@ -22,7 +22,7 @@
         </div>
 
 <div class="show_user_nav">
-         <div class="show_avator"><% if @post.user.prof.avator.present? %><%= link_to me_path(@post.user_id) do %><%= cl_image_tag @post.user.prof.avator %><% end %><% else %><%= link_to me_path(@post.user_id) do %><%= image_tag ('witch.jpg'), alt: "ユーザーアイコン" %><% end %><% end %></div>
+         <div class="show_avator"><% if @post.user.prof.avator.present? %><%= link_to me_path(@post.user_id) do %><%= cl_image_tag @post.user.prof.avator %><% end %><% else %><%= link_to me_path(@post.user_id) do %><%= image_tag ('sign.png'), alt: "ユーザーアイコン" %><% end %><% end %></div>
          <%= link_to "#{@post.user.prof.pagetitle}", me_path(@post.user_id), class: "pagetitle" %>
         <span class="username"><%= @post.user.prof.name %></span>
             <div class="link_box">
