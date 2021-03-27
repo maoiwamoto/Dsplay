@@ -4,7 +4,7 @@
             <% else %>
             <%= cl_image_tag post.image.tiny, alt: "サムネイル" %>
             <% end %>
-    <%= link_to post_path(post) do %>
+    <%= link_to post_path(post), "aria-label" => "#{post.user.prof.name}の#{post.title}へ" do %>
     <span class="show">詳細を見る</span>
     <% end %>
     </li>

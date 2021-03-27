@@ -1,7 +1,7 @@
 <li class="cards article">
     <%= cl_image_tag article.photo.tiny, alt: "サムネイル" if article.photo.present? %>
     <span class="title"><%= article.title.truncate(10) %></span>
-    <%= link_to article_path(article) do %>
+    <%= link_to article_path(article),"aria-label" => "#{article.user.prof.name}の#{article.title}へ" do %>
     <span class="show">詳細を見る</span>
     <% end %>
     </li>

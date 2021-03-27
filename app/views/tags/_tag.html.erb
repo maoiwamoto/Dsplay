@@ -12,6 +12,6 @@
   </ul>
   <% end %>
   
-  <%= link_to "詳細を見る", tag_path(tag), class: "a_line" %>
+  <%= link_to "詳細を見る", tag_path(tag), class: "a_line", "aria-label" => "#{tag.user.prof.name}の「#{tag.name}」へ" %>
 
   </div>
