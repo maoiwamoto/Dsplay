@@ -9,10 +9,9 @@
 
 .me_container .side{
     width: 25vw;
-    border: 1px solid;
+    border: 1px solid rgba(0,0,0,0.6);
     border-top: none;
-    background: rgba(0,0,0,0.8);
-    color: rgba(255,255,255,0.8);
+    background: var(--base-color);
     height: fit-content;
 }
 
@@ -76,32 +75,30 @@
     width: 100%;
 }
 
-.me_container .user_info{
-    padding: 0 15px;
-}
-
-.user_info .pagetitle{
+.pagetitle{
     display: block;
     font-weight: bold;
     font-size: 1.2em;
     font-family: var(--font-mincho);
-    padding: 0.9em 0;
+    padding: 1em;
     line-height: 1;
 }
 
-.user_info .user_name{
+.user_name{
     display: block;
-    font-size: 0.95em;
-    color: var(--ac-color);
-    border-bottom: 1px solid;
-    border-top: 1px solid;
-    padding: 0.4em;
+    font-size: 1em;
     line-height: 1;
+    padding: 0 2em 1em 2em;
+    text-align: right;
+    color: rgba(0,0,0,0.8);
 }
 
-.user_info .prof_text{
-    font-size: 1em;
-    color: #c5cae9;
+.prof_text{
+    font-size: 0.96em;
+    color: rgba(0,0,0,0.9);
+    margin: 0;
+    padding: 2em 1.5em;
+    background: rgba(255,255,255,0.8);
 }
 
 /*---------------------------------------------------*/
@@ -112,7 +109,8 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    border-top: 1px solid rgba(0,0,0,0.4);
+    background: transparent;
+    border-top: 1px solid rgba(0,0,0,0.25);
 }
 
 .me_container .her_side_menu a{
@@ -122,7 +120,7 @@
     padding: 10px 17px;
     font-size: 1.0rem;
     letter-spacing: 0.5px;
-    color: var(--ac-color);
+    color: #7986cb;
 }
 
 .me_container .her_side_menu li a::before{
@@ -173,6 +171,10 @@
     }
     
     .me_container .user_info{
+        text-align: center;
+    }
+    
+    .me_container .user_name{
         text-align: center;
     }
 

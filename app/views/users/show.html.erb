@@ -20,12 +20,11 @@
              <% end %>
          </div>
          
-        <div class="user_info">
+         <div class="user_info">
              <span class="pagetitle"><%= @user.prof.pagetitle %></span>
              <span class="user_name"><%= @user.prof.name %></span>
              <p class="prof_text"><%= safe_join(@user.prof.profile.split("\n"),tag(:br)) %></p>
-          </div>
-         
+         </div>
     
     <ul class="her_side_menu">
     <li><%= link_to "画像", her_posts_path(@user), class: "posts", "aria-label" => "#{@user.prof.name}の画像投稿一覧へ" %></li>
