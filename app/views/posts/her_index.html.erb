@@ -20,7 +20,7 @@
 <%= paginate @posts %>
 <% else %>
 <p>投稿が一件もありません。</p>
-<% if user_signed_in? %>
+<% if user_signed_in? && current_user.id == @user.id %>
 <%= link_to "投稿する", new_post_path, class: "a_line" %>
 <% end %>
 <% end %>
