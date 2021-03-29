@@ -42,7 +42,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: sepia(30%) brightness(60%);
+    filter: sepia(30%) brightness(85%);
 }
 
 .header_back .sub_img{
@@ -50,7 +50,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: sepia(30%) brightness(80%);
+    filter: sepia(30%) brightness(65%);
 }
 
 .header_back::after{
@@ -61,7 +61,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to top,rgba(0,0,0,0.7),transparent);
+    background: linear-gradient(to top,rgba(0,0,0,0.9),transparent 80%);
 }
 
 
