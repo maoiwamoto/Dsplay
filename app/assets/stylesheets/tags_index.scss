@@ -1,7 +1,7 @@
 @import "simple_li_partial";
 
 .tag_cards_container{
-    width: 800px;
+    width: 600px;
     max-width: 100%;
     margin: 0 auto;
     padding: 2em 0;
@@ -9,8 +9,6 @@
 
 .tag_card{
     margin: 20px 0;
-    padding: 15px 30px;
-    position: relative;
 }
 
 .tag_card .tagname{
@@ -28,12 +26,4 @@
     padding-right: 16px;
     vertical-align: middle;
     opacity: 0.7;
-}
-
-@media screen and (max-width: 567px) {
-
-.tag_card{
-    padding: 15px 0;
-}
-
 }

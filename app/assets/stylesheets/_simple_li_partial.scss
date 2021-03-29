@@ -1,98 +1,97 @@
-:root{
-    --grid-li-width: 120px;
-}
-
 .list_item_container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,var(--grid-li-width));
-    grid-auto-rows: var(--grid-li-width);
-    grid-gap: 4px;
-    margin: 0 auto;
-    margin-bottom: 4px;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+}
+
+.list_item_container li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    max-height: calc(120px + 20px);
+}
+
+.list_item_container p{
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
-.list_item_container .cards{
-    background: rgba(140,158,255,0.3);
+.list_item_container .image_box{
+    display: block;
+    width: 120px;
+    height: 120px;
     overflow: hidden;
-    position: relative;
+    object-fit: contain;
+}
+
+.list_item_container .right_data_area{
+    width: calc(100% - 120px);
+    max-height: 100%;
     overflow: hidden;
+}
+
+.list_item_container .small_title{
+    display: block;
+    line-height: 1;
+    font-size: 2.5rem;
+    padding: 0.5em 0.75em;
+    font-family: var(--font-mincho);
+    overflow: hidden;
+}
+
+.list_item_container .right_data_area p{
+    font-size: 1.5rem;
+    padding: 0 1.4em;
 }
 
 
 /*articleの指定-----------------------------------------------*/
 
-.list_item_container .article img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+.list_item_container .article{
+    background: rgba(0,0,0,0.7);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
 }
 
-.list_item_container .article .title{
- position: absolute;
- display: block;
- width: 100%;
- font-size: 1.45rem;
- height: 1.6em;
- line-height: 1.6;
- background: rgba(0,0,0,0.9);
- color: #fff;
- bottom: 0;
- white-space: nowrap;
- text-indent: 5px;
- overflow: hidden;
+.list_item_container .article .right_data_area a{
+    color: var(--ac-color);
 }
 
+.list_item_container .article .right_data_area p{
+    color: rgba(255,255,255,0.6);
+}
+
+.list_item_container .article .dummy{
+    background-color: transparent;
+    background-image: image_url("small_img.png");
+    background-position: center;
+}
 
 /*---------------------------------------*/
 
 /*postの指定*/
 
-.list_item_container .post img{
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.list_item_container .post{
+    background: rgba(255,255,255,0.7);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.list_item_container .post .right_data_area p{
+    color: rgba(0,0,0,0.7);
 }
 
 
 /*---------------------------------------*/
 
-/*a部分の指定（共通）*/
+@media screen and (max-width: 568px) {
 
-.list_item_container .cards a{
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,0.3);
-    opacity: 0;
+.list_item_container .right_data_area .small_title{
+    font-size: 1.1em;
 }
 
-.list_item_container .cards a .show{
-  position: absolute;
-  display: inline-block;
-  width: 100%;
-  bottom: 0;
-  display: none;
+.list_item_container .right_data_area p{
+    font-size: 1.0rem;
 }
-
-
-.list_item_container .cards a:hover{
-    opacity: 1;
-}
-
-/*---------------------------------------*/
-
-@media screen and (max-width: 567px) {
-
-    .list_item_container{
-      width: 95vw;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: calc(95vw / 3);
-    }
 
 }

@@ -1,10 +1,19 @@
 <li class="cards post">
+    <%= link_to post_path(post), "aria-label" => "#{post.user.prof.name}の「#{post.title}」へ" do %>
+    <span class="image_box">
             <% if post.crop_w.nil? %>
             <%= cl_image_tag post.image.safe, alt: "サムネイル" %>
             <% else %>
             <%= cl_image_tag post.image.tiny, alt: "サムネイル" %>
             <% end %>
-    <%= link_to post_path(post), "aria-label" => "#{post.user.prof.name}の#{post.title}へ" do %>
-    <span class="show">詳細を見る</span>
+    </span>
     <% end %>
+    <div class="right_data_area">
+        <%= link_to post_path(post) do %>
+        <span class="small_title"><%= post.title.truncate(15) %></span>
+        <% end %>
+        <% if post.caption.present? %>
+        <span class="small_caption"><p><%= post.caption.truncate(50) %></p></span>
+        <% end %>
+    </div>
     </li>

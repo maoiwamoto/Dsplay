@@ -1,7 +1,17 @@
 <li class="cards article">
-    <%= cl_image_tag article.photo.tiny, alt: "サムネイル" if article.photo.present? %>
-    <span class="title"><%= article.title.truncate(10) %></span>
-    <%= link_to article_path(article),"aria-label" => "#{article.user.prof.name}の#{article.title}へ" do %>
-    <span class="show">詳細を見る</span>
+    <%= link_to article_path(article), "aria-label" => "#{article.user.prof.name}の「#{article.title}」へ" do %>
+    <% if article.photo.present? %>
+    <span class="image_box">
+    <%= cl_image_tag article.photo.tiny, alt: "サムネイル" %>
+    </span>
+    <% else %>
+    <span class="image_box dummy"></span>
     <% end %>
+    <% end %>
+    <div class="right_data_area">
+    <%= link_to article_path(article) do %>
+    <span class="small_title"><%= article.title.truncate(15) %></span>
+    <% end %>
+    <span class="small_body"><p><%= article.body.truncate(50) %></p></span>
+    </div>
     </li>
