@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_060749) do
+ActiveRecord::Schema.define(version: 2021_03_29_102826) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2021_03_03_060749) do
   end
 
   create_table "articles", force: :cascade do |t|
-    t.string "title", default: "無題"
-    t.text "body"
+    t.string "title", default: "無題", null: false
+    t.text "body", null: false
     t.integer "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,12 +37,12 @@ ActiveRecord::Schema.define(version: 2021_03_03_060749) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "title", default: "無題"
+    t.string "title", default: "無題", null: false
     t.text "caption"
     t.integer "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
+    t.string "image", null: false
     t.integer "user_id"
     t.integer "crop_x"
     t.integer "crop_y"

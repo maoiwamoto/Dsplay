@@ -21,7 +21,13 @@
           <% if user_signed_in? %>
           <div class="first">
             <%= link_to me_path(current_user), "aria-label" => "#{current_user.prof.name}のユーザーページへ" do %>
-            <span class="name"><%= current_user.prof.name %></span>
+            <span class="name">
+              <% if current_user.prof.name.present? %>
+              <%= current_user.prof.name.truncate(15) %>
+              <% else %>
+              （×＿×）
+              <% end %>
+              </span>
             <span class="nav_avator">
               <% if current_user.prof.avator.present? %>
               <%= cl_image_tag current_user.prof.avator, alt: "ユーザーアイコン" %>
