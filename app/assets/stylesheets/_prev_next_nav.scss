@@ -40,7 +40,7 @@
     display: block;
     width: 100px;
     height: 100px;
-    background-color: #fff;
+    background-color: #000;
     background-image: image-url('nav_bg.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -53,6 +53,7 @@
 
 .tag_navbox .show_nav_item span{
     border: 2px solid var(--ac-color);
+    background-color: var(--ac-color);
 }
 
 .show_nav_item span img{
