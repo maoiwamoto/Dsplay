@@ -42,10 +42,6 @@
     width: 100px;
     height: 100px;
     background-color: #000;
-    background-image: image-url('nav_bg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
     border: 2px solid;
     border-radius: 50%;
     margin: 0 auto;
@@ -63,4 +59,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.article_show_nav .show_nav_item span{
+    background-image: image-url('nav_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
 }

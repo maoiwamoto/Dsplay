@@ -1,4 +1,4 @@
- <div class="show_nav"><%# 前後のレコードに移動するナビゲーション %>
+ <div class="show_nav article_show_nav"><%# 前後のレコードに移動するナビゲーション %>
                 
         <% if article.previous.present? %>
         <div class="show_nav_item">
@@ -25,7 +25,7 @@
         <%= article.tag.name %>
         <% end %>
         
-        <div class="show_nav tag_navbox"><%# 同じタグに属する前後のレコードに移動するナビゲーション %>
+        <div class="show_nav article_show_nav tag_navbox"><%# 同じタグに属する前後のレコードに移動するナビゲーション %>
                 
         <% if article.prev_tag.present? %>
         <div class="show_nav_item">
