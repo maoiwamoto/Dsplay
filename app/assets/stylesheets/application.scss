@@ -530,12 +530,13 @@ footer{
     background: var(--ac-color);
 }
 
-.c p{
+.c .copyright{
     margin: 0;
     padding: 10px 0;
     text-align: center;
     color: #fff;
     font-size: 0.8em;
+    display: block;
 }
 
 

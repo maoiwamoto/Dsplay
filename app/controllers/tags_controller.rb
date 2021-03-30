@@ -4,7 +4,7 @@ class TagsController < ApplicationController
 
   def her_index
     @user = User.find_by(id: params[:id])
-    @tags = @user.tags.page(params[:page]).per(3)
+    @tags = @user.tags.page(params[:page]).per(2)
   end
 
   def show

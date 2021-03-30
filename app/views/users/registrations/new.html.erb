@@ -6,8 +6,8 @@
 
 <h2>新規ユーザー登録</h2>
 
-<p>フォームに必要事項をご入力の上、アカウント作成ボタンを押してください。<br>
-ご入力いただいたメールアドレスあてに、ご本人様確認のメールが送信されます。<br>
+<p>フォームに必要事項をご入力の上、「アカウント作成」ボタンを押してください。</p>
+<p>ご入力いただいたメールアドレスあてに、ご本人様確認のメールが送信されます。<br>
 メールに記載のリンクから、アカウントの有効化（本登録）を完了してください。</p>
 
 <p>新規登録からログインまでの詳しい流れについては、<%= link_to "こちら", howto_path, class: "a_txt", "aria-label" => "Dsplayの使い方紹介ページへ" %>をご覧ください。</p>
@@ -15,7 +15,7 @@
 <h3>メールが届かない場合</h3>
 <p>迷惑メールとして振り分けられている可能性があるため、
 ご利用のメールサービスの該当フォルダ等をご確認ください。<br>
-「mail@dsplay.icu」の受信許可設定をお願いします。
+「<b>mail@dsplay.icu</b>」の受信許可設定をお願いします。
 </p>
 
 <%= bootstrap_form_with(model: @user, url: user_registration_path, method: :post, local: true, label_errors: true, class: "new_user", id: "new_user",) do |f| %>
@@ -42,7 +42,7 @@
       <%= attributes.hidden_field :profile %>
   <% end %>
   
-  <p>ご登録の前に、下記のご利用規約と<%= link_to "プライバシーポリシー", privacy_path, class: "a_txt" %>をご確認くださいますようお願いします。</p>
+  <p>ご登録の前に、下記のご利用規約と<%= link_to "プライバシーポリシー", privacy_path, class: "a_txt" %>のご確認をお願いします。</p>
   
   <div class="field">
     <%= render('terms') %>
