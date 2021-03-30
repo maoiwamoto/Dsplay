@@ -2,15 +2,13 @@
 
 
 .me_container{ 
- width: fit-content;
- max-width: 100%;
+ width: 95vw;
  margin: 0 auto;
  display: flex;
 }
 
 .me_container .side{
-    width: 300px;
-    max-width: 100%;
+    width: 25vw;
     border: 1px solid rgba(0,0,0,0.6);
     border-top: none;
     background: var(--base-color);
@@ -18,8 +16,7 @@
 }
 
 .me_container .main{
-    width: 950px;
-    max-width: 100%;
+    width: 70vw;
     height: auto;
 }
 
@@ -157,18 +154,19 @@
 
 
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 812px) {
     
 
     .me_container{
         display: inherit;
-        width: 100%;
+        width: 100%;/*vwじゃなくてパーセント指定*/
+        margin: 0;
     }
     
     .me_container .side{
+        width: 100%;
         border: none;
         border-bottom: 1px solid;
-        width: 100%;
     }
     
     .me_container .main{

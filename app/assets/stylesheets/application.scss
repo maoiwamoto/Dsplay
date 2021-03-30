@@ -42,8 +42,7 @@ body {
 	/* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
 	font-size: 1.6em;
 	font-family: var(--font-gothic);
-	background: linear-gradient(175deg, #fff 52%, var(--base-color) 52%);
-	background-attachment: fixed;
+	background: #fff;
 }
 
 body p{
@@ -428,6 +427,14 @@ main{
     padding-top: var(--navbar-height);
     padding-bottom: 50px;
     min-height: 100vh;
+}
+
+/* Safari用のハックは、Chromeに適用されないようにする */
+@supports (-webkit-touch-callout: none) {
+  main{
+    /* Safari用のハック */
+    min-height: -webkit-fill-available;
+  }
 }
 
 

@@ -1,15 +1,14 @@
 :root{
-    --item-box-w: 890px;
+    --item-box-w: 67vw;/*---70vw（ユーザーページの.mainの幅）以下で指定*/
     --item-c: 3;
 }
 
 
 .item_index_container{
-    max-width: 100%;
     width: var(--item-box-w);
     display: grid;
     grid-template-columns: repeat(var(--item-c),1fr);
-    grid-auto-rows: calc(var(--item-box-w) / var(--item-c) - 4px);
+    grid-auto-rows: calc(var(--item-box-w) / var(--item-c));
     grid-gap: 8px;
     margin: 0 auto;
     margin-bottom: 8px;
@@ -43,7 +42,7 @@
     color: #fff;
     margin: 0;
     padding: 0;
-    padding: 17px;
+    padding: 15px;
     font-size: 1em;
     font-family: var(--font-mincho);
 }
@@ -105,44 +104,16 @@
 
 /*---------------------------------------*/
 
-@media screen and (max-width: 813px) {
+@media screen and (max-width: 812px) {
 :root{
-    --item-box-w: 750px;
-    --item-c: 2;
-}
-}
-
-@media screen and (max-width: 769px) {
-:root{
-    --item-box-w: 700px;
-    --item-c: 2;
-}
-}
-
-@media screen and (max-width: 668px) {
-:root{
-    --item-box-w: 600px;
-    --item-c: 2;
-}
-}
-
-@media screen and (max-width: 601px) {
-:root{
-    --item-box-w: 550px;
+    --item-box-w: 95vw;
     --item-c: 2;
 }
 }
 
 @media screen and (max-width: 415px) {
 :root{
-    --item-box-w: 350px;
-    --item-c: 1;
-}
-}
-
-@media screen and (max-width: 321px) {
-:root{
-    --item-box-w: 300px;
+    --item-box-w: 95vw;
     --item-c: 1;
 }
 }
