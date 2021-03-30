@@ -34,6 +34,7 @@
     text-align: center;
     width: 50%;
     padding: 1em 0.8em;
+    font-size: 0.97em;
 }
 
 .show_nav_item span{
@@ -44,10 +45,11 @@
     background-image: image-url('nav_bg.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     border: 2px solid;
     border-radius: 50%;
     margin: 0 auto;
+    margin-bottom: 10px;
     overflow: hidden;
 }
 
