@@ -2,7 +2,7 @@ class AvatorUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
   
 process :convert => 'jpg' # 画像の保存形式  
-process :quality => 'auto'
+process :quality => 'auto:eco'
 process :tags => ['user_avatar']
 cloudinary_transformation :transformation => [
 {:width => 120, :height => 120, :crop => "fill", :gravity => "auto"}]
