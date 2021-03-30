@@ -36,7 +36,7 @@
     <% if post.id.nil? %>
     <div class="field">
     <%= form.hidden_field :image_cache %>
-    <%= form.file_field :image, label: "添付画像(※)" %>
+    <%= form.file_field :image, label: "アップロード画像(※)" %>
     </div>
     <% else %>
     <%= form.hidden_field :image_cache %>
@@ -49,9 +49,6 @@
   </div>
 
   <div class="field">
-    <p>この投稿と関連づける作成済みのタグを選んでください。<br>
-    デフォルトでは未選択となっています。
-    </p>
     <%= form.collection_select(:tag_id, current_user.tags, :id, :name, {:include_blank => true, label: "タグの設定" }, {:size => 2}) %>
   </div>
 
