@@ -20,7 +20,6 @@
  --ac-color: #8c9eff;
  --main-color: #000;
  --base-color: #eceff1;
- --sub-color: #17184b;
  --navbar-height: 50px;
  --font-mincho: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "メイリオ",'Noto Serif JP',serif;
  --font-gothic: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ","Helvetica Neue",Arial,sans-serif;
@@ -43,6 +42,7 @@ body {
 	font-size: 1.6em;
 	font-family: var(--font-gothic);
 	background: #fff;
+	color: rgba(0,0,0,0.87);
 }
 
 body p{
@@ -85,9 +85,9 @@ h4{
   margin: 3em 0;
   padding: 1em;
   background: rgba(255,255,255,0.8);
-  box-shadow: 4px 4px 0 var(--base-color);
+  box-shadow: 2px 2px 7px rgba(0,0,0,0.2);
   font-size: 1em;
-  border-left: 5px solid #000;
+  border-left: 5px solid rgba(164,213,189,0.8);
 }
 
 b{
@@ -232,7 +232,7 @@ hr{
   margin: 0 auto;
   padding: 1em;
   width: 95%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
   list-style-type: none;
 }
 
@@ -317,13 +317,14 @@ hr{
 /*flashのnotice,alertのdivの指定-------------------*/
 
 .flash_box{
-    padding: 1em;
+    padding: 1em 1.5em;
     background: rgba(0,0,0,0.8);
     position: fixed;
     top: var(--navbar-height);
     left: 0;
+    top: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 100;
 }
 
 .flash_box p::before{
@@ -331,6 +332,11 @@ hr{
     font-weight: 900;
     vertical-align: middle;
     margin-right: 1em;
+}
+
+.flash_box p{
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .notice{

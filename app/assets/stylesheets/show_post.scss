@@ -106,10 +106,11 @@ background-size: 150px auto;
 
 #img_modal #close_icon::before{
     font-family: "Font Awesome 5 Free";
-    content: "\f057";
+    content: "\f00d";
+    font-weight: 900;
     display: block;
     font-size: 4.0rem;
-    padding: 7px;
+    padding: 5px 10px;
     color: #f7f6f5;
     text-shadow: 0 0 10px #000;
 }
