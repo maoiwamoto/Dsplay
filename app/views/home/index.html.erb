@@ -26,7 +26,7 @@
     
     <h3>マルチデバイス対応</h3>
     <p><em>デバイスのサイズに合わせて最適な形で作品を公開できます。</em><br>
-    ご利用の際の推奨環境については<%= link_to "こちら", about_path(anchor: "system_requirements"), class: "a_txt" %>をご覧ください。
+    ご利用の際の推奨環境については<%= link_to "こちら", about_path(anchor: "system_requirements"), class: "a_txt", "aria-label" => "閲覧推奨環境の案内ページへ" %>をご覧ください。
     </p>
     
     <%= image_tag ('home/devise.png'), alt: "複数のデバイスからサイトを閲覧した際の見本画像", class: "home_img" %>
@@ -34,10 +34,33 @@
     <small>※画像は推奨ブラウザのデバッグツールで確認した際のものです。<br>
     非推奨または動作確認のされていないブラウザでは表示が異なる場合があります。</small>
     
+    <h3>使い方</h3>
+    <p>「Dsplayの使い方を詳しく知りたい」という方は、「使い方」ページをご覧ください。<br>新規登録の手順や、各種機能のご紹介を行っています。</p>
+    
+    <%= image_tag ('home/banner/menu.png'), alt: "Dsplayの使い方紹介ページへ", class: "home_img" %>
+    
+    <h3>ユーザーの投稿を見る</h3>
+    
+    <p>ユーザーの投稿ページから、作品がどんな風に表示されるかご確認いただけます。</p>
+    
+    <%= image_tag ('home/banner/menu.png'), alt: "Dsplayのユーザー投稿一覧ページへ", class: "home_img" %>
+    
+    <h3>Dsplayはこんな人におすすめ！</h3>
+    
+    <h3>新規登録</h3>
+    
+    <p><em>「試しに使ってみたい」と思ったら、仮登録ページからいつでも気軽に無料登録！</em><br>
+    ご登録に必要なのはメールアドレスとパスワードだけ。<br>
+    メール認証によるアカウントの有効化が完了したら、すぐに作品の投稿機能がご利用いただけます。
+    </p>
+    
+    <%= link_to "無料で新規登録", signup_path, class: "a_line", "aria-label" => "Dsplay新規登録ページへ" %>
+    
     <% if user_signed_in? %>
     <hr>
     <% else %>
     <div class="form_wrapper">
+        <h3>ログイン</h3>
         <%= render('login') %>
         <%= link_to "無料新規登録", new_user_registration_path, class: "a_main" %>
         <%= link_to "パスワードをお忘れの場合", new_user_password_path, class: "a_line" %>
