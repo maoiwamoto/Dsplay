@@ -6,28 +6,31 @@
 
 <div class="home_container">
     
-    <strong>デプロイテスト（herokuパスワード変更）</strong> 
-    <h2>このサイトについて</h2>
+    <h2>Dsplayについて</h2>
+    <p>当サイトをご覧いただきありがとうございます。</p>
+    <p><b>「Dsplay」（ディスプレイ）</b>は、個人による開発・運営を行っている創作向け投稿サービスです。<br>
+    <em>画像や文章の投稿・タグ作成など、すべての機能が無料でご利用いただけます。</em>
+    </p>
     
+    <p><b>イラスト、漫画、写真、小説、詩、日記、ブログ</b>など…アイデア次第でさまざまな使い方ができます。</p>
+    
+    <h3>Dsplayの機能紹介</h2>
 <div class="home_flex_box">
-    <div class="intro"><%= image_tag 'intro1.png', alt: "アイコン" %><span class="home">画像投稿</span><p>投稿機能の説明</p></div>
-    <div class="intro"><%= image_tag 'intro2.png', alt: "アイコン" %><span class="home">文章投稿</span><p>投稿機能の説明</p></div>
-    <div class="intro"><%= image_tag 'intro3.png', alt: "アイコン" %><span class="home">タグ作成</span><p>タグ機能の説明</p></div>
+    <div class="intro"><%= image_tag 'home/intro/post.png', alt: "アイコン" %><span class="intro_ttr">画像投稿</span>
+    <p>お気に入りの写真やイラストを簡単にアップロード！<br>シンプルな閲覧ページが作品を一層引き立てます。</p></div>
+    <div class="intro"><%= image_tag 'home/intro/article.png', alt: "アイコン" %><span class="intro_ttr">文章投稿</span>
+    <p>物語や日々の何気ないことを気軽に書き残そう！<br>好きな画像を小説の挿絵として使える機能も搭載</p></div>
+    <div class="intro"><%= image_tag 'home/intro/tag.png', alt: "アイコン" %><span class="intro_ttr">タグ作成</span>
+    <p>自分専用のタグを作って投稿を整理！<br>カテゴリー分類やシリーズ作品の目次などにオススメ</p></div>
 </div>
-
-    <h2>ユーザーの投稿</h2>
-    <p>ユーザーの投稿紹介</p>
-    <div class="item_index-container"></div>
     
-    <h2>使用例の紹介</h2>
-    <p>サンプルアカウントの紹介</p>
-    <div class="item_index-container"></div>
+    <h3>マルチデバイス対応</h3>
+    <p><em>デバイスのサイズに合わせて最適な形で作品を公開できます。</em></p>
     
     <% if user_signed_in? %>
     <hr>
     <% else %>
-    <div class="form_wrapper" style="width: 500px;">
-        <h3>ログイン</h3>
+    <div class="form_wrapper">
         <%= render('login') %>
         <%= link_to "無料新規登録", new_user_registration_path, class: "a_main" %>
         <%= link_to "パスワードをお忘れの場合", new_user_password_path, class: "a_line" %>
