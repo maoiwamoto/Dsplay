@@ -2,7 +2,7 @@
 <%= stylesheet_link_tag 'home' %>
 <% end %>
 
-<div class="home_main_img_area"><%= image_tag 'header.png', alt: "ヘッダー画像" %></div>
+<div class="home_main_img_area"><%= image_tag 'home/header.png', alt: "トップページヘッダー画像　創作向け投稿サービスDsplay" %></div>
 
 <div class="center_wrapper home_center_wrapper">
     
@@ -49,23 +49,33 @@
     
     <div class="recommended_voice_area">
         <div class="chat_box1">
-            <span class="chat_icon"></span>
-            <div class="chat_voice"><p>ここにテキストを入力。</p></div>
+            <span class="chat_icon"><%= image_tag ('home/face_icon/angel.jpg'), alt: "キャラクターの顔アイコン" %></span>
+            <div class="chat_voice"><p>大事な作品をたくさん飾って眺めるのが好き</p></div>
         </div>
         <div class="chat_box2">
-            <div class="chat_voice"><p>ここにテキストを入力。</p></div>
-            <span class="chat_icon"></span>
+            <div class="chat_voice"><p>作品をアピールできるポートフォリオみたいなサイトを探してます</p></div>
+            <span class="chat_icon"><%= image_tag ('home/face_icon/usa.jpg'), alt: "キャラクターの顔アイコン" %></span>
+        </div>
+        <div class="chat_box1">
+            <span class="chat_icon"><%= image_tag ('home/face_icon/girl.jpg'), alt: "キャラクターの顔アイコン" %></span>
+            <div class="chat_voice"><p>複数ある作品をグループ分けして、見やすいようにまとめたい</p></div>
+        </div>
+        <div class="chat_box2">
+            <div class="chat_voice"><p>作品を公開するサイトがほしいけど、自分で作るのは大変…</p></div>
+            <span class="chat_icon"><%= image_tag ('home/face_icon/alice.jpg'), alt: "キャラクターの顔アイコン" %></span>
         </div>
     </div>
     
+    <p>「Dsplay」は描くことや書くこと、創作を始めとした自己表現が好きなすべての人のためのサービスです。</p>
+    
     <h3>新規登録</h3>
     
-    <p><em>「試しに使ってみたい」と思ったら、仮登録ページからいつでも気軽に無料登録！</em><br>
+    <p><em>「試しに使ってみたい」と思ったら、仮登録ページからいつでも気軽にユーザー登録ができます。</em><br>
     ご登録に必要なのはメールアドレスとパスワードだけ。<br>
     メール認証によるアカウントの有効化が完了したら、すぐに作品の投稿機能がご利用いただけます。
     </p>
     
-    <%= link_to "無料で新規登録", signup_path, class: "a_line", "aria-label" => "Dsplay新規登録ページへ" %>
+    <%= link_to "新規アカウント作成", signup_path, class: "a_line", "aria-label" => "Dsplay新規登録ページへ" %>
     
     <% if user_signed_in? %>
     <hr>

@@ -55,7 +55,7 @@
 .home_img{
     display: block;
     width: auto;
-    max-width: 96%;
+    max-width: 100%;
     object-fit: contain;
     margin: 0 auto;
 }
@@ -110,7 +110,7 @@
   min-width: 120px;
   max-width: calc(100% - 100px);
   background: #fff;
-  border: solid 3px #90a4ae;
+  border: solid 3px #d3d3d3;
   border-radius: 10px;
   padding: 2em 1em;
   margin-left: 15px;
@@ -134,7 +134,7 @@
   left: -30px;
   margin-top: -14px;
   border: 14px solid transparent;
-  border-right: 14px solid #90a4ae;
+  border-right: 14px solid #d3d3d3;
   z-index: 1;
 }
 
@@ -182,6 +182,12 @@
   z-index: 1;
 }
 
+/*----*/
+
+.home_center_wrapper .form_wrapper{
+    width: 600px;
+    max-width: 100%;
+}
 
 
 @media screen and (max-width: 769px) {
