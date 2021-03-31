@@ -9,13 +9,8 @@
     width: 800px;
     max-width: 100%;
     height: 100%;
+    margin: 0 auto;
     object-fit: contain;
-    margin: 0 auto;
-}
-
-.home_container{
-    width: 800px;
-    margin: 0 auto;
 }
 
 .home_flex_box{
@@ -55,6 +50,14 @@
     padding: 20px 1em;
     margin: 5px;
     border: 1px solid;
+}
+
+.home_img{
+    display: block;
+    width: auto;
+    max-width: 96%;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 

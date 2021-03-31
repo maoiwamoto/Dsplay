@@ -4,12 +4,12 @@
 
 <div class="home_main_img_area"><%= image_tag 'header.png', alt: "ヘッダー画像" %></div>
 
-<div class="home_container">
+<div class="center_wrapper home_center_wrapper">
     
     <h2>Dsplayについて</h2>
     <p>当サイトをご覧いただきありがとうございます。</p>
     <p><b>「Dsplay」（ディスプレイ）</b>は、個人による開発・運営を行っている創作向け投稿サービスです。<br>
-    <em>画像や文章の投稿・タグ作成など、すべての機能が無料でご利用いただけます。</em>
+    <em>画像やテキストの投稿・タグ作成など、すべての機能が無料でご利用いただけます。</em>
     </p>
     
     <p><b>イラスト、漫画、写真、小説、詩、日記、ブログ</b>など…アイデア次第でさまざまな使い方ができます。</p>
@@ -25,7 +25,14 @@
 </div>
     
     <h3>マルチデバイス対応</h3>
-    <p><em>デバイスのサイズに合わせて最適な形で作品を公開できます。</em></p>
+    <p><em>デバイスのサイズに合わせて最適な形で作品を公開できます。</em><br>
+    ご利用の際の推奨環境については<%= link_to "こちら", about_path(anchor: "system_requirements"), class: "a_txt" %>をご覧ください。
+    </p>
+    
+    <%= image_tag ('home/devise.png'), alt: "複数のデバイスからサイトを閲覧した際の見本画像", class: "home_img" %>
+    
+    <small>※画像は推奨ブラウザのデバッグツールで確認した際のものです。<br>
+    非推奨または動作確認のされていないブラウザでは表示が異なる場合があります。</small>
     
     <% if user_signed_in? %>
     <hr>

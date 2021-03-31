@@ -47,7 +47,7 @@ body {
 
 body p{
     font-size: 1.68rem;
-    margin: 0  0.6em 1.1em 0.6em;
+    margin: 1em  0.6em 1em 0.6em;
     line-height: 1.68;
 }
 
@@ -83,7 +83,7 @@ h3::before{
 }
 
 h4{
-  margin: 3em 0;
+  margin: 1.5em 0;
   padding: 1.5em;
   background: rgba(255,255,255,0.8);
   box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
@@ -115,6 +115,12 @@ em{
 
 strong span{
   border-bottom: 1px dashed;
+}
+
+small{
+  display: block;
+  margin: 0;
+  padding: 10px 0;
 }
 
 sup{
@@ -185,6 +191,10 @@ a:hover{
     max-width: 100%;
     margin: 0 auto;
     padding: 10px;
+}
+
+.home_center_wrapper{
+  width: 800px;
 }
 
 hr{
@@ -332,6 +342,7 @@ hr{
 .flash_box{
     padding: 1em 1.5em;
     background: rgba(0,0,0,0.8);
+    border-bottom: 1px solid rgba(255,255,255,0.6);
     position: fixed;
     top: var(--navbar-height);
     left: 0;
