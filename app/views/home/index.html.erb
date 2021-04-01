@@ -2,7 +2,7 @@
 <%= stylesheet_link_tag 'home' %>
 <% end %>
 
-<div class="home_main_img_area"><%= image_tag 'home/header.png', alt: "トップページヘッダー画像　創作向け投稿サービスDsplay" %></div>
+<div class="home_main_img_area"><%= image_tag 'home/header_home.png', alt: "トップページヘッダー画像　創作向け投稿サービスDsplay" %></div>
 
 <div class="center_wrapper home_center_wrapper">
     
@@ -35,22 +35,26 @@
     非推奨または動作確認のされていないブラウザでは表示が異なる場合があります。</small>
     
     <h3>使い方</h3>
-    <p>「Dsplayの使い方を詳しく知りたい」という方は、「使い方」ページをご覧ください。<br>新規登録の手順や、各種機能のご紹介を行っています。</p>
+    <p>「Dsplayの使い方を詳しく知りたい」という方は、<%= link_to "「使い方」ページ", howto_path, class: "a_txt" %>をご覧ください。<br>新規登録の手順や、各種機能のご紹介を行っています。</p>
     
-    <%= image_tag ('home/banner/menu.png'), alt: "Dsplayの使い方紹介ページへ", class: "home_img" %>
+    <%= link_to howto_path, "aria-label" => "Dsplayの使い方紹介ページへ" do %>
+    <%= image_tag ('home/banner/banner1.png'), alt: "Dsplayの使い方紹介ページへ", class: "home_img" %>
+    <% end %>
     
     <h3>ユーザーの投稿を見る</h3>
     
-    <p>ユーザーの投稿ページから、作品がどんな風に表示されるかご確認いただけます。</p>
+    <p><%= link_to "ユーザーの投稿ページ", users_path, class: "a_txt" %>から、作品がどんな風に表示されるかご確認いただけます。</p>
     
-    <%= image_tag ('home/banner/menu.png'), alt: "Dsplayのユーザー投稿一覧ページへ", class: "home_img" %>
+    <%= link_to users_path, "aria-label" => "Dsplayのユーザー投稿一覧ページへ" do %>
+    <%= image_tag ('home/banner/banner2.png'), alt: "Dsplayのユーザー投稿一覧ページへ", class: "home_img" %>
+    <% end %>
     
     <h3>Dsplayはこんな人におすすめ！</h3>
     
     <div class="recommended_voice_area">
         <div class="chat_box1">
             <span class="chat_icon"><%= image_tag ('home/face_icon/angel.jpg'), alt: "キャラクターの顔アイコン" %></span>
-            <div class="chat_voice"><p>大事な作品をたくさん飾って眺めるのが好き</p></div>
+            <div class="chat_voice"><p>お気に入りの作品をたくさん飾って眺めるのが好き</p></div>
         </div>
         <div class="chat_box2">
             <div class="chat_voice"><p>作品をアピールできるポートフォリオみたいなサイトを探してます</p></div>
@@ -66,7 +70,7 @@
         </div>
     </div>
     
-    <p>「Dsplay」は描くことや書くこと、創作を始めとした自己表現が好きなすべての人のためのサービスです。</p>
+    <p>「Dsplay」は創作活動が好きな人はもちろん、ブログや撮った写真を気軽にアップしたい人にもおすすめのサービスです。</p>
     
     <h3>新規登録</h3>
     
