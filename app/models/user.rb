@@ -13,7 +13,7 @@ class User < ApplicationRecord
          
   validate :password_complexity
 def password_complexity
-  　　　　　return if password.blank? || password =~ /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,70}$/
+  return if password.blank? || password =~ /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,70}$/
   errors.add :password, "強度が不足しています。大文字と小文字と数字と特殊文字をそれぞれ1文字以上含める必要があります。"
 end
          
