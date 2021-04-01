@@ -32,7 +32,7 @@
   </div>
 
   <div class="field">
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワードを再入力", label: "パスワード確認" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワードを再入力", label: "確認用パスワード" %>
     <% if @minimum_password_length %>
     <p class="min"><em>(<%= @minimum_password_length %>文字以上かつ半角英数字の大文字、小文字、記号(#?!@$%^&*)をそれぞれ1文字以上含む)</em></p>
     <% end %>
