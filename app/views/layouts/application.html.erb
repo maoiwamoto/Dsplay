@@ -2,11 +2,12 @@
 <html lang="ja">
   <head>
     <%= render "layouts/google_analytics" %>
-    <title><%= content_for?(:title) ? yield(:title) : "Dsplay" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Dsplay（ディスプレイ）創作向け投稿サービス" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
    <meta content="utf-8" name="charset">
    <meta name="viewport" content="width=device-width">
+   <meta name="description" content="イラスト・漫画・写真・小説・詩・ブログ･･･アイデア次第で使い方が広がる、新登場の創作系投稿サービス「Dsplay」であなたの作品を素敵に飾ろう！　画像と文章投稿、タグ作成など全ての機能が無料で使える！">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,7 +17,7 @@
   <body>
       
       <header>
-        <div class="left"><h1><%= link_to root_path, "aria-label" => "Dsplayトップページへ" do %><%= image_tag 'app_logo.png', alt: "Dsplay" %><% end %></h1></div>
+        <div class="left"><h1><%= link_to root_path, "aria-label" => "創作向け投稿サービス　Dsplay（ディスプレイ）" do %><%= image_tag 'app_logo.png', alt: "Dsplay（ディスプレイ）" %><% end %></h1></div>
         <div class="right">
           <% if user_signed_in? %>
           <div class="first">
@@ -44,8 +45,11 @@
       </header>
     
     <main>
+    <% if flash.any? %>
     <% flash.each do |key, value| %>
+    <% next if key == 'timedout' %>
     <%= content_tag :div, class: "flash_box" do %><%= content_tag :p, value, class: key %><% end %>
+    <% end %>
     <% end %>
     <%= yield %>
     </main>

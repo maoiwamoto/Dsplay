@@ -22,7 +22,7 @@ ja:
       reset_password_instructions:
         subject: '【Dsplay】パスワードの再設定についてのご連絡'
       unlock_instructions:
-        subject: 'アカウントの凍結解除について'
+        subject: '【Dsplay】アカウントの凍結解除について'
       password_change:
         subject: '【Dsplay】パスワードの変更についてのご連絡'
     omniauth_callbacks:

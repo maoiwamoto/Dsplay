@@ -26,7 +26,7 @@
   <div class="field">
     <%= f.password_field :password, label: "新しいパスワード", placeholder: "パスワードを変更しない場合、空欄にしてください" %>
     <% if @minimum_password_length %>
-      <em class="min"><%= @minimum_password_length %>文字以上</em>
+      <p class="min"><em>(<%= @minimum_password_length %>文字以上かつ半角英数字の大文字、小文字、記号(#?!@$%^&*)をそれぞれ1文字以上含む)</em></p>
     <% end %>
   </div>
 

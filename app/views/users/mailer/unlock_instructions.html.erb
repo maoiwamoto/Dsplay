@@ -1,7 +1,27 @@
-<p>Hello <%= @resource.email %>!</p>
+<p>こんにちは！　Dsplay運営事務局です</p>
 
-<p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
+<p>いつもDsplayをご利用いただき、ありがとうございます。</p>
 
-<p>Click the link below to unlock your account:</p>
+<p>あなたのアカウントは現在凍結されており、ログインができない状態です。</p>
+<p>ログイン画面でパスワードの入力を一定回数繰り返した場合、セキュリティシステムにより、該当のメールアドレスのアカウントが凍結されるようになっています。</p>
 
-<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
+<p>お手数ですが、以下のテキストリンクから、アカウントの凍結解除を行ってください。</p>
+
+<p><%= link_to 'アカウントの凍結解除', unlock_url(@resource, unlock_token: @token) %></p>
+
+<p>恐れ入りますが、心当たりがない場合は本メッセージは破棄してください。</p>
+
+<p>※このメールはシステムによる自動送信メッセージです。<br>
+こちらのメールへ直接ご返信をいただいても、お答えすることができません。</p>
+
+<p>ご質問やご不明な点がありましたら、以下のご連絡先までお問合せくださいますようお願いします。</p>
+
+<p>★---------------------------------------------------------★</p>
+
+<p>
+【Dsplay】～自分の作品がもっと好きになる　創作系投稿サービス～<br>
+https://dsplay.herokuapp.com/<br>
+ご連絡先（運営者メールアドレス）：info@dsplay.icu
+</p>
+
+<p>★---------------------------------------------------------★</p>
