@@ -1,6 +1,6 @@
 <p>こんにちは！ Dsplay運営事務局です。</p>
 
-<% if @user.unconfirmed_email %>
+<% if @resource.unconfirmed_email %>
 <p>いつもDsplayをご利用いただきありがとうございます。<br>
 下記のリンクをクリックすると、ご登録のメールアドレスが変更されます。</p>
 <% else %>
@@ -8,7 +8,7 @@
 現在、仮登録中となっていますので、下記のリンクをクリックしてユーザー登録を完了してください。</p>
 <% end %>
 
-<p><%= link_to 'メールアドレス確認', confirmation_url(@user, :confirmation_token => @token) %></p>
+<p><%= link_to 'メールアドレス確認', controller: 'users/confirmations', action: 'create', confirmation_token: @token %></p>
 
 <p>恐れ入りますが、心当たりがない場合は本メッセージは破棄してください。</p>
 
