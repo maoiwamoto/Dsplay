@@ -1,24 +1,6 @@
-# README
+個人開発による創作系サービス「Dsplay」ページです。
+開発期間　2020年1月～3月
+サイトの公開期間　2020年4月～11月
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+現在は一般公開を停止し、githubにてソースコードを公開しています。
+Ruby,HTML,CSSなどで開発しました。
