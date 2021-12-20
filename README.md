@@ -10,3 +10,7 @@ Ruby,HTML,CSSなどで開発しました。
 https://dsplay.herokuapp.com/
 
 https://twitter.com/mao26672712
+
+https://forms.gle/gHzpASjc6kiDdTzU6
+
+Displayに関するお問い合わせは、上記のフォームからお願い致します。
